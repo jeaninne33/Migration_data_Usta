@@ -1,0 +1,123 @@
+---
+- name: Install composer dependencies at libraries
+  composer:
+    command=install
+    working_dir=/vagrant/html/libraries
+    no_dev=no
+
+- name: Create subscribers folder
+  file:
+    path=/vagrant/bin
+    state=directory
+
+- name: Create subscribers folder
+  file:
+    path=/vagrant/subscribers
+    state=directory
+
+- name: Create VH folder
+  file:
+    path=/vagrant/subscribers/tm
+    state=directory
+
+- name: Copy ws.php file
+  template:
+    src: "templates/ws.php"
+    dest: "/vagrant/html/"
+    force: no
+
+- name: Copy admin.php
+  template:
+    src: "templates/admin.php"
+    dest: "/vagrant/subscribers/tm/"
+    force: no
+
+- name: Copy forgot.php
+  template:
+    src: "templates/forgot.php"
+    dest: "/vagrant/subscribers/tm/"
+    force: no
+
+- name: Copy recover.php
+  template:
+    src: "templates/recover.php"
+    dest: "/vagrant/subscribers/tm/"
+    force: no
+
+- name: Copy rest.php
+  template:
+    src: "templates/rest.php"
+    dest: "/vagrant/subscribers/tm/"
+    force: no
+
+- name: Create config directory
+  file:
+    path=/vagrant/subscribers/tm/config
+    state=directory
+
+- name: Copy Jaws config file
+  template:
+    src: "templates/JawsConfig.php"
+    dest: "/vagrant/subscribers/tm/config/"
+    force: no
+
+- name: Copy version.xml
+  template:
+    src: "templates/version.xml"
+    dest: "/vagrant/subscribers/tm/config/"
+    force: no
+
+- name: Copy logo
+  template:
+    src: "templates/logo.jpg"
+    dest: "/vagrant/subscribers/tm/config/"
+    mode: 0664
+    force: no
+
+- name: Create required symlinks
+  file:
+    src=/vagrant/html/{{ item.src }}
+    dest=/vagrant/subscribers/tm/{{ item.dest }}
+    state=link
+  with_items:
+    - { src: 'data', dest: 'data'}
+    - { src: 'favicon.ico', dest: 'favicon.ico' }
+    - { src: 'gadgets', dest: 'gadgets' }
+    - { src: 'images', dest: 'images' }
+    - { src: 'include', dest: 'include' }
+    - { src: 'index.php', dest: 'index.php' }
+    - { src: 'languages', dest: 'languages' }
+    - { src: 'libraries', dest: 'libraries' }
+    - { src: 'plugins', dest: 'plugins' }
+    - { src: 'robots.txt', dest: 'robots.txt' }
+
+- name: Drop database if exists
+  mysql_db:
+    name=tm
+    state=absent
+    login_password=123
+
+- name: Create mysql database for dev
+  mysql_db:
+    name=tm
+    state=present
+    login_password=123
+
+- name: Import SQL file to restore database
+  mysql_db:
+    name=tm
+    state=import
+    target=/vagrant/sql/installer_master.sql
+    login_password=123
+
+- name: Create MySQL user
+  mysql_user:
+    name={{ mysql.user }}
+    password={{ mysql.password }}
+    state=present
+    append_privs=yes
+    priv={{ item }}
+    login_password=123
+  with_items:
+    - '*.*:ALL'
+    - '*.*:SUPER,RELOAD'

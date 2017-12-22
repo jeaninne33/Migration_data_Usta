@@ -1,0 +1,19 @@
+---
+server:
+    install: '1'
+    timezone: America/Bogota
+    locale: en_US.UTF-8
+    user: vagrant
+mysql:
+    install: '1'
+    root_password: '123'
+    user: tm
+    password: 123
+    version: 5.7
+tests:
+    selenium_server: 2.53.1
+git:
+    user: daniel
+    pass: Tr3sm1lu5
+php:
+    version: 7.1

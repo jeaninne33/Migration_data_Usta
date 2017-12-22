@@ -1,0 +1,50 @@
+---
+- name: Update apt cache.
+  apt:
+    update_cache=yes
+    cache_valid_time=86400
+
+- name: Install Firefox and Xvfb
+  apt: "name={{ item }} state=present"
+  with_items:
+    - firefox
+    - xvfb
+
+- name: Download selenium server
+  get_url:
+    url=https://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-{{ tests.selenium_server }}.jar
+    dest=/opt/
+
+- name: Create Selenium home directory
+  file:
+    path=/usr/lib/selenium
+    state=directory
+
+- name: Create symbolic link to Selenium executable
+  file:
+    src=/opt/selenium-server-standalone-{{ tests.selenium_server }}.jar
+    dest=/usr/lib/selenium/sserve
+    state=link
+
+- name: Create Selenium logs directory
+  file:
+    path=/var/log/selenium
+    state=directory
+    mode="a+w"
+
+- name: Create Selenium service file
+  template:
+    src: "templates/selenium"
+    dest: "/etc/init.d/selenium"
+    mode: 0755
+
+- name: Register Selenium server on startup
+  command: update-rc.d selenium defaults
+  notify:
+    - Start Selenium service
+
+- name: Install composer dependencies for testing
+  composer:
+    command=install
+    working_dir=/vagrant
+    no_dev=no

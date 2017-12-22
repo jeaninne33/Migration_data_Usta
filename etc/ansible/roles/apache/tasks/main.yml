@@ -1,0 +1,69 @@
+---
+- name: Make sure self signed certificate directory exists
+  file:
+    path=/etc/ssl/apache2
+    state=directory
+    owner=root
+    group=root
+    mode=0775
+
+- name: Install Apache
+  apt: "name={{ item }} state=present"
+  with_items:
+    - apache2
+
+- name: Enable Apache modules
+  apache2_module: "name={{ item }} state=present"
+  with_items:
+    - rewrite
+    - proxy
+    - proxy_fcgi
+    - ssl
+    - headers
+    - actions
+    - alias
+  notify: restart apache
+
+- name: Remove default main Apache configuration file
+  file:
+    path: "/etc/apache2/apache2.conf"
+    state: absent
+
+- name: Update main Apache configuration file
+  template:
+    src: "templates/apache2.conf"
+    dest: "/etc/apache2/apache2.conf"
+    force: no
+  notify: restart apache
+
+- name: create self-signed SSL cert
+  command: openssl req -x509 -nodes -subj "/C=CO/ST=Bogota/L=Bogota/O=IT/CN=tm.time.dev" -days 3650 -newkey rsa:2048 -keyout /etc/ssl/apache2/time_dev.key -out /etc/ssl/apache2/time_dev.crt
+
+- name: Add Main Virtual Host
+  template:
+    src: "templates/timedev.conf"
+    dest: "/etc/apache2/sites-available/"
+    force: no
+
+- name: Add Mafirma Virtual Host
+  template:
+    src: "templates/mafirma.conf"
+    dest: "/etc/apache2/sites-available/"
+    force: no
+
+- name: Add PH Main Virtual Host
+  template:
+    src: "templates/ph.conf"
+    dest: "/etc/apache2/sites-available/"
+    force: no
+
+- name: Symlink Virtual Host file
+  file:
+    src: "/etc/apache2/sites-available/timedev.conf"
+    dest: "/etc/apache2/sites-enabled/timedev.conf"
+    state: link
+  notify: restart apache
+
+- name: Remove default virtualhost file.
+  command: a2dissite 000-default.conf
+  notify: restart apache

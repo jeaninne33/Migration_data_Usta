@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version -->
+
+<external>
+    <version>v.1.6.1</version>
+    <ses>
+        <smtp>email-smtp.us-east-1.amazonaws.com</smtp>
+        <user>AKIAJH5OT4PEAAR5CAYA</user>
+        <pass>AtczdFhOkT6iB+Rm7vNDqchH9hafYVqAy1LvwqW4NyAF</pass>
+    </ses>
+    <bill>https://reportes.timemanagerweb.com/birt/frameset?__report=master-factura.rptdesign</bill>
+    <preBill>https://reportes.timemanagerweb.com/birt/frameset?__report=master-factura.rptdesign</preBill>
+    <englishBill>https://reportes.timemanagerweb.com/birt/frameset?__report=master-factura.rptdesign</englishBill>
+    <englishPreBill>https://reportes.timemanagerweb.com/birt/frameset?__report=master-factura.rptdesign</englishPreBill>
+    <billLetter>https://reportes.timemanagerweb.com/birt/frameset?__report=master-factura.rptdesign</billLetter>
+    <englishBillLetter>https://reportes.timemanagerweb.com/birt/frameset?__report=master-factura.rptdesign</englishBillLetter>
+    <usernotime>https://reportes.timemanagerweb.com/birt/run?__report=master-usuariosSinTiempo.rptdesign</usernotime>
+    <onlyExpenses>https://reportes.timemanagerweb.com/birt/run?__report=cpb-Gastos.rptdesign</onlyExpenses>
+    <logo>config/logo.jpg</logo>
+    <logo2>config/logo2.jpg</logo2>
+    <iva>I.V.A.</iva>
+    <nit>NIT</nit>
+    <country>Colombia</country>
+    <city>Bogotá</city>
+    <state>Cundinamarca</state>
+    <background></background> <!-- Utiliza el id de la imagen en la tabla de arte para cargar el fondo -->
+</external>

@@ -1,0 +1,22 @@
+{
+    "name": "tm/tm-pgp-migration",
+    "type": "project",
+    "require": {
+        "php": ">7.1",
+        "phpoffice/phpexcel": "^1.8",
+        "league/csv": "^9.1",
+        "phpoffice/phpspreadsheet": "dev-master",
+        "monolog/monolog": "^1.23"
+    },
+    "authors": [
+        {
+            "name": "Daniel Restrepo Mejia",
+            "email": "danrmejia@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TM\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+---
+- name: Restart server
+  command: shutdown -r "Reboot triggered by Ansible"
+  async: 0
+  poll: 0
+  ignore_errors: true
+
+- name: Wait for server to restart
+  local_action:
+    module: wait_for
+      host=192.168.56.101
+      port=22
+      delay=1
+      timeout=300
+
+- name: Start Selenium service
+  service:
+    name=selenium
+    state=started

@@ -1,0 +1,44 @@
+---
+- name: Set default system language pack
+  shell: locale-gen {{server.locale}}
+
+- name: Update apt cache if needed
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Update all packages to the latest version
+  apt: upgrade=dist
+
+- name: Get software for apt repository management
+  apt: "name={{ item }} state=present"
+  with_items:
+    - python-apt
+    - python-pycurl
+
+- name: Install general requirements
+  apt: "name={{ item }} state=present"
+  with_items:
+    - git
+    - curl
+    - wget
+    - vim
+    - zsh
+    - mcrypt
+
+- name: Disable firewall
+  service: name=ufw state=stopped
+
+- name: Clone oh-my-zsh
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh.git
+    dest=/home/{{ server.user }}/.oh-my-zsh
+
+- name: Copy .zshrc
+  template:
+    src: "templates/zshrc"
+    dest: "/home/vagrant/.zshrc"
+    force: no
+
+- name: Set zsh as default shell
+  user:
+    name={{ server.user }}
+    shell=/bin/zsh

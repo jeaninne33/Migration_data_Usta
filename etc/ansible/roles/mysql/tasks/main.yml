@@ -1,0 +1,39 @@
+---
+- name: Install MySQL
+  apt: "name={{ item }} state=present"
+  with_items:
+    - python-mysqldb
+    - mysql-server-{{ mysql.version }}
+    - mysql-client-{{ mysql.version }}
+  notify: Start MySQL
+
+- name: Update MySQL root password for all root accounts
+  mysql_user:
+    name: root
+    host: "{{ item }}"
+    login_user: root
+    password: "{{ mysql.root_password }}"
+    login_password: "{{ mysql.root_password }}"
+    check_implicit_admin: yes
+    priv: "*.*:ALL,GRANT"
+  with_items:
+    - tm.time.dev
+    - 127.0.0.1
+    - localhost
+    - ::1
+    - "%"
+
+- name: Configure MySQL remote connection
+  lineinfile:
+    dest=/etc/mysql/mysql.conf.d/mysqld.cnf
+    line="#bind-address            = 127.0.0.1"
+    regexp="^bind-address            = 127\.0\.0\.1"
+    state=present
+
+- name: Configure MySQL sql mode
+  lineinfile:
+    dest=/etc/mysql/mysql.conf.d/mysqld.cnf                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    line="sql_mode = \"NO_ENGINE_SUBSTITUTION\""
+    state=present
+    insertafter=EOF
+  notify: Restart MySQL
