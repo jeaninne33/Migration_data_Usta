@@ -14,45 +14,36 @@ class Clientes
 
     public function __construct()
     {
-        $connection = new Connection();
+        $connection = new ConnectionMySQL();
         $this->pdo = $connection->connect();
+        $customer=array();
     }
 
     /**
      * @param string $estado
      * @return array|string
      */
-    public function fetchAllCustomers()
+    public function fetchAllCustomersMySQL()
     {
         try {
-            $query = "SELECT M06COD AS cmrID, 
-                             M06NOM AS cmrName,
-                             M06NOM AS cmrComercial,
-                             M06DOM AS cmrAddress,
-                             M06POB AS cmrCity,
-                             M06PRO AS cmrState,
-                             M06CIF AS cmrNit,
-                             M06FEC AS created,
-                             M06OBS AS notes,
-                             CASE WHEN M06LEN = 'ESP' THEN 1 ELSE 0 END AS cmrLang,
-                             CASE WHEN BAJA = 'A' THEN 1 ELSE 0 END AS cmrStatus,
-                             M06PAI AS cmrCountry,
-                             CONCAT(M06TF1,', ',M06TF2,', ',M06FAX) AS cmrPhone,
-                             CASE WHEN M06TIP = 1 THEN 3 ELSE 1 END AS cmrCttID,
-                             CASE WHEN M06ORI = 'N' THEN 1 ELSE 2 END AS cmrNacional,
-                             CASE WHEN M06RETICA = 'S' THEN 1 ELSE 0 END AS enableReteICA,
-                             M06COD AS codigo_externo_primario,
-                             M06FEA AS modified
-                      FROM CLIENTES";
+            $query = "SELECT 
+                       buzID, buzCmrID, buzCurID, buzPcsID,pcsDsc, cmrName, cmrComercial
+                      FROM
+                        tmc_business_rel_buz
+                       inner join tmc_process_tbl_pcs on buzPcsID=pcsID
+                       inner join tmc_customers_tbl_cmr on cmrID=buzCmrID";
             $stmt = $this->pdo->prepare($query);
             $stmt->execute();
             return $stmt->fetchAll();
+
         } catch (\PDOException $exception) {
             return "Error ejecutando la consulta: " . $exception->getMessage();
         }
     }
 
-    public function fetchAllCustomersForExcel(){
+
+
+    /*public function fetchAllCustomersForExcel(){
         try {
             $query = "SELECT M06COD AS cmrID, 
                              M06NOM AS Nombre,
@@ -79,5 +70,5 @@ class Clientes
         } catch (\PDOException $exception) {
             return "Error ejecutando la consulta: " . $exception->getMessage();
         }
-    }
+    }*/
 }

@@ -21,34 +21,35 @@ class Asuntos
      */
     public function fetchAllBusiness(){
         try {
-            $query = "SELECT M01ASU AS buzID,
-                             M01CL1 AS buzCmrID,
-                             M01NOM AS buzPcsID,
-                             M01TIP AS business_type_id,
-                             M01FEC AS created,
-                             M01STI2 AS buzResponsable,
-                             M01REA AS expediente,
-                             CASE WHEN BAJA = 'A' THEN 1 ELSE 2 END AS buzStatus,
-                             CASE WHEN MODOFACTURACION = 'B' THEN 1
-                                  WHEN MODOFACTURACION = 'C' THEN 1
-                                  WHEN MODOFACTURACION = 'H' THEN 1
-                                  WHEN MODOFACTURACION = 'I' THEN 4
-                                  WHEN MODOFACTURACION = 'L' THEN 9
-                                  WHEN MODOFACTURACION = 'P' THEN 3
-                                  WHEN MODOFACTURACION = 'X' THEN 6
-                             END AS buzImoID,
-                             CASE WHEN M01MONFRA = 'COP' THEN 1
-                                  WHEN M01MONFRA = 'USD' THEN 2
-                                  WHEN M01MONFRA = 'EUR' THEN 3
-                                  WHEN M01MONFRA = 'PES' THEN 4
-                             END AS buzCurID,
-                             M01DTO AS practice_area_id,
-                             CONCAT(OBSERVACIONES2,' ',OBSERVACIONES3) AS buzNotes,
-                             CASE WHEN M01LEN = 'ESP' THEN 1 ELSE 2 END AS language,
-                             CASE WHEN MODOFACTURACION = 'P' OR MODOFACTURACION = 'X' THEN M01PRS ELSE 0 END AS buzMonthlyFixRate,
-                             CASE WHEN M01FAC = 'N' THEN 1 ELSE 0 END AS buzNoInv
-                      FROM ASUNTOS
-                      WHERE M01ASU != 6786;";
+            $query = "SELECT   [registro].[INICIO]
+                              ,[registro].[TERMINO]
+                              ,[registro].[T_TRANS]
+                              ,[registro].[DECIMAL1]
+                              ,[registro].[CODCLI]
+                              ,[registro].[CLIENTE]
+                              ,[registro].[ORDEN]
+                              ,[registro].[AREA]
+                              ,[registro].[T_CLI]  
+                              ,[registro].[FECHA]
+                              ,[registro].[TARIFA]
+                              ,[registro].[TOTAL]
+                              ,[registro].[NORDEN]
+                               ,[facturacion].[INICIO] as inicio_fac
+                              ,[facturacion].[TERMINO] as fin_fac
+                              ,[facturacion].[T_TRANS] as tiempo_fac
+                              ,[facturacion].[DECIMAL1] as deci_fac
+                              ,[facturacion].[CODCLI] as codcli_fac
+                              ,[facturacion].[CLIENTE] as cliente_fac
+                              ,[facturacion].[ORDEN] as orden_fac
+                              ,[facturacion].[AREA] as area_fac
+                              ,[facturacion].[T_CLI]  as modo_fac
+                              ,[facturacion].[FECHA] as fecha_fac
+                              ,[facturacion].[TARIFA] as tarifa_fac
+                              ,[facturacion].[TOTAL] as total_fac
+                              ,[facturacion].[NORDEN] as codorden_fac
+                          FROM [tiemposhoras].[dbo].[registro]
+                          left join [facturacion] on ([padre]=[registro].[UID] and ([registro].[T_TRANS]!=[facturacion].[T_TRANS] or [facturacion].[NORDEN]!= [registro].[NORDEN]))
+                          WHERE [registro].[NORDEN]!=0  AND [registro].[CODCLI]!='' ;";
             $stmt = $this->pdo->prepare($query);
             $stmt->execute();
 

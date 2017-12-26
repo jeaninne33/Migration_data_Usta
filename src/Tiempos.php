@@ -35,7 +35,6 @@ class Tiempos
 
             $timesCounter = 1;
             for($i= $totalTimes; $i> 0 ; $i--) {
-
                 $query = "SELECT M11NRR AS pgsID,
                                  M11ASU AS pgsBuzID,
                                  FORMAT(M11FEC, 'yyyy-MM-dd') AS pgsDateWork,
@@ -132,6 +131,18 @@ class Tiempos
             return $finalTimes;
         } catch (\PDOException $exception) {
             return "Error ejecutando la consulta: " . $exception->getMessage();
+        }
+    }
+
+    public function countAll()
+    {
+        try {
+            $sql = "SELECT COUNT(*) FROM facturacion";
+            $stmt = $this->pdo->query($sql);
+            $stmt->execute();
+            print_r($stmt->fetchAll());
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
         }
     }
 }
