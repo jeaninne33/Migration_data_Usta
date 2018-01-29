@@ -28,7 +28,7 @@ class Tiempos
             $stmt->execute();
             $maxID = $stmt->fetchAll();
 
-            $totalTimes = doubleval($maxID[0]['M11NRR']);
+
 
             $usersObj = new Usuarios();
             $users = $usersObj->fetchAllUsers();

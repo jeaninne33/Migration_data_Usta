@@ -31,7 +31,7 @@ class ConnectionMySQL
     const PASSWORD = '123';
 
     /**
-     * Se conecta a la base de datos remota de hyc y retorna un objeto PDO o una excepción
+     * Se conecta a la base de datos de tiem manager
      * @return \PDO
      */
     public function connect() : \PDO

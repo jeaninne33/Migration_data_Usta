@@ -12,9 +12,11 @@ use TM\Asuntos;
 $tiempos->countAll();*/
 
 $asuntos=new Asuntos();
-//$asuntos=$asuntos->fetchAllBusiness();
+//var_dump($asuntos->countAll());
+$asuntos=$asuntos->fetchAllBusiness();
 //var_dump(count($asuntos));
 $clientes=new Clientes();
 $datamysql=$clientes->fetchAllCustomersMySQL();
-var_dump(count($datamysql));
+
+//var_dump(end($datamysql));
 //var_dump($datamysql);

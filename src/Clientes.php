@@ -16,7 +16,19 @@ class Clientes
     {
         $connection = new ConnectionMySQL();
         $this->pdo = $connection->connect();
-        $customer=array();
+       // $customer=array();
+    }
+
+    public function countAll()
+    {
+        try {
+            $sql = "SELECT COUNT(*) FROM facturacion";
+            $stmt = $this->pdo->query($sql);
+            $stmt->execute();
+            print_r($stmt->fetchAll());
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
     }
 
     /**

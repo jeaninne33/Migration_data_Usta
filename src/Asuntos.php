@@ -19,9 +19,31 @@ class Asuntos
     /**
      * @return array|string
      */
-    public function fetchAllBusiness(){
+    public function countAll()
+    {
         try {
-            $query = "SELECT   [registro].[INICIO]
+            $sql = "SELECT COUNT(*) as total FROM [tiemposhoras].[dbo].[registro]";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+
+    public function fetchAllBusiness(){
+
+        try {
+            $query = "SELECT TOP 1 [uid] FROM [tiemposhoras].[dbo].[registro] ORDER BY [uid] DESC";
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+            $maxID = $stmt->fetchAll();
+
+            $totalTimes = doubleval($maxID[0]['uid']);
+
+            for($i= $totalTimes; $i> 0 ; $i--) {
+                $query = "SELECT   
+                               [registro].[INICIO]
                               ,[registro].[TERMINO]
                               ,[registro].[T_TRANS]
                               ,[registro].[DECIMAL1]
@@ -34,36 +56,39 @@ class Asuntos
                               ,[registro].[TARIFA]
                               ,[registro].[TOTAL]
                               ,[registro].[NORDEN]
-                               ,[facturacion].[INICIO] as inicio_fac
-                              ,[facturacion].[TERMINO] as fin_fac
-                              ,[facturacion].[T_TRANS] as tiempo_fac
-                              ,[facturacion].[DECIMAL1] as deci_fac
-                              ,[facturacion].[CODCLI] as codcli_fac
-                              ,[facturacion].[CLIENTE] as cliente_fac
-                              ,[facturacion].[ORDEN] as orden_fac
-                              ,[facturacion].[AREA] as area_fac
-                              ,[facturacion].[T_CLI]  as modo_fac
-                              ,[facturacion].[FECHA] as fecha_fac
-                              ,[facturacion].[TARIFA] as tarifa_fac
-                              ,[facturacion].[TOTAL] as total_fac
-                              ,[facturacion].[NORDEN] as codorden_fac
+                              ,[facturacion].[INICIO] AS inicio_fac
+                              ,[facturacion].[TERMINO] AS fin_fac
+                              ,[facturacion].[T_TRANS] AS tiempo_fac
+                              ,[facturacion].[DECIMAL1] AS deci_fac
+                              ,[facturacion].[CODCLI] AS codcli_fac
+                              ,[facturacion].[CLIENTE] AS cliente_fac
+                              ,[facturacion].[ORDEN] AS orden_fac
+                              ,[facturacion].[AREA] AS area_fac
+                              ,[facturacion].[T_CLI]  AS modo_fac
+                              ,[facturacion].[FECHA] AS fecha_fac
+                              ,[facturacion].[TARIFA] AS tarifa_fac
+                              ,[facturacion].[TOTAL] AS total_fac
+                              ,[facturacion].[NORDEN] AS codorden_fac
+                              ,[registro].[uid] AS clave_res
+                              ,[facturacion].[uid] AS clave_fac
                           FROM [tiemposhoras].[dbo].[registro]
-                          left join [facturacion] on ([padre]=[registro].[UID] and ([registro].[T_TRANS]!=[facturacion].[T_TRANS] or [facturacion].[NORDEN]!= [registro].[NORDEN]))
-                          WHERE [registro].[NORDEN]!=0  AND [registro].[CODCLI]!='' ;";
-            $stmt = $this->pdo->prepare($query);
-            $stmt->execute();
+                          LEFT JOIN [tiemposhoras].[dbo].[facturacion] ON ([facturacion].[padre]=[registro].[UID] AND ([registro].[T_TRANS]!=[facturacion].[T_TRANS] OR [facturacion].[NORDEN]!= [registro].[NORDEN]))
+                          WHERE [registro].[NORDEN]!=0  AND [registro].[CODCLI]!='' AND [registro].[uid]=$i
+                           ;
+                          ";
+                $stmt = $this->pdo->prepare($query);
+                $stmt->execute();
+                $times = $stmt->fetchAll();
 
-            $business = $stmt->fetchAll();
-
-            $descripcionesObj = new DescripcionesAsuntos();
-            $descripciones = $descripcionesObj->fetchAllBusinessDescriptions();
-
+                $descripcionesObj = new DescripcionesAsuntos();
+                $descripciones = $descripcionesObj->fetchAllBusinessDescriptions();
+            }
             $usersObj = new Usuarios();
 
             $users = $usersObj->fetchAllUsers();
 
             $totalBusiness = count($business);
-
+            /*
             $patron = array ('á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U');
 
             for($i = 0; $i<$totalBusiness; $i++){
@@ -107,7 +132,7 @@ class Asuntos
                     $business[$i][11] = $business[$i][11] . ' ' . $detailsText;
                     $times[$i]['buzNotes'] = $business[$i]['buzNotes'].' '.$detailsText;
                 }
-            }
+            }*/
 
             return $business;
         } catch (\PDOException $exception) {
