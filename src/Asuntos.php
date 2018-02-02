@@ -14,6 +14,7 @@ class Asuntos
     {
         $connection = new Connection();
         $this->pdo = $connection->connect();
+
     }
 
     /**

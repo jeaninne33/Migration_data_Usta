@@ -54,6 +54,7 @@ class AsuntosMySQL
 
             $business = $stmt->fetchAll();
 
+
             /*$descripcionesObj = new DescripcionesAsuntos();
             $descripciones = $descripcionesObj->fetchAllBusinessDescriptions();
 
