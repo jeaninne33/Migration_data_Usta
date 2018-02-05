@@ -28,8 +28,6 @@ class Tiempos
             $stmt->execute();
             $maxID = $stmt->fetchAll();
 
-
-
             $usersObj = new Usuarios();
             $users = $usersObj->fetchAllUsers();
 

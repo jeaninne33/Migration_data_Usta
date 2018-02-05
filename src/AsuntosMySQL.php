@@ -2,6 +2,7 @@
 
 
 namespace TM;
+use TM\Mysqlcheck;
 
 class AsuntosMySQL
 {

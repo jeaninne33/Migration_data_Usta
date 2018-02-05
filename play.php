@@ -13,15 +13,15 @@ use TM\Mysqlcheck;
 /*$tiempos = new Tiempos();
 $tiempos->countAll();*/
 
-$name='CASTROL DEL PERU S.A.';
+$name='AGRICOLA LAS LLAMOZAS S.A.';
+$nameOt='GENERAL - RETAINER';
 //$check=new MysqlCheck();
 
 //var_dump(new MysqlCheck());die;
 //var_dump($check->checkCustomers($name));die;
 $asuntos=new Asuntos();
 $check=new Mysqlcheck();
-var_dump($check->checkCustomers($name));
-var_dump($asuntos->countAll());
+var_dump($asuntos->fetchAllBusiness());
 //$asuntos=$asuntos->fetchAllBusiness();
 //var_dump(count($asuntos));
 //$clientes=new Clientes();

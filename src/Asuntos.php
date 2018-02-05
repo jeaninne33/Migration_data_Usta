@@ -2,6 +2,10 @@
 
 
 namespace TM;
+use TM\Mysqlcheck;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 
 class Asuntos
 {
@@ -41,7 +45,15 @@ class Asuntos
             $maxID = $stmt->fetchAll();
 
             $totalTimes = doubleval($maxID[0]['uid']);
-
+            // create a log channel
+            $log = new Logger('name');
+            $log->pushHandler(new StreamHandler('path/to/your.log', Logger::WARNING));
+            /*
+             * // add records to the log
+                $log->warning('Foo');
+                $log->error('Bar');
+             * */
+            // add records to the log
             for($i= $totalTimes; $i> 0 ; $i--) {
                 $query = "SELECT   
                                [registro].[INICIO]
@@ -53,7 +65,10 @@ class Asuntos
                               ,[registro].[ORDEN]
                               ,[registro].[AREA]
                               ,[registro].[T_CLI]  
+                              ,[registro].[DETALLE] 
                               ,[registro].[FECHA]
+                              ,[registro].[ABOGADO]
+                              ,[registro].[INICIAL]
                               ,[registro].[TARIFA]
                               ,[registro].[TOTAL]
                               ,[registro].[NORDEN]
@@ -61,6 +76,8 @@ class Asuntos
                               ,[facturacion].[TERMINO] AS fin_fac
                               ,[facturacion].[T_TRANS] AS tiempo_fac
                               ,[facturacion].[DECIMAL1] AS deci_fac
+                              ,[registro].[ABOGADO] AS abo_fac
+                              ,[registro].[INICIAL] as ini_fac
                               ,[facturacion].[CODCLI] AS codcli_fac
                               ,[facturacion].[CLIENTE] AS cliente_fac
                               ,[facturacion].[ORDEN] AS orden_fac
@@ -73,69 +90,91 @@ class Asuntos
                               ,[registro].[uid] AS clave_res
                               ,[facturacion].[uid] AS clave_fac
                           FROM [tiemposhoras].[dbo].[registro]
-                          LEFT JOIN [tiemposhoras].[dbo].[facturacion] ON ([facturacion].[padre]=[registro].[UID] AND ([registro].[T_TRANS]!=[facturacion].[T_TRANS] OR [facturacion].[NORDEN]!= [registro].[NORDEN]))
+                          INNER JOIN [tiemposhoras].[dbo].[facturacion] ON ([facturacion].[padre]=[registro].[UID])
                           WHERE [registro].[NORDEN]!=0  AND [registro].[CODCLI]!='' AND [registro].[uid]=$i
                            ;
                           ";
                 $stmt = $this->pdo->prepare($query);
                 $stmt->execute();
                 $times = $stmt->fetchAll();
-
-                $descripcionesObj = new DescripcionesAsuntos();
-                $descripciones = $descripcionesObj->fetchAllBusinessDescriptions();
-            }
-            $usersObj = new Usuarios();
-
-            $users = $usersObj->fetchAllUsers();
-
-            $totalBusiness = count($business);
-            /*
-            $patron = array ('á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U');
-
-            for($i = 0; $i<$totalBusiness; $i++){
-                var_dump('Ajustando registro de asuntos '.($i+1).' de '.$totalBusiness);
-                foreach($descripciones AS $desc){
-                    if(strtoupper(str_replace(array_keys($patron), array_values($patron), $business[$i]['buzPcsID']))==strtoupper(str_replace(array_keys($patron), array_values($patron), $desc['pcsDsc']))){
-                        $business[$i]['buzPcsID'] = $desc['pcsID'];
-                        $business[$i][2] = $desc['pcsID'];
-                        break;
+                $check=new Mysqlcheck();
+                if(is_array($times) && count($times)>0) {
+                    if ($times[0]['CLIENTE'] != $times[0]['cliente_fac']) {//si es diferente el cliente en facturacion
+                        $nameC = trim($times[0]['cliente_fac']);
+                    } else {
+                        $nameC = trim($times[0]['CLIENTE']);
                     }
-                }
-                foreach($users as $usr){
-                    if($usr['short_name'] != '' && $usr['short_name'] != null) {
-                        if ($business[$i]['buzResponsable'] == $usr['short_name']) {
-                            $business[$i]['buzResponsable'] = $usr['id'];
-                            $business[$i][5] = $usr['id'];
-                            break;
+                    if ($times[0]['ORDEN'] != $times[0]['orden_fac']) {//si es diferente la orden de trabajo en facturacion
+                        $nameOT = trim($times[0]['orden_fac']);
+                    } else {
+                        $nameOT = trim($times[0]['ORDEN']);
+                    }
+                    if ($times[0]['AREA'] != $times[0]['area_fac']) {//si es diferente el area en facturacion
+                        $nameArea = trim($times[0]['area_fac']);
+                    } else {
+                        $nameArea = trim($times[0]['AREA']);
+                    }
+                    if ($times[0]['ABOGADO'] != $times[0]['area_fac']) {//si es diferente el abogado en facturacion
+                        $nameUser = trim($times[0]['ABOGADO']);
+                        $short_name = trim($times[0]['INICIAL']);
+                    } else {
+                        $nameUser = trim($times[0]['abo_fac']);
+                        $short_name = trim($times[0]['ini_fac']);
+                    }
+                    if ($times[0]['TARIFA'] != $times[0]['tarifa_fac'] && $times[0]['tarifa_fac'] > 0) {//si es diferente el tarifa en facturacion
+                        $tarifa = doubleval($times[0]['tarifa_fac']);
+                    } else {
+                        $tarifa = doubleval($times[0]['TARIFA']);
+                    }
+                    if ($times[0]['TOTAL'] != $times[0]['total_fac'] && $times[0]['total_fac'] > 0) {//si es diferente el total en facturacion
+                        $total = doubleval($times[0]['total_fac']);
+                    } else {
+                        $total = doubleval($times[0]['TOTAL']);
+                    }
+                    //validamos que existan los registros en la base de datos
+                    $checkUser = $check->checkUser($nameUser, $short_name);
+                    $checkBusiness = $check->checkBusiness($nameC, $nameOT);
+                    $checkArea = $check->checkArea($nameArea);
+                    if (count($checkBusiness) > 0) {// si existe el asunto
+                        if (!isset($checkBusiness['error'])) {
+                            if (count($checkUser) > 0) {// si existe el usuario
+                                if (!isset($checkUser['error'])) {
+                                    if (count($checkArea) > 0) {// si existe el area
+                                        if (!isset($checkUser['error'])) {
+                                            $pgsBuzId = $checkBusiness[0]['buzID'];
+                                            $pgsCurID = $checkBusiness[0]['buzCurID'];
+                                            $pgsProID = $checkUser[0]['id'];
+                                            $minuts = doubleval($times[0]['T_TRANS']) * 60;
+                                            $minutswork = doubleval($times[0]['tiempo_fac']) * 60;
+                                            $pgsDateWork = new \DateTime($times[0]['FECHA']);
+                                            $pgsDateWork = $pgsDateWork->format('Y-m-d');
+                                            $sql = "INSERT INTO tmc_progress_tbl_pgs ( pgsBuzID, pgsProID, original_user_id, pgsMinutsWork, pgsMinuts, pgsDateWork, pgsDetails,
+                                              pgsHourRate, pgsTotal, pgsCurID, pgsStatus, pgsInvoiceble, migration) 
+                                              VALUES ($pgsBuzId,$pgsProID,$pgsProID,$minutswork,$minuts,'" . $pgsDateWork . "','" . $times[0]['DETALLE'] . "',$tarifa,$total, $pgsCurID, 4, 1, 1)";
+                                            $inserts[$times[0]['clave_res']] = $sql;
+                                            var_dump($inserts);
+                                        } else {
+                                            $times[0]['error'] = $checkBusiness['error'];
+                                            $arrayErrors[] = $times[0];
+                                        }
+                                    }
+                                } else {
+                                    $times[0]['error'] = $checkBusiness['error'];
+                                    $arrayErrors[] = $times[0];
+                                }
+                            }
+
+                        } else {
+                            $times[0]['error'] = $checkBusiness['error'];
+                            $arrayErrors[] = $times[0];
                         }
-                    }else{
-                        $business[$i]['buzResponsable'] = null;
-                        $business[$i][5] = null;
                     }
                 }
-                if($business[$i]['practice_area_id']==0 || $business[$i]['practice_area_id']==''){
-                    $business[$i]['practice_area_id'] = null;
-                }
 
-                $foreignKey = $business[$i]['buzID'];
-                $query = "SELECT REPLACE(M01TEX, CHAR(13), ' ') AS M01TEX 
-                          FROM ASULIN
-                          WHERE M01ASU = $foreignKey";
-                $stmt = $this->pdo->prepare($query);
-                $stmt->execute();
-
-                $details = $stmt->fetchAll();
-                $detailsText = '';
-                foreach($details as $det){
-                    $detailsText .= $det['M01TEX'].' ';
-                }
-                if($detailsText != '') {
-                    $business[$i][11] = $business[$i][11] . ' ' . $detailsText;
-                    $times[$i]['buzNotes'] = $business[$i]['buzNotes'].' '.$detailsText;
-                }
-            }*/
-
-            return $business;
+            }//fin for
+            echo '<pre>';
+            var_dump($arrayErrors, $inserts);die;
+            echo '<pre>';
         } catch (\PDOException $exception) {
             return "Error ejecutando la consulta: " . $exception->getMessage().' - '.$exception->getLine();
         }
