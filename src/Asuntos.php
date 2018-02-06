@@ -5,6 +5,7 @@ namespace TM;
 use TM\Mysqlcheck;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
+use Monolog\Formatter\LineFormatter;
 
 
 class Asuntos
@@ -45,15 +46,23 @@ class Asuntos
             $maxID = $stmt->fetchAll();
 
             $totalTimes = doubleval($maxID[0]['uid']);
-            // create a log channel
-            $log = new Logger('name');
-            $log->pushHandler(new StreamHandler('path/to/your.log', Logger::WARNING));
-            /*
-             * // add records to the log
-                $log->warning('Foo');
-                $log->error('Bar');
-             * */
-            // add records to the log
+            // create a log
+            $log = new Logger('Files');
+
+            $formatter = new LineFormatter(null, null, false, true);
+            $debugHandler = new StreamHandler('debug.log', Logger::DEBUG);
+            $debugHandler->setFormatter($formatter);
+
+            $errorHandler = new StreamHandler('error.log', Logger::ERROR);
+            $errorHandler->setFormatter($formatter);
+
+            // This will have both DEBUG and ERROR messages
+            $log->pushHandler($debugHandler);
+            // This will have only ERROR messages
+            $log->pushHandler($errorHandler);
+            $countInsert=0;
+            $countError=0;
+
             for($i= $totalTimes; $i> 0 ; $i--) {
                 $query = "SELECT   
                                [registro].[INICIO]
@@ -139,83 +148,54 @@ class Asuntos
                         if (!isset($checkBusiness['error'])) {
                             if (count($checkUser) > 0) {// si existe el usuario
                                 if (!isset($checkUser['error'])) {
-                                    if (count($checkArea) > 0) {// si existe el area
-                                        if (!isset($checkUser['error'])) {
-                                            $pgsBuzId = $checkBusiness[0]['buzID'];
-                                            $pgsCurID = $checkBusiness[0]['buzCurID'];
-                                            $pgsProID = $checkUser[0]['id'];
-                                            $minuts = doubleval($times[0]['T_TRANS']) * 60;
-                                            $minutswork = doubleval($times[0]['tiempo_fac']) * 60;
-                                            $pgsDateWork = new \DateTime($times[0]['FECHA']);
-                                            $pgsDateWork = $pgsDateWork->format('Y-m-d');
-                                            $sql = "INSERT INTO tmc_progress_tbl_pgs ( pgsBuzID, pgsProID, original_user_id, pgsMinutsWork, pgsMinuts, pgsDateWork, pgsDetails,
-                                              pgsHourRate, pgsTotal, pgsCurID, pgsStatus, pgsInvoiceble, migration) 
-                                              VALUES ($pgsBuzId,$pgsProID,$pgsProID,$minutswork,$minuts,'" . $pgsDateWork . "','" . $times[0]['DETALLE'] . "',$tarifa,$total, $pgsCurID, 4, 1, 1)";
-                                            $inserts[$times[0]['clave_res']] = $sql;
-                                            var_dump($inserts);
-                                        } else {
-                                            $times[0]['error'] = $checkBusiness['error'];
-                                            $arrayErrors[] = $times[0];
+                                    if (count($checkArea) > 0) {//
+                                        if (isset($checkUser['error'])) {//si no existe el area
+                                            $practice_area_id=$check->InsertArea($nameArea);//se inserta el area
+                                        }else{//si existe el area
+                                            $practice_area_id=$checkArea[0]['id_practice_area'];
                                         }
+                                        if($nameC=='VARIOS'){//si el cliente es varios el registro se almacena como no facturable
+                                            $pgsInvoiceble=2;
+                                        }else{
+                                            $pgsInvoiceble=1;
+                                        }
+                                        $pgsBuzId = $checkBusiness[0]['buzID'];
+                                        $pgsCurID = $checkBusiness[0]['buzCurID'];
+                                        $pgsProID = $checkUser[0]['id'];
+                                        $minuts = doubleval($times[0]['T_TRANS']) * 60;
+                                        $minutswork = doubleval($times[0]['tiempo_fac']) * 60;
+                                        if($total==0 && $tarifa>0){
+                                            $total=($minutswork/60)*$tarifa;
+                                        }
+                                        $pgsDateWork = new \DateTime($times[0]['FECHA']);
+                                        $pgsDateWork = $pgsDateWork->format('Y-m-d');
+                                        $sql = "INSERT INTO tmc_progress_tbl_pgs ( pgsBuzID, pgsProID, original_user_id, pgsMinutsWork, pgsMinuts, pgsDateWork, pgsDetails,
+                                          pgsHourRate, pgsTotal, pgsCurID, pgsStatus, practice_area_id,pgsInvoiceble, migration) 
+                                          VALUES ($pgsBuzId,$pgsProID,$pgsProID,$minutswork,$minuts,'" . $pgsDateWork . "','" . $times[0]['DETALLE'] . "',$tarifa,$total, $pgsCurID, 4,$practice_area_id, $pgsInvoiceble, 1);";
+                                        var_dump($sql);
+                                        $pgsID=$check->InsertTime($sql);
+                                        $countInsert++;
+                                        $log->debug("\r\n".$countInsert.'; Registro Insertado; pgsID:'. $pgsID.'; Uid: '.$times[0]['clave_res']."\r\n");
                                     }
                                 } else {
+                                    $countError++;
                                     $times[0]['error'] = $checkBusiness['error'];
-                                    $arrayErrors[] = $times[0];
+                                    $log->error("\r\n".$countError.'; No se pudo insertar el registro; '.$checkBusiness['desc'].'; UID: '.$times[0]['clave_res']."\r\n");
                                 }
                             }
 
                         } else {
+                            $countError++;
                             $times[0]['error'] = $checkBusiness['error'];
-                            $arrayErrors[] = $times[0];
+                            $log->error("\r\n".$countError.'; No se pudo insertar el registro; '.$checkBusiness['desc'].'; UID: '.$times[0]['clave_res']."\r\n");
                         }
                     }
                 }
 
             }//fin for
-            echo '<pre>';
-            var_dump($arrayErrors, $inserts);die;
-            echo '<pre>';
         } catch (\PDOException $exception) {
             return "Error ejecutando la consulta: " . $exception->getMessage().' - '.$exception->getLine();
         }
     }
 
-    /**
-     * @return array|string
-     */
-    public function fetchAllBusinessFoxExcel(){
-        try {
-            $query =  "SELECT  M01ASU AS buzID,
-                               M06NOM AS Cliente,
-                               M01NOM AS Asunto,
-                               M02DES AS TipoAsunto,
-                               M01STI2 AS ReposnsableFacturacion,
-                               M01REA AS codigo_externo_primario,
-                               CASE WHEN ASUNTOS.BAJA = 'A' THEN 'Activo' ELSE 'Inactivo' END AS Estado,
-                               CASE WHEN ASUNTOS.MODOFACTURACION = 'B' THEN 'Horas Limite de horas*'
-                                    WHEN ASUNTOS.MODOFACTURACION = 'C' THEN 'Cuotas*'
-                                    WHEN ASUNTOS.MODOFACTURACION = 'H' THEN 'Por horas'
-                                    WHEN ASUNTOS.MODOFACTURACION = 'I' THEN 'Por Hitos o Etapas'
-                                    WHEN ASUNTOS.MODOFACTURACION = 'L' THEN 'Libre'
-                                    WHEN ASUNTOS.MODOFACTURACION = 'P' THEN 'Monto fijo'
-                                    WHEN ASUNTOS.MODOFACTURACION = 'X' THEN 'Por Horas Con CAP'
-                               END AS FormaFacturacion,
-                               DEPDES AS Area,
-                               CONCAT(OBSERVACIONES2,' ',OBSERVACIONES3) AS Notas,
-                               CASE WHEN M01LEN = 'ESP' THEN 'Español' ELSE 'Ingles' END AS IdiomaAsunto,
-                               CASE WHEN ASUNTOS.MODOFACTURACION = 'P' OR ASUNTOS.MODOFACTURACION = 'X' THEN M01PRS ELSE 0 END AS Tarifa,
-                               M01MONFRA AS Moneda,
-                               CASE WHEN M01FAC = 'N' THEN 'No Facturable' ELSE 'Facturable' END AS Facturable,
-                               M01FEC AS created
-                        FROM ASUNTOS
-                        INNER JOIN CLIENTES ON (M01CL1 = M06COD)
-                        LEFT JOIN DEPARTAMENTOS ON (M01DTO = DEPCOD)
-                        LEFT JOIN TIPASU ON (M01TIP = M02COD);";
-            $stmt = $this->pdo->prepare($query);
-            $stmt->execute();
-            return $stmt->fetchAll();
-        } catch (\PDOException $exception) {
-            return "Error ejecutando la consulta: " . $exception->getMessage();
-        }
-    }
 }

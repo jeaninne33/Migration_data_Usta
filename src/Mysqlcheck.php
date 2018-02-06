@@ -20,7 +20,7 @@ class Mysqlcheck
 
     public function checkCustomers($name){
         try {
-            $sql="SELECT cmrID FROM tmc_customers_tbl_cmr WHERE cmrName LIKE '%".$name."' OR cmrComercial LIKE  '%".$name."';";
+            $sql='SELECT cmrID FROM tmc_customers_tbl_cmr WHERE cmrName LIKE "%'.$name.'" OR cmrComercial LIKE  "%'.$name.'";';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll();
@@ -74,9 +74,22 @@ class Mysqlcheck
 
     public function InsertTime($sql){
         try {
-            if(!empty($sql))
-            $stmt = $this->pdo->prepare($sql);
+            if(!empty($sql)) {
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute();
+                return $this->pdo->lastInsertId();
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+
+    public function InsertArea($name){
+        try {
+            $sql="INSERT INTO practice_areas ='".$name."';";
+                $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
+            return $this->pdo->lastInsertId();
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
         }

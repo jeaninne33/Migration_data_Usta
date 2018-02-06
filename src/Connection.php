@@ -8,12 +8,12 @@ class Connection
     /**
      * @var string
      */
-    const HOST = '190.60.251.138';
+    const HOST = '192.168.2.140';
 
     /**
      * @var string
      */
-    const PORT = '49303';
+    const PORT = '53499';
 
     /**
      * @var string
@@ -28,7 +28,7 @@ class Connection
     /**
      * @var string
      */
-    const PASSWORD = 'Colombia1';
+    const PASSWORD = 'Tr3sm1lu5';
 
     /**
      * Se conecta a la base de datos remota en PGP y retorna un objeto PDO o una excepción
