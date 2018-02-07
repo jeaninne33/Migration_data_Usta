@@ -40,30 +40,38 @@ class Asuntos
     public function fetchAllBusiness(){
 
         try {
-            $query = "SELECT TOP 1 [uid] FROM [tiemposhoras].[dbo].[registro] ORDER BY [uid] DESC";
+            //buscamos el maximo UID de los registros del año 2017
+            $query = "SELECT TOP 1 [uid] FROM [tiemposhoras].[dbo].[registro] where [registro].[FECHA]>='2017-01-01 00:00:00' ORDER BY [uid] DESC";
             $stmt = $this->pdo->prepare($query);
             $stmt->execute();
             $maxID = $stmt->fetchAll();
 
+            //buscamos el minimo UID de los registros del año 2017
+            $query2 = "SELECT TOP 1 [uid] FROM [tiemposhoras].[dbo].[registro] where [registro].[FECHA]>='2017-01-01 00:00:00' ORDER BY [uid] ASC";
+            $stmt2 = $this->pdo->prepare($query2);
+            $stmt2->execute();
+            $minID = $stmt2->fetchAll();
+
             $totalTimes = doubleval($maxID[0]['uid']);
+            $minID = doubleval($minID[0]['uid']);
             // create a log
             $log = new Logger('Files');
 
             $formatter = new LineFormatter(null, null, false, true);
-            $debugHandler = new StreamHandler('debug.log', Logger::DEBUG);
-            $debugHandler->setFormatter($formatter);
+            $infoHandler = new StreamHandler('debug.log', Logger::INFO);
+            $infoHandler->setFormatter($formatter);
 
             $errorHandler = new StreamHandler('error.log', Logger::ERROR);
             $errorHandler->setFormatter($formatter);
 
-            // This will have both DEBUG and ERROR messages
-            $log->pushHandler($debugHandler);
+            // This will have messages
+            $log->pushHandler($infoHandler);
             // This will have only ERROR messages
             $log->pushHandler($errorHandler);
             $countInsert=0;
             $countError=0;
 
-            for($i= $totalTimes; $i> 0 ; $i--) {
+            for($i= $totalTimes; $i>= $minID ; $i--) {
                 $query = "SELECT   
                                [registro].[INICIO]
                               ,[registro].[TERMINO]
@@ -100,7 +108,7 @@ class Asuntos
                               ,[facturacion].[uid] AS clave_fac
                           FROM [tiemposhoras].[dbo].[registro]
                           INNER JOIN [tiemposhoras].[dbo].[facturacion] ON ([facturacion].[padre]=[registro].[UID])
-                          WHERE [registro].[NORDEN]!=0  AND [registro].[CODCLI]!='' AND [registro].[uid]=$i
+                          WHERE [registro].[NORDEN]!=0  AND [registro].[CODCLI]!='' AND [registro].[uid]=$i AND [registro].[FECHA]>='2017-01-01 00:00:00'
                            ;
                           ";
                 $stmt = $this->pdo->prepare($query);
@@ -151,6 +159,7 @@ class Asuntos
                                     if (count($checkArea) > 0) {//
                                         if (isset($checkUser['error'])) {//si no existe el area
                                             $practice_area_id=$check->InsertArea($nameArea);//se inserta el area
+                                            $log->debug("\r\n".'; Area de practica creada con exito; id: '.  $practice_area_id.'; name: '.$nameArea."\r\n");
                                         }else{//si existe el area
                                             $practice_area_id=$checkArea[0]['id_practice_area'];
                                         }
@@ -172,10 +181,10 @@ class Asuntos
                                         $sql = "INSERT INTO tmc_progress_tbl_pgs ( pgsBuzID, pgsProID, original_user_id, pgsMinutsWork, pgsMinuts, pgsDateWork, pgsDetails,
                                           pgsHourRate, pgsTotal, pgsCurID, pgsStatus, practice_area_id,pgsInvoiceble, migration) 
                                           VALUES ($pgsBuzId,$pgsProID,$pgsProID,$minutswork,$minuts,'" . $pgsDateWork . "','" . $times[0]['DETALLE'] . "',$tarifa,$total, $pgsCurID, 4,$practice_area_id, $pgsInvoiceble, 1);";
-                                        var_dump($sql);
+                                        var_dump($i.' - '.$sql);
                                         $pgsID=$check->InsertTime($sql);
                                         $countInsert++;
-                                        $log->debug("\r\n".$countInsert.'; Registro Insertado; pgsID:'. $pgsID.'; Uid: '.$times[0]['clave_res']."\r\n");
+                                        $log->info("\r\n".$countInsert.'; Registro Insertado; pgsID:'. $pgsID.'; Uid: '.$times[0]['clave_res']."\r\n");
                                     }
                                 } else {
                                     $countError++;
