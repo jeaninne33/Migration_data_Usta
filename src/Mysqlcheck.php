@@ -46,7 +46,7 @@ class Mysqlcheck
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $area=$stmt->fetchAll();
-            if($area>0){
+            if(count($area)>0){
                 return $area;
             }else{
                 return array('error'=>'103','desc'=>"No existe el area en la BD");
@@ -62,7 +62,7 @@ class Mysqlcheck
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $user=$stmt->fetchAll();
-            if($user>0){
+            if(count($user)>0){
                 return $user;
             }else{
                 return array('error'=>'104','desc'=>"No existe el usuario en la BD");
@@ -86,8 +86,20 @@ class Mysqlcheck
 
     public function InsertArea($name){
         try {
-            $sql="INSERT INTO practice_areas ='".$name."';";
-                $stmt = $this->pdo->prepare($sql);
+            $sql="INSERT INTO practice_areas (name, _status) values ('".$name."', 1);";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $this->pdo->lastInsertId();
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+
+    public function InsertUser($name, $short_name){
+        try {
+            $sql="INSERT INTO users (username, passwd,email, user_type,nickname, fname,short_name, enabled, photo, admin_view)
+                values ('".strtolower($short_name)."@ehernandez.com.pe','','".strtolower($short_name)."@ehernandez.com.pe',3,'".$name."','".$name."','".$short_name."', 1,'',1);";
+            $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             return $this->pdo->lastInsertId();
         } catch (\PDOException $exception) {

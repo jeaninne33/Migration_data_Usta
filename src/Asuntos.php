@@ -58,7 +58,7 @@ class Asuntos
             $log = new Logger('Files');
 
             $formatter = new LineFormatter(null, null, false, true);
-            $infoHandler = new StreamHandler('debug.log', Logger::INFO);
+            $infoHandler = new StreamHandler('info.log', Logger::INFO, false);
             $infoHandler->setFormatter($formatter);
 
             $errorHandler = new StreamHandler('error.log', Logger::ERROR);
@@ -70,7 +70,6 @@ class Asuntos
             $log->pushHandler($errorHandler);
             $countInsert=0;
             $countError=0;
-
             for($i= $totalTimes; $i>= $minID ; $i--) {
                 $query = "SELECT   
                                [registro].[INICIO]
@@ -154,51 +153,58 @@ class Asuntos
                     $checkArea = $check->checkArea($nameArea);
                     if (count($checkBusiness) > 0) {// si existe el asunto
                         if (!isset($checkBusiness['error'])) {
-                            if (count($checkUser) > 0) {// si existe el usuario
-                                if (!isset($checkUser['error'])) {
-                                    if (count($checkArea) > 0) {//
-                                        if (isset($checkUser['error'])) {//si no existe el area
-                                            $practice_area_id=$check->InsertArea($nameArea);//se inserta el area
-                                            $log->debug("\r\n".'; Area de practica creada con exito; id: '.  $practice_area_id.'; name: '.$nameArea."\r\n");
-                                        }else{//si existe el area
-                                            $practice_area_id=$checkArea[0]['id_practice_area'];
-                                        }
-                                        if($nameC=='VARIOS'){//si el cliente es varios el registro se almacena como no facturable
-                                            $pgsInvoiceble=2;
-                                        }else{
-                                            $pgsInvoiceble=1;
-                                        }
-                                        $pgsBuzId = $checkBusiness[0]['buzID'];
-                                        $pgsCurID = $checkBusiness[0]['buzCurID'];
-                                        $pgsProID = $checkUser[0]['id'];
-                                        $minuts = doubleval($times[0]['T_TRANS']) * 60;
-                                        $minutswork = doubleval($times[0]['tiempo_fac']) * 60;
-                                        if($total==0 && $tarifa>0){
-                                            $total=($minutswork/60)*$tarifa;
-                                        }
-                                        $pgsDateWork = new \DateTime($times[0]['FECHA']);
-                                        $pgsDateWork = $pgsDateWork->format('Y-m-d');
-                                        $sql = "INSERT INTO tmc_progress_tbl_pgs ( pgsBuzID, pgsProID, original_user_id, pgsMinutsWork, pgsMinuts, pgsDateWork, pgsDetails,
-                                          pgsHourRate, pgsTotal, pgsCurID, pgsStatus, practice_area_id,pgsInvoiceble, migration) 
-                                          VALUES ($pgsBuzId,$pgsProID,$pgsProID,$minutswork,$minuts,'" . $pgsDateWork . "','" . $times[0]['DETALLE'] . "',$tarifa,$total, $pgsCurID, 4,$practice_area_id, $pgsInvoiceble, 1);";
-                                        var_dump($i.' - '.$sql);
-                                        $pgsID=$check->InsertTime($sql);
-                                        $countInsert++;
-                                        $log->info("\r\n".$countInsert.'; Registro Insertado; pgsID:'. $pgsID.'; Uid: '.$times[0]['clave_res']."\r\n");
-                                    }
+                            if (count($checkUser) > 0) {// se comprueba el usuario
+                                if (isset($checkUser['error'])) {// SI NO EXISTE EL USUARIO
+                                    $pgsProID=$check->InsertUser($nameUser, $short_name);//se inserta el usuario
+                                    $log->info("\r\n".'; Usuario Insertado con exito; id: '.  $pgsProID.';'.$nameUser.';'.$short_name."\r\n");
                                 } else {
-                                    $countError++;
-                                    $times[0]['error'] = $checkBusiness['error'];
-                                    $log->error("\r\n".$countError.'; No se pudo insertar el registro; '.$checkBusiness['desc'].'; UID: '.$times[0]['clave_res']."\r\n");
+                                    $pgsProID = $checkUser[0]['id'];
+                                    /*$countError++;
+                                    $times[0]['error'] = $checkUser['error'];
+                                    $log->error("\r\n".$countError.'; No se pudo insertar el registro; '.$checkUser['desc'].'; UID; '.$times[0]['clave_res'].';'.$nameC.';'.$nameOT.";".$nameUser.';'.$short_name."\r\n");
+                                        */
                                 }
-                            }
+                                if (count($checkArea) > 0) {//
+                                    if (isset($checkArea['error'])) {//si no existe el area
+                                        $practice_area_id=$check->InsertArea($nameArea);//se inserta el area
+                                        $log->info("\r\n".'; Area de practica creada con exito; id: '.  $practice_area_id.'; name: '.$nameArea."\r\n");
+                                    }else{//si existe el area
+                                        $practice_area_id=$checkArea[0]['id_practice_area'];
+                                    }
+                                    if($nameC=='VARIOS'){//si el cliente es varios el registro se almacena como no facturable
+                                        $pgsInvoiceble=2;
+                                    }else{
+                                        $pgsInvoiceble=1;
+                                    }
+                                    $pgsBuzId = $checkBusiness[0]['buzID'];
+                                    $pgsCurID = $checkBusiness[0]['buzCurID'];
 
+                                    $minuts = doubleval($times[0]['T_TRANS']) * 60;
+                                    $minutswork = doubleval($times[0]['tiempo_fac']) * 60;
+                                    if($total==0 && $tarifa>0){
+                                        $total=($minutswork/60)*$tarifa;
+                                    }
+                                    $pgsDateWork = new \DateTime($times[0]['FECHA']);
+                                    $pgsDateWork = $pgsDateWork->format('Y-m-d');
+                                    $sql = "INSERT INTO tmc_progress_tbl_pgs ( pgsBuzID, pgsProID, original_user_id, pgsMinutsWork, pgsMinuts, pgsDateWork, pgsDetails,
+                                      pgsHourRate, pgsTotal, pgsCurID, pgsStatus, practice_area_id,pgsInvoiceble, migration) 
+                                      VALUES ($pgsBuzId,$pgsProID,$pgsProID,$minutswork,$minuts,'" . $pgsDateWork . "','" . $times[0]['DETALLE'] . "',$tarifa,$total, $pgsCurID, 4,$practice_area_id, $pgsInvoiceble, 1);";
+                                    $countInsert++;
+                                    var_dump('id: '.$i.' - Count: '.$countInsert.' - '.$sql."\r\n");
+                                    $pgsID=$check->InsertTime($sql);
+
+                                    $log->info("\r\n".$countInsert.'; Registro Insertado; pgsID;'. $pgsID.'; UID; '.$times[0]['clave_res'].';'.$nameC.';'.$nameOT.";\r\n");
+                                }
+
+                            }
                         } else {
                             $countError++;
                             $times[0]['error'] = $checkBusiness['error'];
-                            $log->error("\r\n".$countError.'; No se pudo insertar el registro; '.$checkBusiness['desc'].'; UID: '.$times[0]['clave_res']."\r\n");
+                            $log->error("\r\n".$countError.'; No se pudo insertar el registro; '.$checkBusiness['desc'].'; UID; '.$times[0]['clave_res'].';'.$nameC.';'.$nameOT.";\r\n");
                         }
                     }
+                }else{
+                   // $log->error("\r\n".'; No se existe el id;'.$i."\r\n");
                 }
 
             }//fin for
