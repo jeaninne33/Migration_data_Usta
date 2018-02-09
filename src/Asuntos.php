@@ -120,11 +120,13 @@ class Asuntos
                     } else {
                         $nameC = trim($times[0]['CLIENTE']);
                     }
+                    $nameC=$check->CheckNameCustomer($nameC); // se arregla el nombre del cliente
                     if ($times[0]['ORDEN'] != $times[0]['orden_fac']) {//si es diferente la orden de trabajo en facturacion
                         $nameOT = trim($times[0]['orden_fac']);
                     } else {
                         $nameOT = trim($times[0]['ORDEN']);
                     }
+                    $nameOT=$check->CheckNameProcess($nameOT);//se arregla en nombre del asunto
                     if ($times[0]['AREA'] != $times[0]['area_fac']) {//si es diferente el area en facturacion
                         $nameArea = trim($times[0]['area_fac']);
                     } else {
