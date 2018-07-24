@@ -148,18 +148,11 @@ class Inscripciones
                     } else {// si existe el periodo
                         $institucion_id=$checkinstitucion[0]['id'];
                     }
-                    $checkCampus
-                    if ($checkinstitucion==0) {// si no existe la institucion_destino
-                        //se prepatra la data para la creacion de la institucion
-                        $sql="INSERT INTO institucion (nombre, tipo_institucion_id, migration) values ('".$institucion_destino."',7, 1);";
-                        $institucion_id=$inserts->InsertGeneral($sql);
-                        $log->info("\r\n".'Institucion Insertada con exito; id; '. $institucion_id."\r\n");
-                        
-                    } else {// si existe el periodo
-                        $institucion_id=$checkinstitucion[0]['id'];
-                    }
-
-                    $consulta="select ciudad.id from ciudad 
+                    //se valida el campus de destino
+                    $checkCampusdestino=$check->firstCampus($institucion_id);
+                    if ($checkCampusdestino==0) {// si no existe el campus destino
+                        //se prepatra la data para la creacion del campus destino
+                        $consulta="select ciudad.id from ciudad 
                         inner join departamento on departamento_id=departamento.id
                         inner join pais on pais.id=departamento.pais_id
                         where pais.nombre like '$pais_destino'
@@ -167,7 +160,14 @@ class Inscripciones
                         $ciudad_id=$inserts->consulta($consulta);
                         $ciudad_id= $ciudad_id[0]['id'];
                         $sql="INSERT INTO campus (nombre, institucion_id, ciudad_id,principal) values ('Sede Principal',$institucion_id, $ciudad_id,1);";
-                        $campus_id=$inserts->InsertGeneral($sql);
+                        $campus_destino_id=$inserts->InsertGeneral($sql);
+                        $log->info("\r\n".'Campus Insertado con exito; id; '. $campus_id."\r\n");
+                        
+                    } else {// si existe un campus
+                        $campus_destino_id=$checkCampusdestino[0]['id'];
+                    }
+
+                   
                   
                     if (!isset($checkBusiness['error'])) {
                         if (count($checkUser) > 0) {// se comprueba el usuario
