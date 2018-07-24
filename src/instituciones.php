@@ -17,7 +17,7 @@ class Asuntos
 
     public function __construct()
     {
-        $connection = new Connection();
+        $connection = new ConnectionMySQL();
         $this->pdo = $connection->connect();
 
     }

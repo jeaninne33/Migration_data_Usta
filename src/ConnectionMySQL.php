@@ -8,7 +8,7 @@ class ConnectionMySQL
     /**
      * @var string
      */
-    const HOST = '192.168.56.1';
+    const HOST = 'localhost';
 
     /**
      * @var string
@@ -18,7 +18,7 @@ class ConnectionMySQL
     /**
      * @var string
      */
-    const DB_NAME = 'tm_hyc';
+    const DB_NAME = 'interactin_usta';
 
     /**
      * @var string
@@ -28,7 +28,7 @@ class ConnectionMySQL
     /**
      * @var string
      */
-    const PASSWORD = '123';
+    const PASSWORD = '';
 
     /**
      * Se conecta a la base de datos de tiem manager

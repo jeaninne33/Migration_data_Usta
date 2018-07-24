@@ -18,71 +18,149 @@ class Mysqlcheck
         $this->pdo = $connectionInsert->connect();
     }
 
-    public function checkCustomers($name){
+    public function checkUsers($name){
         try {
-            $sql='SELECT cmrID FROM tmc_customers_tbl_cmr WHERE cmrName LIKE "'.$name.'" OR cmrComercial LIKE  "'.$name.'";';
+            $sql='SELECT id FROM users WHERE email LIKE "'.$name.'";';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
-            return $stmt->fetchAll();
-        } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
-        }
-
-    }
-    public function checkProcess($name){
-        try {
-            $sql="SELECT pcsID FROM tmc_process_tbl_pcs WHERE pcsDsc='".$name."';";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-            return $stmt->fetchAll();
-        } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
-        }
-    }
-
-    public function checkArea($name){
-        try {
-            $sql="SELECT id_practice_area FROM practice_areas WHERE name='".$name."';";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-            $area=$stmt->fetchAll();
-            if(count($area)>0){
-                return $area;
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
             }else{
-                return array('error'=>'103','desc'=>"No existe el area en la BD");
+                return 0;//array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+
+    }
+    public function checkPeriod($name){
+        try {
+            $sql="SELECT id FROM periodo WHERE nombre='".$name."';";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0; //return array('error'=>'101','desc'=>"No existe EL periodo en la BD");
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
         }
     }
 
-    public function checkUser($name,$short_name){
+    public function checkTipoModalidad($name){
         try {
-            $sql="SELECT id FROM users WHERE short_name='$short_name' OR fname LIKE '%".$name."%';";
+            $sql="SELECT id FROM tipo_modalidad WHERE nombre  LIKE '%".$name."%' and tipo=0 or tipo=2;";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;// array('error'=>'102','desc'=>"No existe la modalidad en la BD");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+    public function checkCountry($name){
+        try {
+            $sql="SELECT id FROM pais WHERE nombre='".$name."'";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;// array('error'=>'102','desc'=>"No existe la modalidad en la BD");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+
+
+    public function checkInstitution($name){
+        try {
+            $sql="SELECT id FROM institucion WHERE nombre LIKE '%".$name."%';";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $user=$stmt->fetchAll();
             if(count($user)>0){
                 return $user;
             }else{
-                return array('error'=>'104','desc'=>"No existe el usuario en la BD");
+                return array('error'=>'103','desc'=>"No existe la institucion en la BD");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+    
+    public function checkModalidad($periodo_id, $institucion_id, $modalidad_id){
+        try {
+            $sql="SELECT id FROM modalidad WHERE periodo_id=$periodo_id and institucion_id=$institucion_id and tipo_modalidad_id=$modalidad_id";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $user=$stmt->fetchAll();
+            if(count($user)>0){
+                return $user;
+            }else{
+                return array('error'=>'104','desc'=>"No existe la programacion de la modalidad en la  BD");
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
         }
     }
 
-    public function InsertTime($sql){
+      
+    public function checkfuenteFinanciacion($name){
         try {
-            if(!empty($sql)) {
-                $stmt = $this->pdo->prepare($sql);
-                $stmt->execute();
-                return $this->pdo->lastInsertId();
+            $sql="SELECT id FROM fuente_financiacion WHERE nombre like '%$name%' ";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $user=$stmt->fetchAll();
+            if(count($user)>0){
+                return $user;
+            }else{
+                return array('error'=>'105','desc'=>"No existe la fuente de financiación en la  BD");
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
         }
     }
+    public function checkCampus($name){
+        try {
+            $sql="SELECT id FROM campus WHERE nombre LIKE '%".$name."%';";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return array('error'=>'106','desc'=>"No existe EL CAMPUS en la BD");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+    public function firstCampus($institucion_id){
+        try {
+            $sql="SELECT id FROM campus WHERE institucion_id=$institucion_id  limit 1;";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+
 
     public function CheckNameCustomer($name){
 
@@ -132,100 +210,6 @@ class Mysqlcheck
         }
         return $name;
     }
-    public function CheckNameProcess($name){
-        switch ($name) {
-            case "MATRIZ DE CONTINGENCIAS ZAÑA":  $name="MATRIZ DE CONTINGENCIA ZAÑA";
-                break;
-            case "PROCESO JUDICIAL- MG NATURA PERU S.A.C.":  $name="PROCESO JUDICIAL - MG NATURA PERU S.A.C.";
-                break;
-            case "GENERALES":  $name="GENERAL";
-                break;
-            case "REGULARIZACIÓN ADMISIONES TEMPORALES  INFORME PLANEAMIENTO TRIBUTARIO EXPORTACION":  $name="REGULARIZACIÓN ADMISIONES TEMPORALES";
-                break;
-            case "COBRO DE DEUDA - D'COMIDA S.A.C.":  $name="COBRO DE DEUDA - D'COMIDA S.A.C.";
-                break;
-            case "Personal.":  $name="PERSONAL";
-                break;
-            case "REVISION ESTRUCUTRA TRIBUTARIA 2017":  $name="REVISION ESTRUCTURA TRIBUTARIA 2017";
-                break;
-            case "IMPLICANCIAS TRIBUTARIASC SERVICIOS DEL EXTERIOR":  $name="IMPLICANCIAS TRIBUTARIAS SERVICIOS DEL EXTERIOR";
-                break;
-            case "HORARIO DIFERENCIADO.":  $name="HORARIO DIFERENCIADO";
-                break;
-        }
-        return $name;
-    }
 
-
-    public function InsertArea($name){
-        try {
-            $sql="INSERT INTO practice_areas (name, _status) values ('".$name."', 1);";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-            return $this->pdo->lastInsertId();
-        } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
-        }
-    }
-    public function InsertUser($name, $short_name){
-        try {
-            $sql="INSERT INTO users (username, passwd,email, user_type,nickname, fname,short_name, enabled, photo, admin_view)
-                values ('".strtolower($short_name)."@ehernandez.com.pe','','".strtolower($short_name)."@ehernandez.com.pe',3,'".$name."','".$name."','".$short_name."', 1,'',1);";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-            return $this->pdo->lastInsertId();
-        } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
-        }
-    }
-
-    public function checkBusiness($nameC,$nameOT){
-        try {
-            $customer=$this->checkCustomers($nameC);
-            if(count($customer)>0){//si se encontro el cliente
-                $process=$this->checkProcess($nameOT);// se busca elk nombre de la orden de trabajo
-                $cmrid=$customer[0]['cmrID'];
-                $num=count($process);
-                if($num>0){
-                    if($num>1) {
-                        $i=0;
-                        $band=false;
-                       while($i<$num && !$band) {
-                           $sql = "SELECT buzID, buzCurID FROM tmc_business_rel_buz WHERE  buzCmrID=$cmrid and buzPcsID=" . $process[$i]['pcsID'] . ";";
-                           $stmt = $this->pdo->prepare($sql);
-                           $stmt->execute();
-                           $business = $stmt->fetchAll();
-                           if (count($business) > 0) {
-                               $band = true;
-                           }
-                           $i++;
-                       }
-                       if($band){
-                           return $business;
-                       }else{
-                           return array('error' => '102', 'desc' => "No existe el asunto para ese cliente en la BD");
-                       }
-                    }else{
-                        $sql = "SELECT buzID, buzCurID FROM tmc_business_rel_buz WHERE  buzCmrID=$cmrid and buzPcsID=" . $process[0]['pcsID'] . ";";
-                        $stmt = $this->pdo->prepare($sql);
-                        $stmt->execute();
-                        $business = $stmt->fetchAll();
-                        if (count($business) > 0) {
-                            return $business;
-                        }else{
-                            return array('error' => '102', 'desc' => "No existe el asunto para ese cliente en la BD");
-                        }
-                    }
-                }else{
-                    return array('error'=>'101','desc' =>"No existe el nombre del asunto en la BD");
-                }
-            }else{
-                return array('error'=>'100', 'desc'=>"No existe el cliente en la BD");
-            }
-        } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
-        }
-
-    }
 
 }
