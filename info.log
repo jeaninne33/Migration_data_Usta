@@ -1,1 +1,1379 @@
-[2018-07-24 17:01:33] Files.INFO:  ;prueba;  
+[2018-07-26 00:02:45] Files.INFO:  Institucion Insertada con exito; id; 7   
+[2018-07-26 00:02:45] Files.INFO:  Campus destino Insertado con exito; id; 12   
+[2018-07-26 00:02:45] Files.INFO:  Programación de la modalidad Insertada con exito; id; 11   
+[2018-07-26 00:02:45] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 32   
+[2018-07-26 00:02:45] Files.INFO:  usuario Insertado con exito; id; 32   
+[2018-07-26 00:02:45] Files.INFO:  Facultad Insertada con exito; id; 50   
+[2018-07-26 00:02:45] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 11   
+[2018-07-26 00:02:45] Files.INFO:  USER_CAMPUS Insertados con exito; id; 29   
+[2018-07-26 00:02:45] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 11 ; # 1;    
+[2018-07-26 00:02:45] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:45] Files.INFO:  Institucion Insertada con exito; id; 8   
+[2018-07-26 00:02:45] Files.INFO:  Campus destino Insertado con exito; id; 13   
+[2018-07-26 00:02:45] Files.INFO:  Programación de la modalidad Insertada con exito; id; 12   
+[2018-07-26 00:02:45] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 33   
+[2018-07-26 00:02:45] Files.INFO:  usuario Insertado con exito; id; 33   
+[2018-07-26 00:02:45] Files.INFO:  Facultad Insertada con exito; id; 51   
+[2018-07-26 00:02:45] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 12   
+[2018-07-26 00:02:45] Files.INFO:  USER_CAMPUS Insertados con exito; id; 30   
+[2018-07-26 00:02:45] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 12 ; # 2;    
+[2018-07-26 00:02:45] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:46] Files.INFO:  Institucion Insertada con exito; id; 9   
+[2018-07-26 00:02:46] Files.INFO:  Campus destino Insertado con exito; id; 14   
+[2018-07-26 00:02:46] Files.INFO:  Programación de la modalidad Insertada con exito; id; 13   
+[2018-07-26 00:02:46] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 34   
+[2018-07-26 00:02:46] Files.INFO:  usuario Insertado con exito; id; 34   
+[2018-07-26 00:02:46] Files.INFO:  Facultad Insertada con exito; id; 52   
+[2018-07-26 00:02:46] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 13   
+[2018-07-26 00:02:46] Files.INFO:  USER_CAMPUS Insertados con exito; id; 31   
+[2018-07-26 00:02:46] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 13 ; # 3;    
+[2018-07-26 00:02:46] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:46] Files.INFO:  Institucion Insertada con exito; id; 10   
+[2018-07-26 00:02:46] Files.INFO:  Campus destino Insertado con exito; id; 15   
+[2018-07-26 00:02:46] Files.INFO:  Programación de la modalidad Insertada con exito; id; 14   
+[2018-07-26 00:02:46] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 35   
+[2018-07-26 00:02:46] Files.INFO:  usuario Insertado con exito; id; 35   
+[2018-07-26 00:02:46] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 14   
+[2018-07-26 00:02:46] Files.INFO:  USER_CAMPUS Insertados con exito; id; 32   
+[2018-07-26 00:02:46] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 14 ; # 4;    
+[2018-07-26 00:02:46] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:46] Files.INFO:  Institucion Insertada con exito; id; 11   
+[2018-07-26 00:02:46] Files.INFO:  Campus destino Insertado con exito; id; 16   
+[2018-07-26 00:02:46] Files.INFO:  Programación de la modalidad Insertada con exito; id; 15   
+[2018-07-26 00:02:46] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 36   
+[2018-07-26 00:02:46] Files.INFO:  usuario Insertado con exito; id; 36   
+[2018-07-26 00:02:46] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 15   
+[2018-07-26 00:02:46] Files.INFO:  USER_CAMPUS Insertados con exito; id; 33   
+[2018-07-26 00:02:46] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 15 ; # 5;    
+[2018-07-26 00:02:46] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:46] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 37   
+[2018-07-26 00:02:46] Files.INFO:  usuario Insertado con exito; id; 37   
+[2018-07-26 00:02:46] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 16   
+[2018-07-26 00:02:47] Files.INFO:  USER_CAMPUS Insertados con exito; id; 34   
+[2018-07-26 00:02:47] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 16 ; # 6;    
+[2018-07-26 00:02:47] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:47] Files.INFO:  Institucion Insertada con exito; id; 12   
+[2018-07-26 00:02:47] Files.INFO:  Campus destino Insertado con exito; id; 17   
+[2018-07-26 00:02:47] Files.INFO:  Programación de la modalidad Insertada con exito; id; 16   
+[2018-07-26 00:02:47] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 38   
+[2018-07-26 00:02:47] Files.INFO:  usuario Insertado con exito; id; 38   
+[2018-07-26 00:02:47] Files.INFO:  Facultad Insertada con exito; id; 53   
+[2018-07-26 00:02:47] Files.INFO:  PROGRAMA Insertado con exito; id; 208   
+[2018-07-26 00:02:47] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 17   
+[2018-07-26 00:02:47] Files.INFO:  USER_CAMPUS Insertados con exito; id; 35   
+[2018-07-26 00:02:47] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 17 ; # 7;    
+[2018-07-26 00:02:47] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:47] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 39   
+[2018-07-26 00:02:47] Files.INFO:  usuario Insertado con exito; id; 39   
+[2018-07-26 00:02:47] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 18   
+[2018-07-26 00:02:47] Files.INFO:  USER_CAMPUS Insertados con exito; id; 36   
+[2018-07-26 00:02:47] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 18 ; # 8;    
+[2018-07-26 00:02:47] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:47] Files.INFO:  Institucion Insertada con exito; id; 13   
+[2018-07-26 00:02:47] Files.INFO:  Campus destino Insertado con exito; id; 18   
+[2018-07-26 00:02:47] Files.INFO:  Programación de la modalidad Insertada con exito; id; 17   
+[2018-07-26 00:02:47] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 40   
+[2018-07-26 00:02:47] Files.INFO:  usuario Insertado con exito; id; 40   
+[2018-07-26 00:02:47] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 19   
+[2018-07-26 00:02:47] Files.INFO:  USER_CAMPUS Insertados con exito; id; 37   
+[2018-07-26 00:02:47] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 19 ; # 9;    
+[2018-07-26 00:02:47] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:47] Files.INFO:  Institucion Insertada con exito; id; 14   
+[2018-07-26 00:02:47] Files.INFO:  Campus destino Insertado con exito; id; 19   
+[2018-07-26 00:02:47] Files.INFO:  Programación de la modalidad Insertada con exito; id; 18   
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 41   
+[2018-07-26 00:02:48] Files.INFO:  usuario Insertado con exito; id; 41   
+[2018-07-26 00:02:48] Files.INFO:  Facultad Insertada con exito; id; 54   
+[2018-07-26 00:02:48] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 20   
+[2018-07-26 00:02:48] Files.INFO:  USER_CAMPUS Insertados con exito; id; 38   
+[2018-07-26 00:02:48] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 20 ; # 10;    
+[2018-07-26 00:02:48] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:48] Files.INFO:  Institucion Insertada con exito; id; 15   
+[2018-07-26 00:02:48] Files.INFO:  Campus destino Insertado con exito; id; 20   
+[2018-07-26 00:02:48] Files.INFO:  Programación de la modalidad Insertada con exito; id; 19   
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 42   
+[2018-07-26 00:02:48] Files.INFO:  usuario Insertado con exito; id; 42   
+[2018-07-26 00:02:48] Files.INFO:  Facultad Insertada con exito; id; 55   
+[2018-07-26 00:02:48] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 21   
+[2018-07-26 00:02:48] Files.INFO:  USER_CAMPUS Insertados con exito; id; 39   
+[2018-07-26 00:02:48] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 21 ; # 11;    
+[2018-07-26 00:02:48] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:48] Files.INFO:  Programación de la modalidad Insertada con exito; id; 20   
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 43   
+[2018-07-26 00:02:48] Files.INFO:  usuario Insertado con exito; id; 43   
+[2018-07-26 00:02:48] Files.INFO:  Facultad Insertada con exito; id; 56   
+[2018-07-26 00:02:48] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 22   
+[2018-07-26 00:02:48] Files.INFO:  USER_CAMPUS Insertados con exito; id; 40   
+[2018-07-26 00:02:48] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 22 ; # 12;    
+[2018-07-26 00:02:48] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 44   
+[2018-07-26 00:02:48] Files.INFO:  usuario Insertado con exito; id; 44   
+[2018-07-26 00:02:48] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 23   
+[2018-07-26 00:02:48] Files.INFO:  USER_CAMPUS Insertados con exito; id; 41   
+[2018-07-26 00:02:48] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 23 ; # 13;    
+[2018-07-26 00:02:48] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 45   
+[2018-07-26 00:02:48] Files.INFO:  usuario Insertado con exito; id; 45   
+[2018-07-26 00:02:48] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 24   
+[2018-07-26 00:02:48] Files.INFO:  USER_CAMPUS Insertados con exito; id; 42   
+[2018-07-26 00:02:48] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 24 ; # 14;    
+[2018-07-26 00:02:48] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 46   
+[2018-07-26 00:02:48] Files.INFO:  usuario Insertado con exito; id; 46   
+[2018-07-26 00:02:48] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 25   
+[2018-07-26 00:02:48] Files.INFO:  USER_CAMPUS Insertados con exito; id; 43   
+[2018-07-26 00:02:48] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 25 ; # 15;    
+[2018-07-26 00:02:48] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 47   
+[2018-07-26 00:02:48] Files.INFO:  usuario Insertado con exito; id; 47   
+[2018-07-26 00:02:48] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 26   
+[2018-07-26 00:02:48] Files.INFO:  USER_CAMPUS Insertados con exito; id; 44   
+[2018-07-26 00:02:48] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 26 ; # 16;    
+[2018-07-26 00:02:48] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:48] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 48   
+[2018-07-26 00:02:49] Files.INFO:  usuario Insertado con exito; id; 48   
+[2018-07-26 00:02:49] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 27   
+[2018-07-26 00:02:49] Files.INFO:  USER_CAMPUS Insertados con exito; id; 45   
+[2018-07-26 00:02:49] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 27 ; # 17;    
+[2018-07-26 00:02:49] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:49] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 49   
+[2018-07-26 00:02:49] Files.INFO:  usuario Insertado con exito; id; 49   
+[2018-07-26 00:02:49] Files.INFO:  Facultad Insertada con exito; id; 57   
+[2018-07-26 00:02:49] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 28   
+[2018-07-26 00:02:49] Files.INFO:  USER_CAMPUS Insertados con exito; id; 46   
+[2018-07-26 00:02:49] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 28 ; # 18;    
+[2018-07-26 00:02:49] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:49] Files.INFO:  Institucion Insertada con exito; id; 16   
+[2018-07-26 00:02:49] Files.INFO:  Campus destino Insertado con exito; id; 21   
+[2018-07-26 00:02:49] Files.INFO:  Programación de la modalidad Insertada con exito; id; 21   
+[2018-07-26 00:02:49] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 50   
+[2018-07-26 00:02:49] Files.INFO:  usuario Insertado con exito; id; 50   
+[2018-07-26 00:02:49] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 29   
+[2018-07-26 00:02:49] Files.INFO:  USER_CAMPUS Insertados con exito; id; 47   
+[2018-07-26 00:02:49] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 29 ; # 19;    
+[2018-07-26 00:02:49] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:49] Files.INFO:  Institucion Insertada con exito; id; 17   
+[2018-07-26 00:02:49] Files.INFO:  Campus destino Insertado con exito; id; 22   
+[2018-07-26 00:02:49] Files.INFO:  Programación de la modalidad Insertada con exito; id; 22   
+[2018-07-26 00:02:49] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 51   
+[2018-07-26 00:02:49] Files.INFO:  usuario Insertado con exito; id; 51   
+[2018-07-26 00:02:49] Files.INFO:  Facultad Insertada con exito; id; 58   
+[2018-07-26 00:02:49] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 30   
+[2018-07-26 00:02:49] Files.INFO:  USER_CAMPUS Insertados con exito; id; 48   
+[2018-07-26 00:02:49] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 30 ; # 20;    
+[2018-07-26 00:02:49] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:49] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 52   
+[2018-07-26 00:02:49] Files.INFO:  usuario Insertado con exito; id; 52   
+[2018-07-26 00:02:49] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 31   
+[2018-07-26 00:02:49] Files.INFO:  USER_CAMPUS Insertados con exito; id; 49   
+[2018-07-26 00:02:49] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 31 ; # 21;    
+[2018-07-26 00:02:49] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:49] Files.INFO:  Institucion Insertada con exito; id; 18   
+[2018-07-26 00:02:49] Files.INFO:  Campus destino Insertado con exito; id; 23   
+[2018-07-26 00:02:49] Files.INFO:  Programación de la modalidad Insertada con exito; id; 23   
+[2018-07-26 00:02:49] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 53   
+[2018-07-26 00:02:49] Files.INFO:  usuario Insertado con exito; id; 53   
+[2018-07-26 00:02:49] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 32   
+[2018-07-26 00:02:49] Files.INFO:  USER_CAMPUS Insertados con exito; id; 50   
+[2018-07-26 00:02:49] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 32 ; # 22;    
+[2018-07-26 00:02:49] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:49] Files.INFO:  Institucion Insertada con exito; id; 19   
+[2018-07-26 00:02:49] Files.INFO:  Campus destino Insertado con exito; id; 24   
+[2018-07-26 00:02:49] Files.INFO:  Programación de la modalidad Insertada con exito; id; 24   
+[2018-07-26 00:02:49] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 54   
+[2018-07-26 00:02:49] Files.INFO:  usuario Insertado con exito; id; 54   
+[2018-07-26 00:02:49] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 33   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 51   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 33 ; # 23;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  Institucion Insertada con exito; id; 20   
+[2018-07-26 00:02:50] Files.INFO:  Campus destino Insertado con exito; id; 25   
+[2018-07-26 00:02:50] Files.INFO:  Programación de la modalidad Insertada con exito; id; 25   
+[2018-07-26 00:02:50] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 55   
+[2018-07-26 00:02:50] Files.INFO:  usuario Insertado con exito; id; 55   
+[2018-07-26 00:02:50] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 34   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 52   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 34 ; # 24;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 56   
+[2018-07-26 00:02:50] Files.INFO:  usuario Insertado con exito; id; 56   
+[2018-07-26 00:02:50] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 35   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 53   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 35 ; # 25;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  Periodo Insertado con exito; id; 45   
+[2018-07-26 00:02:50] Files.INFO:  Institucion Insertada con exito; id; 21   
+[2018-07-26 00:02:50] Files.INFO:  Campus destino Insertado con exito; id; 26   
+[2018-07-26 00:02:50] Files.INFO:  Programación de la modalidad Insertada con exito; id; 26   
+[2018-07-26 00:02:50] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 57   
+[2018-07-26 00:02:50] Files.INFO:  usuario Insertado con exito; id; 57   
+[2018-07-26 00:02:50] Files.INFO:  Facultad Insertada con exito; id; 59   
+[2018-07-26 00:02:50] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 36   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 54   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 36 ; # 26;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  Institucion Insertada con exito; id; 22   
+[2018-07-26 00:02:50] Files.INFO:  Campus destino Insertado con exito; id; 27   
+[2018-07-26 00:02:50] Files.INFO:  Programación de la modalidad Insertada con exito; id; 27   
+[2018-07-26 00:02:50] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 58   
+[2018-07-26 00:02:50] Files.INFO:  usuario Insertado con exito; id; 58   
+[2018-07-26 00:02:50] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 37   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 55   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 37 ; # 27;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 59   
+[2018-07-26 00:02:50] Files.INFO:  usuario Insertado con exito; id; 59   
+[2018-07-26 00:02:50] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 38   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 56   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 38 ; # 28;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 60   
+[2018-07-26 00:02:50] Files.INFO:  usuario Insertado con exito; id; 60   
+[2018-07-26 00:02:50] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 39   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 57   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 39 ; # 29;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  Institucion Insertada con exito; id; 23   
+[2018-07-26 00:02:50] Files.INFO:  Campus destino Insertado con exito; id; 28   
+[2018-07-26 00:02:50] Files.INFO:  Programación de la modalidad Insertada con exito; id; 28   
+[2018-07-26 00:02:50] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 61   
+[2018-07-26 00:02:50] Files.INFO:  usuario Insertado con exito; id; 61   
+[2018-07-26 00:02:50] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 40   
+[2018-07-26 00:02:50] Files.INFO:  USER_CAMPUS Insertados con exito; id; 58   
+[2018-07-26 00:02:50] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 40 ; # 30;    
+[2018-07-26 00:02:50] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:50] Files.INFO:  Institucion Insertada con exito; id; 24   
+[2018-07-26 00:02:51] Files.INFO:  Campus destino Insertado con exito; id; 29   
+[2018-07-26 00:02:51] Files.INFO:  Programación de la modalidad Insertada con exito; id; 29   
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 62   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 62   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 41   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 59   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 41 ; # 31;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:51] Files.INFO:  Programación de la modalidad Insertada con exito; id; 30   
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 63   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 63   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 42   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 60   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 42 ; # 32;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:51] Files.INFO:  Programación de la modalidad Insertada con exito; id; 31   
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 64   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 64   
+[2018-07-26 00:02:51] Files.INFO:  Facultad Insertada con exito; id; 60   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 43   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 61   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 43 ; # 33;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 65   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 65   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 44   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 62   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 44 ; # 34;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 66   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 66   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 45   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 63   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 45 ; # 35;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 67   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 67   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 46   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 64   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 46 ; # 36;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:51] Files.INFO:  Institucion Insertada con exito; id; 25   
+[2018-07-26 00:02:51] Files.INFO:  Campus destino Insertado con exito; id; 30   
+[2018-07-26 00:02:51] Files.INFO:  Programación de la modalidad Insertada con exito; id; 32   
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 68   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 68   
+[2018-07-26 00:02:51] Files.INFO:  Facultad Insertada con exito; id; 61   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 47   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 65   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 47 ; # 37;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:51] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 69   
+[2018-07-26 00:02:51] Files.INFO:  usuario Insertado con exito; id; 69   
+[2018-07-26 00:02:51] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 48   
+[2018-07-26 00:02:51] Files.INFO:  USER_CAMPUS Insertados con exito; id; 66   
+[2018-07-26 00:02:51] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 48 ; # 38;    
+[2018-07-26 00:02:51] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:52] Files.INFO:  Institucion Insertada con exito; id; 26   
+[2018-07-26 00:02:52] Files.INFO:  Campus destino Insertado con exito; id; 31   
+[2018-07-26 00:02:52] Files.INFO:  Programación de la modalidad Insertada con exito; id; 33   
+[2018-07-26 00:02:52] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 70   
+[2018-07-26 00:02:52] Files.INFO:  usuario Insertado con exito; id; 70   
+[2018-07-26 00:02:52] Files.INFO:  Facultad Insertada con exito; id; 62   
+[2018-07-26 00:02:52] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 49   
+[2018-07-26 00:02:52] Files.INFO:  USER_CAMPUS Insertados con exito; id; 67   
+[2018-07-26 00:02:52] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 49 ; # 39;    
+[2018-07-26 00:02:52] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:52] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 71   
+[2018-07-26 00:02:52] Files.INFO:  usuario Insertado con exito; id; 71   
+[2018-07-26 00:02:52] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 50   
+[2018-07-26 00:02:52] Files.INFO:  USER_CAMPUS Insertados con exito; id; 68   
+[2018-07-26 00:02:52] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 50 ; # 40;    
+[2018-07-26 00:02:52] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:52] Files.INFO:  Institucion Insertada con exito; id; 27   
+[2018-07-26 00:02:52] Files.INFO:  Campus destino Insertado con exito; id; 32   
+[2018-07-26 00:02:52] Files.INFO:  Programación de la modalidad Insertada con exito; id; 34   
+[2018-07-26 00:02:52] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 72   
+[2018-07-26 00:02:52] Files.INFO:  usuario Insertado con exito; id; 72   
+[2018-07-26 00:02:52] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 51   
+[2018-07-26 00:02:52] Files.INFO:  USER_CAMPUS Insertados con exito; id; 69   
+[2018-07-26 00:02:52] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 51 ; # 41;    
+[2018-07-26 00:02:52] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:52] Files.INFO:  Institucion Insertada con exito; id; 28   
+[2018-07-26 00:02:52] Files.INFO:  Campus destino Insertado con exito; id; 33   
+[2018-07-26 00:02:52] Files.INFO:  Programación de la modalidad Insertada con exito; id; 35   
+[2018-07-26 00:02:52] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 73   
+[2018-07-26 00:02:52] Files.INFO:  usuario Insertado con exito; id; 73   
+[2018-07-26 00:02:52] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 52   
+[2018-07-26 00:02:52] Files.INFO:  USER_CAMPUS Insertados con exito; id; 70   
+[2018-07-26 00:02:52] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 52 ; # 42;    
+[2018-07-26 00:02:52] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:52] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 74   
+[2018-07-26 00:02:52] Files.INFO:  usuario Insertado con exito; id; 74   
+[2018-07-26 00:02:52] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 53   
+[2018-07-26 00:02:52] Files.INFO:  USER_CAMPUS Insertados con exito; id; 71   
+[2018-07-26 00:02:52] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 53 ; # 43;    
+[2018-07-26 00:02:52] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:52] Files.INFO:  Institucion Insertada con exito; id; 29   
+[2018-07-26 00:02:52] Files.INFO:  Campus destino Insertado con exito; id; 34   
+[2018-07-26 00:02:52] Files.INFO:  Programación de la modalidad Insertada con exito; id; 36   
+[2018-07-26 00:02:52] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 75   
+[2018-07-26 00:02:52] Files.INFO:  usuario Insertado con exito; id; 75   
+[2018-07-26 00:02:52] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 54   
+[2018-07-26 00:02:52] Files.INFO:  USER_CAMPUS Insertados con exito; id; 72   
+[2018-07-26 00:02:52] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 54 ; # 44;    
+[2018-07-26 00:02:52] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:52] Files.INFO:  Institucion Insertada con exito; id; 30   
+[2018-07-26 00:02:52] Files.INFO:  Campus destino Insertado con exito; id; 35   
+[2018-07-26 00:02:52] Files.INFO:  Programación de la modalidad Insertada con exito; id; 37   
+[2018-07-26 00:02:52] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 76   
+[2018-07-26 00:02:52] Files.INFO:  usuario Insertado con exito; id; 76   
+[2018-07-26 00:02:52] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 55   
+[2018-07-26 00:02:52] Files.INFO:  USER_CAMPUS Insertados con exito; id; 73   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 55 ; # 45;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  Programación de la modalidad Insertada con exito; id; 38   
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 77   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 77   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 56   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 74   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 56 ; # 46;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 78   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 78   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 57   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 75   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 57 ; # 47;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  Programación de la modalidad Insertada con exito; id; 39   
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 79   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 79   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 58   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 76   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 58 ; # 48;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  Programación de la modalidad Insertada con exito; id; 40   
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 80   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 80   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 59   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 77   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 59 ; # 49;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 81   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 81   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 60   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 78   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 60 ; # 50;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 82   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 82   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 61   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 79   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 61 ; # 51;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  Institucion Insertada con exito; id; 31   
+[2018-07-26 00:02:53] Files.INFO:  Campus destino Insertado con exito; id; 36   
+[2018-07-26 00:02:53] Files.INFO:  Programación de la modalidad Insertada con exito; id; 41   
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 83   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 83   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 62   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 80   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 62 ; # 52;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  Institucion Insertada con exito; id; 32   
+[2018-07-26 00:02:53] Files.INFO:  Campus destino Insertado con exito; id; 37   
+[2018-07-26 00:02:53] Files.INFO:  Programación de la modalidad Insertada con exito; id; 42   
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 84   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 84   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 63   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 81   
+[2018-07-26 00:02:53] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 63 ; # 53;    
+[2018-07-26 00:02:53] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:53] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 85   
+[2018-07-26 00:02:53] Files.INFO:  usuario Insertado con exito; id; 85   
+[2018-07-26 00:02:53] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 64   
+[2018-07-26 00:02:53] Files.INFO:  USER_CAMPUS Insertados con exito; id; 82   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 64 ; # 54;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  Institucion Insertada con exito; id; 33   
+[2018-07-26 00:02:54] Files.INFO:  Campus destino Insertado con exito; id; 38   
+[2018-07-26 00:02:54] Files.INFO:  Programación de la modalidad Insertada con exito; id; 43   
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 86   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 86   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 65   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 83   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 65 ; # 55;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  Institucion Insertada con exito; id; 34   
+[2018-07-26 00:02:54] Files.INFO:  Campus destino Insertado con exito; id; 39   
+[2018-07-26 00:02:54] Files.INFO:  Programación de la modalidad Insertada con exito; id; 44   
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 87   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 87   
+[2018-07-26 00:02:54] Files.INFO:  Facultad Insertada con exito; id; 63   
+[2018-07-26 00:02:54] Files.INFO:  PROGRAMA Insertado con exito; id; 209   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 66   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 84   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 66 ; # 56;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  Programación de la modalidad Insertada con exito; id; 45   
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 88   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 88   
+[2018-07-26 00:02:54] Files.INFO:  Facultad Insertada con exito; id; 64   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 67   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 85   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 67 ; # 57;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 89   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 89   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 68   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 86   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 68 ; # 58;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 90   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 90   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 69   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 87   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 69 ; # 59;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 91   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 91   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 70   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 88   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 70 ; # 60;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 92   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 92   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 71   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 89   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 71 ; # 61;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 93   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 93   
+[2018-07-26 00:02:54] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 72   
+[2018-07-26 00:02:54] Files.INFO:  USER_CAMPUS Insertados con exito; id; 90   
+[2018-07-26 00:02:54] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 72 ; # 62;    
+[2018-07-26 00:02:54] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:54] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 94   
+[2018-07-26 00:02:54] Files.INFO:  usuario Insertado con exito; id; 94   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 73   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 91   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 73 ; # 63;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 95   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 95   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 74   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 92   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 74 ; # 64;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 96   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 96   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 75   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 93   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 75 ; # 65;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 97   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 97   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 76   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 94   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 76 ; # 66;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 98   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 98   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 77   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 95   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 77 ; # 67;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 99   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 99   
+[2018-07-26 00:02:55] Files.INFO:  Facultad Insertada con exito; id; 65   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 78   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 96   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 78 ; # 68;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 100   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 100   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 79   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 97   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 79 ; # 69;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 101   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 101   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 80   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 98   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 80 ; # 70;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 102   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 102   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 81   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 99   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 81 ; # 71;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 103   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 103   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 82   
+[2018-07-26 00:02:55] Files.INFO:  USER_CAMPUS Insertados con exito; id; 100   
+[2018-07-26 00:02:55] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 82 ; # 72;    
+[2018-07-26 00:02:55] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:55] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 104   
+[2018-07-26 00:02:55] Files.INFO:  usuario Insertado con exito; id; 104   
+[2018-07-26 00:02:55] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 83   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 101   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 83 ; # 73;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 105   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 105   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 84   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 102   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 84 ; # 74;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 106   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 106   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 85   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 103   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 85 ; # 75;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 107   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 107   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 86   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 104   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 86 ; # 76;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  Institucion Insertada con exito; id; 35   
+[2018-07-26 00:02:56] Files.INFO:  Campus destino Insertado con exito; id; 40   
+[2018-07-26 00:02:56] Files.INFO:  Programación de la modalidad Insertada con exito; id; 46   
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 108   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 108   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 87   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 105   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 87 ; # 77;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  Institucion Insertada con exito; id; 36   
+[2018-07-26 00:02:56] Files.INFO:  Campus destino Insertado con exito; id; 41   
+[2018-07-26 00:02:56] Files.INFO:  Programación de la modalidad Insertada con exito; id; 47   
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 109   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 109   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 88   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 106   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 88 ; # 78;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 110   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 110   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 89   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 107   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 89 ; # 79;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 111   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 111   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 90   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 108   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 90 ; # 80;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 112   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 112   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 91   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 109   
+[2018-07-26 00:02:56] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 91 ; # 81;    
+[2018-07-26 00:02:56] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:56] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 113   
+[2018-07-26 00:02:56] Files.INFO:  usuario Insertado con exito; id; 113   
+[2018-07-26 00:02:56] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 92   
+[2018-07-26 00:02:56] Files.INFO:  USER_CAMPUS Insertados con exito; id; 110   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 92 ; # 82;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  Institucion Insertada con exito; id; 37   
+[2018-07-26 00:02:57] Files.INFO:  Campus destino Insertado con exito; id; 42   
+[2018-07-26 00:02:57] Files.INFO:  Programación de la modalidad Insertada con exito; id; 48   
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 114   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 114   
+[2018-07-26 00:02:57] Files.INFO:  Facultad Insertada con exito; id; 66   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 93   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 111   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 93 ; # 83;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  Periodo Insertado con exito; id; 46   
+[2018-07-26 00:02:57] Files.INFO:  Institucion Insertada con exito; id; 38   
+[2018-07-26 00:02:57] Files.INFO:  Campus destino Insertado con exito; id; 43   
+[2018-07-26 00:02:57] Files.INFO:  Programación de la modalidad Insertada con exito; id; 49   
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 115   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 115   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 94   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 112   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 94 ; # 84;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 116   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 116   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 95   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 113   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 95 ; # 85;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 117   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 117   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 96   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 114   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 96 ; # 86;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 118   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 118   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 97   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 115   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 97 ; # 87;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 119   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 119   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 98   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 116   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 98 ; # 88;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 120   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 120   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 99   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 117   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 99 ; # 89;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  Programación de la modalidad Insertada con exito; id; 50   
+[2018-07-26 00:02:57] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 121   
+[2018-07-26 00:02:57] Files.INFO:  usuario Insertado con exito; id; 121   
+[2018-07-26 00:02:57] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 100   
+[2018-07-26 00:02:57] Files.INFO:  USER_CAMPUS Insertados con exito; id; 118   
+[2018-07-26 00:02:57] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 100 ; # 90;    
+[2018-07-26 00:02:57] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:57] Files.INFO:  Programación de la modalidad Insertada con exito; id; 51   
+[2018-07-26 00:02:58] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 122   
+[2018-07-26 00:02:58] Files.INFO:  usuario Insertado con exito; id; 122   
+[2018-07-26 00:02:58] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 101   
+[2018-07-26 00:02:58] Files.INFO:  USER_CAMPUS Insertados con exito; id; 119   
+[2018-07-26 00:02:58] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 101 ; # 91;    
+[2018-07-26 00:02:58] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:58] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 123   
+[2018-07-26 00:02:58] Files.INFO:  usuario Insertado con exito; id; 123   
+[2018-07-26 00:02:58] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 102   
+[2018-07-26 00:02:58] Files.INFO:  USER_CAMPUS Insertados con exito; id; 120   
+[2018-07-26 00:02:58] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 102 ; # 92;    
+[2018-07-26 00:02:58] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:58] Files.INFO:  Institucion Insertada con exito; id; 39   
+[2018-07-26 00:02:58] Files.INFO:  Campus destino Insertado con exito; id; 44   
+[2018-07-26 00:02:58] Files.INFO:  Programación de la modalidad Insertada con exito; id; 52   
+[2018-07-26 00:02:58] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 124   
+[2018-07-26 00:02:58] Files.INFO:  usuario Insertado con exito; id; 124   
+[2018-07-26 00:02:58] Files.INFO:  Facultad Insertada con exito; id; 67   
+[2018-07-26 00:02:58] Files.INFO:  PROGRAMA Insertado con exito; id; 210   
+[2018-07-26 00:02:58] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 103   
+[2018-07-26 00:02:58] Files.INFO:  USER_CAMPUS Insertados con exito; id; 121   
+[2018-07-26 00:02:58] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 103 ; # 93;    
+[2018-07-26 00:02:58] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:58] Files.INFO:  Institucion Insertada con exito; id; 40   
+[2018-07-26 00:02:58] Files.INFO:  Campus destino Insertado con exito; id; 45   
+[2018-07-26 00:02:58] Files.INFO:  Programación de la modalidad Insertada con exito; id; 53   
+[2018-07-26 00:02:58] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 125   
+[2018-07-26 00:02:58] Files.INFO:  usuario Insertado con exito; id; 125   
+[2018-07-26 00:02:58] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 104   
+[2018-07-26 00:02:58] Files.INFO:  USER_CAMPUS Insertados con exito; id; 122   
+[2018-07-26 00:02:58] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 104 ; # 94;    
+[2018-07-26 00:02:58] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:58] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 126   
+[2018-07-26 00:02:58] Files.INFO:  usuario Insertado con exito; id; 126   
+[2018-07-26 00:02:58] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 105   
+[2018-07-26 00:02:58] Files.INFO:  USER_CAMPUS Insertados con exito; id; 123   
+[2018-07-26 00:02:58] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 105 ; # 95;    
+[2018-07-26 00:02:58] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:58] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 127   
+[2018-07-26 00:02:58] Files.INFO:  usuario Insertado con exito; id; 127   
+[2018-07-26 00:02:58] Files.INFO:  Facultad Insertada con exito; id; 68   
+[2018-07-26 00:02:58] Files.INFO:  PROGRAMA Insertado con exito; id; 211   
+[2018-07-26 00:02:58] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 106   
+[2018-07-26 00:02:58] Files.INFO:  USER_CAMPUS Insertados con exito; id; 124   
+[2018-07-26 00:02:58] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 106 ; # 96;    
+[2018-07-26 00:02:58] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:58] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 128   
+[2018-07-26 00:02:58] Files.INFO:  usuario Insertado con exito; id; 128   
+[2018-07-26 00:02:58] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 107   
+[2018-07-26 00:02:58] Files.INFO:  USER_CAMPUS Insertados con exito; id; 125   
+[2018-07-26 00:02:58] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 107 ; # 97;    
+[2018-07-26 00:02:58] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:59] Files.INFO:  Institucion Insertada con exito; id; 41   
+[2018-07-26 00:02:59] Files.INFO:  Campus destino Insertado con exito; id; 46   
+[2018-07-26 00:02:59] Files.INFO:  Programación de la modalidad Insertada con exito; id; 54   
+[2018-07-26 00:02:59] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 129   
+[2018-07-26 00:02:59] Files.INFO:  usuario Insertado con exito; id; 129   
+[2018-07-26 00:02:59] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 108   
+[2018-07-26 00:02:59] Files.INFO:  USER_CAMPUS Insertados con exito; id; 126   
+[2018-07-26 00:02:59] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 108 ; # 98;    
+[2018-07-26 00:02:59] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:59] Files.INFO:  Institucion Insertada con exito; id; 42   
+[2018-07-26 00:02:59] Files.INFO:  Campus destino Insertado con exito; id; 47   
+[2018-07-26 00:02:59] Files.INFO:  Programación de la modalidad Insertada con exito; id; 55   
+[2018-07-26 00:02:59] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 130   
+[2018-07-26 00:02:59] Files.INFO:  usuario Insertado con exito; id; 130   
+[2018-07-26 00:02:59] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 109   
+[2018-07-26 00:02:59] Files.INFO:  USER_CAMPUS Insertados con exito; id; 127   
+[2018-07-26 00:02:59] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 109 ; # 99;    
+[2018-07-26 00:02:59] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:59] Files.INFO:  Programación de la modalidad Insertada con exito; id; 56   
+[2018-07-26 00:02:59] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 131   
+[2018-07-26 00:02:59] Files.INFO:  usuario Insertado con exito; id; 131   
+[2018-07-26 00:02:59] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 110   
+[2018-07-26 00:02:59] Files.INFO:  USER_CAMPUS Insertados con exito; id; 128   
+[2018-07-26 00:02:59] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 110 ; # 100;    
+[2018-07-26 00:02:59] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:59] Files.INFO:  Institucion Insertada con exito; id; 43   
+[2018-07-26 00:02:59] Files.INFO:  Campus destino Insertado con exito; id; 48   
+[2018-07-26 00:02:59] Files.INFO:  Programación de la modalidad Insertada con exito; id; 57   
+[2018-07-26 00:02:59] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 132   
+[2018-07-26 00:02:59] Files.INFO:  usuario Insertado con exito; id; 132   
+[2018-07-26 00:02:59] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 111   
+[2018-07-26 00:02:59] Files.INFO:  USER_CAMPUS Insertados con exito; id; 129   
+[2018-07-26 00:02:59] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 111 ; # 101;    
+[2018-07-26 00:02:59] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:59] Files.INFO:  Institucion Insertada con exito; id; 44   
+[2018-07-26 00:02:59] Files.INFO:  Campus destino Insertado con exito; id; 49   
+[2018-07-26 00:02:59] Files.INFO:  Programación de la modalidad Insertada con exito; id; 58   
+[2018-07-26 00:02:59] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 133   
+[2018-07-26 00:02:59] Files.INFO:  usuario Insertado con exito; id; 133   
+[2018-07-26 00:02:59] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 112   
+[2018-07-26 00:02:59] Files.INFO:  USER_CAMPUS Insertados con exito; id; 130   
+[2018-07-26 00:02:59] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 112 ; # 102;    
+[2018-07-26 00:02:59] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:02:59] Files.INFO:  Institucion Insertada con exito; id; 45   
+[2018-07-26 00:02:59] Files.INFO:  Campus destino Insertado con exito; id; 50   
+[2018-07-26 00:02:59] Files.INFO:  Programación de la modalidad Insertada con exito; id; 59   
+[2018-07-26 00:02:59] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 134   
+[2018-07-26 00:02:59] Files.INFO:  usuario Insertado con exito; id; 134   
+[2018-07-26 00:03:00] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 113   
+[2018-07-26 00:03:00] Files.INFO:  USER_CAMPUS Insertados con exito; id; 131   
+[2018-07-26 00:03:00] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 113 ; # 103;    
+[2018-07-26 00:03:00] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:00] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 135   
+[2018-07-26 00:03:00] Files.INFO:  usuario Insertado con exito; id; 135   
+[2018-07-26 00:03:00] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 114   
+[2018-07-26 00:03:00] Files.INFO:  USER_CAMPUS Insertados con exito; id; 132   
+[2018-07-26 00:03:00] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 114 ; # 104;    
+[2018-07-26 00:03:00] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:00] Files.INFO:  Institucion Insertada con exito; id; 46   
+[2018-07-26 00:03:00] Files.INFO:  Campus destino Insertado con exito; id; 51   
+[2018-07-26 00:03:00] Files.INFO:  Programación de la modalidad Insertada con exito; id; 60   
+[2018-07-26 00:03:00] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 136   
+[2018-07-26 00:03:00] Files.INFO:  usuario Insertado con exito; id; 136   
+[2018-07-26 00:03:00] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 115   
+[2018-07-26 00:03:00] Files.INFO:  USER_CAMPUS Insertados con exito; id; 133   
+[2018-07-26 00:03:00] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 115 ; # 105;    
+[2018-07-26 00:03:00] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:00] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 137   
+[2018-07-26 00:03:00] Files.INFO:  usuario Insertado con exito; id; 137   
+[2018-07-26 00:03:00] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 116   
+[2018-07-26 00:03:00] Files.INFO:  USER_CAMPUS Insertados con exito; id; 134   
+[2018-07-26 00:03:00] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 116 ; # 106;    
+[2018-07-26 00:03:00] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:00] Files.INFO:  Programación de la modalidad Insertada con exito; id; 61   
+[2018-07-26 00:03:00] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 117 ; # 107;    
+[2018-07-26 00:03:00] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:00] Files.INFO:  Institucion Insertada con exito; id; 47   
+[2018-07-26 00:03:00] Files.INFO:  Campus destino Insertado con exito; id; 52   
+[2018-07-26 00:03:00] Files.INFO:  Programación de la modalidad Insertada con exito; id; 62   
+[2018-07-26 00:03:00] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 138   
+[2018-07-26 00:03:00] Files.INFO:  usuario Insertado con exito; id; 138   
+[2018-07-26 00:03:00] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 117   
+[2018-07-26 00:03:00] Files.INFO:  USER_CAMPUS Insertados con exito; id; 135   
+[2018-07-26 00:03:00] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 118 ; # 108;    
+[2018-07-26 00:03:00] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:00] Files.INFO:  Programación de la modalidad Insertada con exito; id; 63   
+[2018-07-26 00:03:00] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 139   
+[2018-07-26 00:03:00] Files.INFO:  usuario Insertado con exito; id; 139   
+[2018-07-26 00:03:00] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 118   
+[2018-07-26 00:03:00] Files.INFO:  USER_CAMPUS Insertados con exito; id; 136   
+[2018-07-26 00:03:00] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 119 ; # 109;    
+[2018-07-26 00:03:00] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:00] Files.INFO:  Programación de la modalidad Insertada con exito; id; 64   
+[2018-07-26 00:03:00] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 140   
+[2018-07-26 00:03:00] Files.INFO:  usuario Insertado con exito; id; 140   
+[2018-07-26 00:03:00] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 119   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 137   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 120 ; # 110;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  Programación de la modalidad Insertada con exito; id; 65   
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 141   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 141   
+[2018-07-26 00:03:01] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 120   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 138   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 121 ; # 111;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 142   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 142   
+[2018-07-26 00:03:01] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 121   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 139   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 122 ; # 112;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  Institucion Insertada con exito; id; 48   
+[2018-07-26 00:03:01] Files.INFO:  Campus destino Insertado con exito; id; 53   
+[2018-07-26 00:03:01] Files.INFO:  Programación de la modalidad Insertada con exito; id; 66   
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 143   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 143   
+[2018-07-26 00:03:01] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 122   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 140   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 123 ; # 113;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  Institucion Insertada con exito; id; 49   
+[2018-07-26 00:03:01] Files.INFO:  Campus destino Insertado con exito; id; 54   
+[2018-07-26 00:03:01] Files.INFO:  Programación de la modalidad Insertada con exito; id; 67   
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 144   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 144   
+[2018-07-26 00:03:01] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 123   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 141   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 124 ; # 114;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 145   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 145   
+[2018-07-26 00:03:01] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 124   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 142   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 125 ; # 115;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  Institucion Insertada con exito; id; 50   
+[2018-07-26 00:03:01] Files.INFO:  Campus destino Insertado con exito; id; 55   
+[2018-07-26 00:03:01] Files.INFO:  Programación de la modalidad Insertada con exito; id; 68   
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 146   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 146   
+[2018-07-26 00:03:01] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 125   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 143   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 126 ; # 116;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 147   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 147   
+[2018-07-26 00:03:01] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 126   
+[2018-07-26 00:03:01] Files.INFO:  USER_CAMPUS Insertados con exito; id; 144   
+[2018-07-26 00:03:01] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 127 ; # 117;    
+[2018-07-26 00:03:01] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:01] Files.INFO:  Institucion Insertada con exito; id; 51   
+[2018-07-26 00:03:01] Files.INFO:  Campus destino Insertado con exito; id; 56   
+[2018-07-26 00:03:01] Files.INFO:  Programación de la modalidad Insertada con exito; id; 69   
+[2018-07-26 00:03:01] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 148   
+[2018-07-26 00:03:01] Files.INFO:  usuario Insertado con exito; id; 148   
+[2018-07-26 00:03:02] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 127   
+[2018-07-26 00:03:02] Files.INFO:  USER_CAMPUS Insertados con exito; id; 145   
+[2018-07-26 00:03:02] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 128 ; # 118;    
+[2018-07-26 00:03:02] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:02] Files.INFO:  Institucion Insertada con exito; id; 52   
+[2018-07-26 00:03:02] Files.INFO:  Campus destino Insertado con exito; id; 57   
+[2018-07-26 00:03:02] Files.INFO:  Programación de la modalidad Insertada con exito; id; 70   
+[2018-07-26 00:03:02] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 149   
+[2018-07-26 00:03:02] Files.INFO:  usuario Insertado con exito; id; 149   
+[2018-07-26 00:03:02] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 128   
+[2018-07-26 00:03:02] Files.INFO:  USER_CAMPUS Insertados con exito; id; 146   
+[2018-07-26 00:03:02] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 129 ; # 119;    
+[2018-07-26 00:03:02] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:02] Files.INFO:  Institucion Insertada con exito; id; 53   
+[2018-07-26 00:03:02] Files.INFO:  Campus destino Insertado con exito; id; 58   
+[2018-07-26 00:03:02] Files.INFO:  Programación de la modalidad Insertada con exito; id; 71   
+[2018-07-26 00:03:02] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 150   
+[2018-07-26 00:03:02] Files.INFO:  usuario Insertado con exito; id; 150   
+[2018-07-26 00:03:02] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 129   
+[2018-07-26 00:03:02] Files.INFO:  USER_CAMPUS Insertados con exito; id; 147   
+[2018-07-26 00:03:02] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 130 ; # 120;    
+[2018-07-26 00:03:02] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:02] Files.INFO:  Institucion Insertada con exito; id; 54   
+[2018-07-26 00:03:02] Files.INFO:  Campus destino Insertado con exito; id; 59   
+[2018-07-26 00:03:02] Files.INFO:  Programación de la modalidad Insertada con exito; id; 72   
+[2018-07-26 00:03:02] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 151   
+[2018-07-26 00:03:02] Files.INFO:  usuario Insertado con exito; id; 151   
+[2018-07-26 00:03:02] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 130   
+[2018-07-26 00:03:02] Files.INFO:  USER_CAMPUS Insertados con exito; id; 148   
+[2018-07-26 00:03:02] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 131 ; # 121;    
+[2018-07-26 00:03:02] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:02] Files.INFO:  Institucion Insertada con exito; id; 55   
+[2018-07-26 00:03:02] Files.INFO:  Campus destino Insertado con exito; id; 60   
+[2018-07-26 00:03:03] Files.INFO:  Programación de la modalidad Insertada con exito; id; 73   
+[2018-07-26 00:03:03] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 152   
+[2018-07-26 00:03:03] Files.INFO:  usuario Insertado con exito; id; 152   
+[2018-07-26 00:03:03] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 131   
+[2018-07-26 00:03:03] Files.INFO:  USER_CAMPUS Insertados con exito; id; 149   
+[2018-07-26 00:03:03] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 132 ; # 122;    
+[2018-07-26 00:03:03] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:03] Files.INFO:  Programación de la modalidad Insertada con exito; id; 74   
+[2018-07-26 00:03:03] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 153   
+[2018-07-26 00:03:03] Files.INFO:  usuario Insertado con exito; id; 153   
+[2018-07-26 00:03:03] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 132   
+[2018-07-26 00:03:03] Files.INFO:  USER_CAMPUS Insertados con exito; id; 150   
+[2018-07-26 00:03:03] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 133 ; # 123;    
+[2018-07-26 00:03:03] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:03] Files.INFO:  Programación de la modalidad Insertada con exito; id; 75   
+[2018-07-26 00:03:03] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 154   
+[2018-07-26 00:03:03] Files.INFO:  usuario Insertado con exito; id; 154   
+[2018-07-26 00:03:03] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 133   
+[2018-07-26 00:03:03] Files.INFO:  USER_CAMPUS Insertados con exito; id; 151   
+[2018-07-26 00:03:03] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 134 ; # 124;    
+[2018-07-26 00:03:03] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:03] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 155   
+[2018-07-26 00:03:03] Files.INFO:  usuario Insertado con exito; id; 155   
+[2018-07-26 00:03:03] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 134   
+[2018-07-26 00:03:03] Files.INFO:  USER_CAMPUS Insertados con exito; id; 152   
+[2018-07-26 00:03:03] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 135 ; # 125;    
+[2018-07-26 00:03:03] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:03] Files.INFO:  Institucion Insertada con exito; id; 56   
+[2018-07-26 00:03:03] Files.INFO:  Campus destino Insertado con exito; id; 61   
+[2018-07-26 00:03:03] Files.INFO:  Programación de la modalidad Insertada con exito; id; 76   
+[2018-07-26 00:03:03] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 156   
+[2018-07-26 00:03:03] Files.INFO:  usuario Insertado con exito; id; 156   
+[2018-07-26 00:03:03] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 135   
+[2018-07-26 00:03:03] Files.INFO:  USER_CAMPUS Insertados con exito; id; 153   
+[2018-07-26 00:03:03] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 136 ; # 126;    
+[2018-07-26 00:03:03] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:03] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 157   
+[2018-07-26 00:03:03] Files.INFO:  usuario Insertado con exito; id; 157   
+[2018-07-26 00:03:03] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 136   
+[2018-07-26 00:03:03] Files.INFO:  USER_CAMPUS Insertados con exito; id; 154   
+[2018-07-26 00:03:03] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 137 ; # 127;    
+[2018-07-26 00:03:03] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:03] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 158   
+[2018-07-26 00:03:03] Files.INFO:  usuario Insertado con exito; id; 158   
+[2018-07-26 00:03:03] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 137   
+[2018-07-26 00:03:03] Files.INFO:  USER_CAMPUS Insertados con exito; id; 155   
+[2018-07-26 00:03:03] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 138 ; # 128;    
+[2018-07-26 00:03:03] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 159   
+[2018-07-26 00:03:04] Files.INFO:  usuario Insertado con exito; id; 159   
+[2018-07-26 00:03:04] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 138   
+[2018-07-26 00:03:04] Files.INFO:  USER_CAMPUS Insertados con exito; id; 156   
+[2018-07-26 00:03:04] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 139 ; # 129;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 160   
+[2018-07-26 00:03:04] Files.INFO:  usuario Insertado con exito; id; 160   
+[2018-07-26 00:03:04] Files.INFO:  Facultad Insertada con exito; id; 69   
+[2018-07-26 00:03:04] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 139   
+[2018-07-26 00:03:04] Files.INFO:  USER_CAMPUS Insertados con exito; id; 157   
+[2018-07-26 00:03:04] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 140 ; # 130;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 161   
+[2018-07-26 00:03:04] Files.INFO:  usuario Insertado con exito; id; 161   
+[2018-07-26 00:03:04] Files.INFO:  Facultad Insertada con exito; id; 70   
+[2018-07-26 00:03:04] Files.INFO:  PROGRAMA Insertado con exito; id; 212   
+[2018-07-26 00:03:04] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 140   
+[2018-07-26 00:03:04] Files.INFO:  USER_CAMPUS Insertados con exito; id; 158   
+[2018-07-26 00:03:04] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 141 ; # 131;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  Institucion Insertada con exito; id; 57   
+[2018-07-26 00:03:04] Files.INFO:  Campus destino Insertado con exito; id; 62   
+[2018-07-26 00:03:04] Files.INFO:  Programación de la modalidad Insertada con exito; id; 77   
+[2018-07-26 00:03:04] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 162   
+[2018-07-26 00:03:04] Files.INFO:  usuario Insertado con exito; id; 162   
+[2018-07-26 00:03:04] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 141   
+[2018-07-26 00:03:04] Files.INFO:  USER_CAMPUS Insertados con exito; id; 159   
+[2018-07-26 00:03:04] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 142 ; # 132;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 163   
+[2018-07-26 00:03:04] Files.INFO:  usuario Insertado con exito; id; 163   
+[2018-07-26 00:03:04] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 142   
+[2018-07-26 00:03:04] Files.INFO:  USER_CAMPUS Insertados con exito; id; 160   
+[2018-07-26 00:03:04] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 143 ; # 133;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 164   
+[2018-07-26 00:03:04] Files.INFO:  usuario Insertado con exito; id; 164   
+[2018-07-26 00:03:04] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 143   
+[2018-07-26 00:03:04] Files.INFO:  USER_CAMPUS Insertados con exito; id; 161   
+[2018-07-26 00:03:04] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 144 ; # 134;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 165   
+[2018-07-26 00:03:04] Files.INFO:  usuario Insertado con exito; id; 165   
+[2018-07-26 00:03:04] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 144   
+[2018-07-26 00:03:04] Files.INFO:  USER_CAMPUS Insertados con exito; id; 162   
+[2018-07-26 00:03:04] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 145 ; # 135;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:04] Files.INFO:  La financiacion ha sido Insertada con exito; id; 11   
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 166   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 166   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 145   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 163   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 146 ; # 137;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 147 ; # 138;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  Programación de la modalidad Insertada con exito; id; 78   
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 167   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 167   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 146   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 164   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 148 ; # 139;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 168   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 168   
+[2018-07-26 00:03:05] Files.INFO:  Facultad Insertada con exito; id; 71   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 147   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 165   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 149 ; # 140;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 169   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 169   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 148   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 166   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 150 ; # 141;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 170   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 170   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 149   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 167   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 151 ; # 142;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 171   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 171   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 150   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 168   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 152 ; # 143;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 172   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 172   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 151   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 169   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 153 ; # 144;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:05] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 173   
+[2018-07-26 00:03:05] Files.INFO:  usuario Insertado con exito; id; 173   
+[2018-07-26 00:03:05] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 152   
+[2018-07-26 00:03:05] Files.INFO:  USER_CAMPUS Insertados con exito; id; 170   
+[2018-07-26 00:03:05] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 154 ; # 145;    
+[2018-07-26 00:03:05] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 174   
+[2018-07-26 00:03:06] Files.INFO:  usuario Insertado con exito; id; 174   
+[2018-07-26 00:03:06] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 153   
+[2018-07-26 00:03:06] Files.INFO:  USER_CAMPUS Insertados con exito; id; 171   
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 155 ; # 146;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  Periodo Insertado con exito; id; 47   
+[2018-07-26 00:03:06] Files.INFO:  Programación de la modalidad Insertada con exito; id; 79   
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 156 ; # 147;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 157 ; # 148;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 158 ; # 149;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 159 ; # 150;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 160 ; # 151;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 161 ; # 152;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  Institucion Insertada con exito; id; 58   
+[2018-07-26 00:03:06] Files.INFO:  Campus destino Insertado con exito; id; 63   
+[2018-07-26 00:03:06] Files.INFO:  Programación de la modalidad Insertada con exito; id; 80   
+[2018-07-26 00:03:06] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 175   
+[2018-07-26 00:03:06] Files.INFO:  usuario Insertado con exito; id; 175   
+[2018-07-26 00:03:06] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 154   
+[2018-07-26 00:03:06] Files.INFO:  USER_CAMPUS Insertados con exito; id; 172   
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 162 ; # 153;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 176   
+[2018-07-26 00:03:06] Files.INFO:  usuario Insertado con exito; id; 176   
+[2018-07-26 00:03:06] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 155   
+[2018-07-26 00:03:06] Files.INFO:  USER_CAMPUS Insertados con exito; id; 173   
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 163 ; # 154;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 177   
+[2018-07-26 00:03:06] Files.INFO:  usuario Insertado con exito; id; 177   
+[2018-07-26 00:03:06] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 156   
+[2018-07-26 00:03:06] Files.INFO:  USER_CAMPUS Insertados con exito; id; 174   
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 164 ; # 155;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  Institucion Insertada con exito; id; 59   
+[2018-07-26 00:03:06] Files.INFO:  Campus destino Insertado con exito; id; 64   
+[2018-07-26 00:03:06] Files.INFO:  Programación de la modalidad Insertada con exito; id; 81   
+[2018-07-26 00:03:06] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 165 ; # 156;    
+[2018-07-26 00:03:06] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:06] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 178   
+[2018-07-26 00:03:06] Files.INFO:  usuario Insertado con exito; id; 178   
+[2018-07-26 00:03:06] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 157   
+[2018-07-26 00:03:07] Files.INFO:  USER_CAMPUS Insertados con exito; id; 175   
+[2018-07-26 00:03:07] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 166 ; # 157;    
+[2018-07-26 00:03:07] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:07] Files.INFO:  Programación de la modalidad Insertada con exito; id; 82   
+[2018-07-26 00:03:07] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 179   
+[2018-07-26 00:03:07] Files.INFO:  usuario Insertado con exito; id; 179   
+[2018-07-26 00:03:07] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 158   
+[2018-07-26 00:03:07] Files.INFO:  USER_CAMPUS Insertados con exito; id; 176   
+[2018-07-26 00:03:07] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 167 ; # 158;    
+[2018-07-26 00:03:07] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:07] Files.INFO:  Programación de la modalidad Insertada con exito; id; 83   
+[2018-07-26 00:03:07] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 180   
+[2018-07-26 00:03:07] Files.INFO:  usuario Insertado con exito; id; 180   
+[2018-07-26 00:03:07] Files.INFO:  Facultad Insertada con exito; id; 72   
+[2018-07-26 00:03:07] Files.INFO:  PROGRAMA Insertado con exito; id; 213   
+[2018-07-26 00:03:07] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 159   
+[2018-07-26 00:03:07] Files.INFO:  USER_CAMPUS Insertados con exito; id; 177   
+[2018-07-26 00:03:07] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 168 ; # 159;    
+[2018-07-26 00:03:07] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:07] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 181   
+[2018-07-26 00:03:07] Files.INFO:  usuario Insertado con exito; id; 181   
+[2018-07-26 00:03:07] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 160   
+[2018-07-26 00:03:07] Files.INFO:  USER_CAMPUS Insertados con exito; id; 178   
+[2018-07-26 00:03:07] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 169 ; # 160;    
+[2018-07-26 00:03:07] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:07] Files.INFO:  Institucion Insertada con exito; id; 60   
+[2018-07-26 00:03:07] Files.INFO:  Campus destino Insertado con exito; id; 65   
+[2018-07-26 00:03:07] Files.INFO:  Programación de la modalidad Insertada con exito; id; 84   
+[2018-07-26 00:03:07] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 182   
+[2018-07-26 00:03:07] Files.INFO:  usuario Insertado con exito; id; 182   
+[2018-07-26 00:03:07] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 161   
+[2018-07-26 00:03:07] Files.INFO:  USER_CAMPUS Insertados con exito; id; 179   
+[2018-07-26 00:03:07] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 170 ; # 161;    
+[2018-07-26 00:03:07] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:07] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 183   
+[2018-07-26 00:03:07] Files.INFO:  usuario Insertado con exito; id; 183   
+[2018-07-26 00:03:07] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 162   
+[2018-07-26 00:03:07] Files.INFO:  USER_CAMPUS Insertados con exito; id; 180   
+[2018-07-26 00:03:07] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 171 ; # 162;    
+[2018-07-26 00:03:07] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:07] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 184   
+[2018-07-26 00:03:07] Files.INFO:  usuario Insertado con exito; id; 184   
+[2018-07-26 00:03:07] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 163   
+[2018-07-26 00:03:07] Files.INFO:  USER_CAMPUS Insertados con exito; id; 181   
+[2018-07-26 00:03:07] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 172 ; # 163;    
+[2018-07-26 00:03:07] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:08] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 185   
+[2018-07-26 00:03:08] Files.INFO:  usuario Insertado con exito; id; 185   
+[2018-07-26 00:03:08] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 164   
+[2018-07-26 00:03:08] Files.INFO:  USER_CAMPUS Insertados con exito; id; 182   
+[2018-07-26 00:03:08] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 173 ; # 164;    
+[2018-07-26 00:03:08] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:08] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 186   
+[2018-07-26 00:03:08] Files.INFO:  usuario Insertado con exito; id; 186   
+[2018-07-26 00:03:08] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 165   
+[2018-07-26 00:03:08] Files.INFO:  USER_CAMPUS Insertados con exito; id; 183   
+[2018-07-26 00:03:08] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 174 ; # 165;    
+[2018-07-26 00:03:08] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:08] Files.INFO:  Institucion Insertada con exito; id; 61   
+[2018-07-26 00:03:08] Files.INFO:  Campus destino Insertado con exito; id; 66   
+[2018-07-26 00:03:08] Files.INFO:  Programación de la modalidad Insertada con exito; id; 85   
+[2018-07-26 00:03:08] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 187   
+[2018-07-26 00:03:08] Files.INFO:  usuario Insertado con exito; id; 187   
+[2018-07-26 00:03:08] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 166   
+[2018-07-26 00:03:08] Files.INFO:  USER_CAMPUS Insertados con exito; id; 184   
+[2018-07-26 00:03:08] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 175 ; # 166;    
+[2018-07-26 00:03:08] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:08] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 188   
+[2018-07-26 00:03:08] Files.INFO:  usuario Insertado con exito; id; 188   
+[2018-07-26 00:03:08] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 167   
+[2018-07-26 00:03:08] Files.INFO:  USER_CAMPUS Insertados con exito; id; 185   
+[2018-07-26 00:03:08] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 176 ; # 167;    
+[2018-07-26 00:03:08] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:08] Files.INFO:  Institucion Insertada con exito; id; 62   
+[2018-07-26 00:03:08] Files.INFO:  Campus destino Insertado con exito; id; 67   
+[2018-07-26 00:03:08] Files.INFO:  Programación de la modalidad Insertada con exito; id; 86   
+[2018-07-26 00:03:08] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 177 ; # 168;    
+[2018-07-26 00:03:08] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:08] Files.INFO:  Institucion Insertada con exito; id; 63   
+[2018-07-26 00:03:08] Files.INFO:  Campus destino Insertado con exito; id; 68   
+[2018-07-26 00:03:08] Files.INFO:  Programación de la modalidad Insertada con exito; id; 87   
+[2018-07-26 00:03:08] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 189   
+[2018-07-26 00:03:08] Files.INFO:  usuario Insertado con exito; id; 189   
+[2018-07-26 00:03:08] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 168   
+[2018-07-26 00:03:08] Files.INFO:  USER_CAMPUS Insertados con exito; id; 186   
+[2018-07-26 00:03:08] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 178 ; # 169;    
+[2018-07-26 00:03:08] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:08] Files.INFO:  Institucion Insertada con exito; id; 64   
+[2018-07-26 00:03:08] Files.INFO:  Campus destino Insertado con exito; id; 69   
+[2018-07-26 00:03:08] Files.INFO:  Programación de la modalidad Insertada con exito; id; 88   
+[2018-07-26 00:03:09] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 190   
+[2018-07-26 00:03:09] Files.INFO:  usuario Insertado con exito; id; 190   
+[2018-07-26 00:03:09] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 169   
+[2018-07-26 00:03:09] Files.INFO:  USER_CAMPUS Insertados con exito; id; 187   
+[2018-07-26 00:03:09] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 179 ; # 170;    
+[2018-07-26 00:03:09] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:09] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 191   
+[2018-07-26 00:03:09] Files.INFO:  usuario Insertado con exito; id; 191   
+[2018-07-26 00:03:09] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 170   
+[2018-07-26 00:03:09] Files.INFO:  USER_CAMPUS Insertados con exito; id; 188   
+[2018-07-26 00:03:09] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 180 ; # 171;    
+[2018-07-26 00:03:09] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:09] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 192   
+[2018-07-26 00:03:09] Files.INFO:  usuario Insertado con exito; id; 192   
+[2018-07-26 00:03:09] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 171   
+[2018-07-26 00:03:09] Files.INFO:  USER_CAMPUS Insertados con exito; id; 189   
+[2018-07-26 00:03:09] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 181 ; # 172;    
+[2018-07-26 00:03:09] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:09] Files.INFO:  Institucion Insertada con exito; id; 65   
+[2018-07-26 00:03:09] Files.INFO:  Campus destino Insertado con exito; id; 70   
+[2018-07-26 00:03:09] Files.INFO:  Programación de la modalidad Insertada con exito; id; 89   
+[2018-07-26 00:03:09] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 193   
+[2018-07-26 00:03:09] Files.INFO:  usuario Insertado con exito; id; 193   
+[2018-07-26 00:03:09] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 172   
+[2018-07-26 00:03:09] Files.INFO:  USER_CAMPUS Insertados con exito; id; 190   
+[2018-07-26 00:03:09] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 182 ; # 173;    
+[2018-07-26 00:03:09] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:09] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 194   
+[2018-07-26 00:03:09] Files.INFO:  usuario Insertado con exito; id; 194   
+[2018-07-26 00:03:09] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 173   
+[2018-07-26 00:03:09] Files.INFO:  USER_CAMPUS Insertados con exito; id; 191   
+[2018-07-26 00:03:09] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 183 ; # 174;    
+[2018-07-26 00:03:09] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:09] Files.INFO:  Institucion Insertada con exito; id; 66   
+[2018-07-26 00:03:09] Files.INFO:  Campus destino Insertado con exito; id; 71   
+[2018-07-26 00:03:09] Files.INFO:  Programación de la modalidad Insertada con exito; id; 90   
+[2018-07-26 00:03:09] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 195   
+[2018-07-26 00:03:09] Files.INFO:  usuario Insertado con exito; id; 195   
+[2018-07-26 00:03:09] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 174   
+[2018-07-26 00:03:09] Files.INFO:  USER_CAMPUS Insertados con exito; id; 192   
+[2018-07-26 00:03:09] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 184 ; # 175;    
+[2018-07-26 00:03:09] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:09] Files.INFO:  Institucion Insertada con exito; id; 67   
+[2018-07-26 00:03:09] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:10] Files.INFO:  Programación de la modalidad Insertada con exito; id; 91   
+[2018-07-26 00:03:10] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 196   
+[2018-07-26 00:03:10] Files.INFO:  usuario Insertado con exito; id; 196   
+[2018-07-26 00:03:10] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 175   
+[2018-07-26 00:03:10] Files.INFO:  USER_CAMPUS Insertados con exito; id; 193   
+[2018-07-26 00:03:10] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 185 ; # 176;    
+[2018-07-26 00:03:10] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:10] Files.INFO:  Programación de la modalidad Insertada con exito; id; 92   
+[2018-07-26 00:03:10] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 197   
+[2018-07-26 00:03:10] Files.INFO:  usuario Insertado con exito; id; 197   
+[2018-07-26 00:03:10] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 176   
+[2018-07-26 00:03:10] Files.INFO:  USER_CAMPUS Insertados con exito; id; 194   
+[2018-07-26 00:03:10] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 186 ; # 177;    
+[2018-07-26 00:03:10] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:10] Files.INFO:  Institucion Insertada con exito; id; 68   
+[2018-07-26 00:03:10] Files.INFO:  Campus destino Insertado con exito; id; 72   
+[2018-07-26 00:03:10] Files.INFO:  Programación de la modalidad Insertada con exito; id; 93   
+[2018-07-26 00:03:10] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 198   
+[2018-07-26 00:03:10] Files.INFO:  usuario Insertado con exito; id; 198   
+[2018-07-26 00:03:10] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 177   
+[2018-07-26 00:03:10] Files.INFO:  USER_CAMPUS Insertados con exito; id; 195   
+[2018-07-26 00:03:10] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 187 ; # 178;    
+[2018-07-26 00:03:10] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:10] Files.INFO:  Institucion Insertada con exito; id; 69   
+[2018-07-26 00:03:10] Files.INFO:  Campus destino Insertado con exito; id; 73   
+[2018-07-26 00:03:10] Files.INFO:  Programación de la modalidad Insertada con exito; id; 94   
+[2018-07-26 00:03:10] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 199   
+[2018-07-26 00:03:10] Files.INFO:  usuario Insertado con exito; id; 199   
+[2018-07-26 00:03:10] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 178   
+[2018-07-26 00:03:10] Files.INFO:  USER_CAMPUS Insertados con exito; id; 196   
+[2018-07-26 00:03:10] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 188 ; # 179;    
+[2018-07-26 00:03:10] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:10] Files.INFO:  Institucion Insertada con exito; id; 70   
+[2018-07-26 00:03:10] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:10] Files.INFO:  Programación de la modalidad Insertada con exito; id; 95   
+[2018-07-26 00:03:10] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 200   
+[2018-07-26 00:03:10] Files.INFO:  usuario Insertado con exito; id; 200   
+[2018-07-26 00:03:10] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 179   
+[2018-07-26 00:03:10] Files.INFO:  USER_CAMPUS Insertados con exito; id; 197   
+[2018-07-26 00:03:10] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 189 ; # 180;    
+[2018-07-26 00:03:10] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:10] Files.INFO:  Institucion Insertada con exito; id; 71   
+[2018-07-26 00:03:10] Files.INFO:  Campus destino Insertado con exito; id; 74   
+[2018-07-26 00:03:10] Files.INFO:  Programación de la modalidad Insertada con exito; id; 96   
+[2018-07-26 00:03:10] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 201   
+[2018-07-26 00:03:10] Files.INFO:  usuario Insertado con exito; id; 201   
+[2018-07-26 00:03:10] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 180   
+[2018-07-26 00:03:10] Files.INFO:  USER_CAMPUS Insertados con exito; id; 198   
+[2018-07-26 00:03:10] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 190 ; # 181;    
+[2018-07-26 00:03:11] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Institucion Insertada con exito; id; 72   
+[2018-07-26 00:03:11] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Programación de la modalidad Insertada con exito; id; 97   
+[2018-07-26 00:03:11] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 202   
+[2018-07-26 00:03:11] Files.INFO:  usuario Insertado con exito; id; 202   
+[2018-07-26 00:03:11] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 181   
+[2018-07-26 00:03:11] Files.INFO:  USER_CAMPUS Insertados con exito; id; 199   
+[2018-07-26 00:03:11] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 191 ; # 182;    
+[2018-07-26 00:03:11] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Institucion Insertada con exito; id; 73   
+[2018-07-26 00:03:11] Files.INFO:  Campus destino Insertado con exito; id; 75   
+[2018-07-26 00:03:11] Files.INFO:  Programación de la modalidad Insertada con exito; id; 98   
+[2018-07-26 00:03:11] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 203   
+[2018-07-26 00:03:11] Files.INFO:  usuario Insertado con exito; id; 203   
+[2018-07-26 00:03:11] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 182   
+[2018-07-26 00:03:11] Files.INFO:  USER_CAMPUS Insertados con exito; id; 200   
+[2018-07-26 00:03:11] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 192 ; # 183;    
+[2018-07-26 00:03:11] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Institucion Insertada con exito; id; 74   
+[2018-07-26 00:03:11] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Programación de la modalidad Insertada con exito; id; 99   
+[2018-07-26 00:03:11] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 204   
+[2018-07-26 00:03:11] Files.INFO:  usuario Insertado con exito; id; 204   
+[2018-07-26 00:03:11] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 183   
+[2018-07-26 00:03:11] Files.INFO:  USER_CAMPUS Insertados con exito; id; 201   
+[2018-07-26 00:03:11] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 193 ; # 184;    
+[2018-07-26 00:03:11] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Institucion Insertada con exito; id; 75   
+[2018-07-26 00:03:11] Files.INFO:  Campus destino Insertado con exito; id; 76   
+[2018-07-26 00:03:11] Files.INFO:  Programación de la modalidad Insertada con exito; id; 100   
+[2018-07-26 00:03:11] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 205   
+[2018-07-26 00:03:11] Files.INFO:  usuario Insertado con exito; id; 205   
+[2018-07-26 00:03:11] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 184   
+[2018-07-26 00:03:11] Files.INFO:  USER_CAMPUS Insertados con exito; id; 202   
+[2018-07-26 00:03:11] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 194 ; # 185;    
+[2018-07-26 00:03:11] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 206   
+[2018-07-26 00:03:11] Files.INFO:  usuario Insertado con exito; id; 206   
+[2018-07-26 00:03:11] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 185   
+[2018-07-26 00:03:11] Files.INFO:  USER_CAMPUS Insertados con exito; id; 203   
+[2018-07-26 00:03:11] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 195 ; # 186;    
+[2018-07-26 00:03:11] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:11] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 207   
+[2018-07-26 00:03:11] Files.INFO:  usuario Insertado con exito; id; 207   
+[2018-07-26 00:03:11] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 186   
+[2018-07-26 00:03:11] Files.INFO:  USER_CAMPUS Insertados con exito; id; 204   
+[2018-07-26 00:03:12] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 196 ; # 187;    
+[2018-07-26 00:03:12] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Institucion Insertada con exito; id; 76   
+[2018-07-26 00:03:12] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Programación de la modalidad Insertada con exito; id; 101   
+[2018-07-26 00:03:12] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 208   
+[2018-07-26 00:03:12] Files.INFO:  usuario Insertado con exito; id; 208   
+[2018-07-26 00:03:12] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 187   
+[2018-07-26 00:03:12] Files.INFO:  USER_CAMPUS Insertados con exito; id; 205   
+[2018-07-26 00:03:12] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 197 ; # 188;    
+[2018-07-26 00:03:12] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 209   
+[2018-07-26 00:03:12] Files.INFO:  usuario Insertado con exito; id; 209   
+[2018-07-26 00:03:12] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 188   
+[2018-07-26 00:03:12] Files.INFO:  USER_CAMPUS Insertados con exito; id; 206   
+[2018-07-26 00:03:12] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 198 ; # 189;    
+[2018-07-26 00:03:12] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Institucion Insertada con exito; id; 77   
+[2018-07-26 00:03:12] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Programación de la modalidad Insertada con exito; id; 102   
+[2018-07-26 00:03:12] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 210   
+[2018-07-26 00:03:12] Files.INFO:  usuario Insertado con exito; id; 210   
+[2018-07-26 00:03:12] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 189   
+[2018-07-26 00:03:12] Files.INFO:  USER_CAMPUS Insertados con exito; id; 207   
+[2018-07-26 00:03:12] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 199 ; # 190;    
+[2018-07-26 00:03:12] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 211   
+[2018-07-26 00:03:12] Files.INFO:  usuario Insertado con exito; id; 211   
+[2018-07-26 00:03:12] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 190   
+[2018-07-26 00:03:12] Files.INFO:  USER_CAMPUS Insertados con exito; id; 208   
+[2018-07-26 00:03:12] Files.INFO:  La Inscripcion ha sido Insertada con exito; id; 200 ; # 191;    
+[2018-07-26 00:03:12] Files.INFO:  La financiacion ha sido Insertada con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Institucion Insertada con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Campus destino Insertado con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  Programación de la modalidad Insertada con exito; id;    
+[2018-07-26 00:03:12] Files.INFO:  DATOS PERSONALES Insertados con exito; id; 212   
+[2018-07-26 00:03:12] Files.INFO:  usuario Insertado con exito; id; 212   
+[2018-07-26 00:03:12] Files.INFO:  USER_PROGRAMA Insertados con exito; id; 191   
+[2018-07-26 00:03:12] Files.INFO:  USER_CAMPUS Insertados con exito; id; 209   
+[2018-07-26 00:03:12] Files.INFO:  La Inscripcion ha sido Insertada con exito; id;  ; # 192;    
+[2018-07-26 00:03:12] Files.INFO:  La financiacion ha sido Insertada con exito; id;    

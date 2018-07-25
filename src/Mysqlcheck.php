@@ -18,9 +18,108 @@ class Mysqlcheck
         $this->pdo = $connectionInsert->connect();
     }
 
-    public function checkUsers($name){
+    public function checkUsers($datos_id){
         try {
-            $sql='SELECT id FROM users WHERE email LIKE "'.$name.'";';
+            $sql="SELECT id FROM users WHERE datos_personales_id=$datos_id;";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;//array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+
+    }
+    public function checkUserProgram($user_id,$programa_id){
+        try {
+            $sql="SELECT id FROM user_programa WHERE user_id=$user_id and programa_id=$programa_id;";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;//array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+
+    }
+    public function checkUserCampus($user_id,$campus_id){
+        try {
+            $sql="SELECT id FROM user_campus WHERE user_id=$user_id and campus_id=$campus_id;";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;//array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+
+    }
+    public function checkUsersDatos($ci){
+        try {
+            $sql='SELECT id FROM datos_personales WHERE numero_documento= "'.$ci.'";';
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;//array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+
+    }
+    public function checkfacultad($name,$campus_id){
+        try {
+            $sql="SELECT id FROM facultad WHERE nombre= '$name' and campus_id=$campus_id;";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;//array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+
+    }
+    public function checkinscripcion($user_id,$campus_id, $periodo_id, $modalidad_id,$institucion_id){
+        try {
+            $sql="SELECT id FROM inscripcion WHERE user_id=$user_id and periodo_id=$periodo_id
+            and modalidad_id=$modalidad_id and institucion_destino_id=$institucion_id and 
+           campus_id=$campus_id and  tipo=0;";
+        
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result=$stmt->fetchAll();
+            if(count($result)>0){
+                return $result;
+            }else{
+                return 0;//array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+
+    }
+    public function checkprograma($name){
+        try {
+            $sql='SELECT id FROM programa WHERE nombre= "'.$name.'";';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $result=$stmt->fetchAll();
@@ -91,7 +190,7 @@ class Mysqlcheck
             if(count($user)>0){
                 return $user;
             }else{
-                return array('error'=>'103','desc'=>"No existe la institucion en la BD");
+                return 0;
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
@@ -107,7 +206,7 @@ class Mysqlcheck
             if(count($user)>0){
                 return $user;
             }else{
-                return array('error'=>'104','desc'=>"No existe la programacion de la modalidad en la  BD");
+                return 0;
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
@@ -124,7 +223,23 @@ class Mysqlcheck
             if(count($user)>0){
                 return $user;
             }else{
-                return array('error'=>'105','desc'=>"No existe la fuente de financiación en la  BD");
+                return 0;          
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
+      
+    public function checkFinanciacion($fuente_financiacion_id, $inscripcion_id){
+        try {
+            $sql="SELECT id FROM financiacion WHERE fuente_financiacion_id=$fuente_financiacion_id and inscripcion_id=$inscripcion_id  ";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $user=$stmt->fetchAll();
+            if(count($user)>0){
+                return $user;
+            }else{
+                return 0;          
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
@@ -139,7 +254,7 @@ class Mysqlcheck
             if(count($result)>0){
                 return $result;
             }else{
-                return array('error'=>'106','desc'=>"No existe EL CAMPUS en la BD");
+                return 0;
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());

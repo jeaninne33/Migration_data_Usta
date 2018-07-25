@@ -88,28 +88,14 @@ class Inscripciones
                  
                 if(!empty($periodo) && !empty($campus) && !empty($division) && !empty($facultad) && !empty($programa) && !empty($tipo_doc) && !empty($num_docu) && !empty($apellidos) 
                 && !empty($nombres) && !empty($nacionalidad) && !empty($institucion_origen) && !empty($institucion_destino)){
-   
-                 /*   $output .= '<tr><td>';
-                   $output.='<br> i: '.$row.'<br>' ;
-                    $output .= 'periodo '.$periodo.' campus '.$campus.' divi '.$division.' facultad '.$facultad.' programa '.$programa.' tipo_doc '.$tipo_doc.' num_docu '.$num_docu.' apellidos '.$apellidos;
-                    $output .='nombres '.$nombres.' nacionalidad '.$nacionalidad.' modalidad '.$modalidad.' institucion_origen '.$institucion_origen.' institucion_destino '.$institucion_destino.' pais_destino '.$pais_destino.' fuentes_financiacion '.$fuentes_financiacion;
-                    $output .= '</td></tr>'; */
-               // echo 'periodo '.$periodo.' campus '.$campus.' divi '.$division.' facultad '.$facultad.' programa '.$programa.' tipo_doc '.$tipo_doc.' num_docu '.$num_docu.' apellidos '.$apellidos.'<br>';
-               // echo 'nombres '.$nombres.' nacionalidad '.$nacionalidad.' modalidad '.$modalidad.' institucion_origen '.$institucion_origen.' institucion_destino '.$institucion_destino.' pais_destino '.$pais_destino.' fuentes_financiacion '.$fuentes_financiacion.'<br>';
-               
-                ///echo '<br><br>';
-
-                 
+                   
 
                   /*   $nameC = trim($times[0]['cliente_fac']);
                     $tarifa = doubleval($times[0]['TARIFA']); */
                 
                     //validamos que existan los registros en la base de datos
                     $checkperiod = $check->checkPeriod($periodo);
-              /*       var_dump($checkperiod);
-                   echo '<pre>'; */
-                   //var_dump($periodo, count($checkperiod), $checkperiod==0,  $checkmodalidad, $checkcampus);die;
-                   //se valida el periodo
+                   //se valida el periodo   1
                     if ($checkperiod==0) {// si no existe el periodo 
                         //se prepatra la data para la creacion del periodo
                         $periodo1=explode('-',$periodo);
@@ -123,32 +109,66 @@ class Inscripciones
                         $sql="INSERT INTO periodo (nombre, fecha_desde, fecha_hasta,migration) values ('".$periodo."','$fecha_ip','$fecha_fp', 1);";
                         $periodo_id=$inserts->InsertGeneral($sql);
                         $log->info("\r\n".'Periodo Insertado con exito; id; '. $periodo_id."\r\n");
+                        $output.='<tr><td>';
+                        $output.="Periodo Insertado con exito; id; '. $periodo_id.";
+                        $output.='</td></tr>';
                     } else {// si existe el periodo
                         $periodo_id=$checkperiod[0]['id'];
                        // $log->error("\r\n".$countError.'; No se pudo insertar el periodo; '.$checkBusiness['desc'].'; UID; '.$times[0]['clave_res'].';'.$nameC.';'.$nameOT.";\r\n");
                     }
-                    //se valida la modalidad
+                   
+                    //se valida la modalidad 2
                     $checkModalidad = $check->checkTipoModalidad($modalidad);
                     if ($checkModalidad==0) {// si no existe la modalidad
                         //se prepatra la data para la creacion de la modalidad
                         $sql="INSERT INTO tipo_modalidad (nombre, promedio, tipo,migration) values ('".$modalidad."',0, 0, 1);";
                         $modalidad_id=$inserts->InsertGeneral($sql);
                         $log->info("\r\n".'Modalidad Insertada con exito; id; '. $modalidad_id."\r\n");
-                    } else {// si existe el periodo
+                        $output.='<tr><td>';
+                        $output.="Modalidad Insertada con exito; id; '. $modalidad_id";
+                        $output.='</td></tr>';
+                    } else {// si existe la modalidad
                         $modalidad_id=$checkModalidad[0]['id'];
                     }
-                    //se valida la institucion destino
+
+                    
+                    //se valida la institucion destino 3
                     $checkinstitucion = $check->checkInstitution($institucion_destino);
+                  
                     if ($checkinstitucion==0) {// si no existe la institucion_destino
                         //se prepatra la data para la creacion de la institucion
                         $sql="INSERT INTO institucion (nombre, tipo_institucion_id, migration) values ('".$institucion_destino."',7, 1);";
                         $institucion_id=$inserts->InsertGeneral($sql);
                         $log->info("\r\n".'Institucion Insertada con exito; id; '. $institucion_id."\r\n");
-                        
-                    } else {// si existe el periodo
+                        $output.='<tr><td>';
+                        $output.="Institucion Insertada con exito; id; '. $institucion_id";
+                        $output.='</td></tr>';
+                    } else {// si existe la institucion
                         $institucion_id=$checkinstitucion[0]['id'];
                     }
-                    //se valida el campus de destino
+                 
+                    //se valida el campus de oRIGEN 3.1
+                    $checkCampusOrigen=$check->checkCampus($campus);
+                    if ($checkCampusOrigen==0) {// si no existe el campus origen
+                        //se prepatra la data para la creacion del campus origen
+                        $consulta="select ciudad.id from ciudad 
+                        inner join departamento on departamento_id=departamento.id
+                        inner join pais on pais.id=departamento.pais_id
+                        where pais.nombre like 'colombia'
+                        limit 1";
+                        $ciudad_id=$inserts->consulta($consulta);
+                        $ciudad_id= $ciudad_id[0]['id'];
+                        $sql="INSERT INTO campus (nombre, institucion_id, ciudad_id,principal) values ('$campus',1, $ciudad_id,0);";
+                        $campus_origen_id=$inserts->InsertGeneral($sql);
+                        $log->info("\r\n".'Campus origen Insertado con exito; id; '. $campus_origen_id."\r\n");
+                        $output.='<tr><td>';
+                        $output.="Campus origen Insertado con exito; id; '. $campus_origen_id";
+                        $output.='</td></tr>';
+                        
+                    } else {// si existe un  campus origen
+                        $campus_origen_id=$checkCampusOrigen[0]['id'];
+                    }
+                      //se valida el campus de destino 3.2
                     $checkCampusdestino=$check->firstCampus($institucion_id);
                     if ($checkCampusdestino==0) {// si no existe el campus destino
                         //se prepatra la data para la creacion del campus destino
@@ -161,64 +181,159 @@ class Inscripciones
                         $ciudad_id= $ciudad_id[0]['id'];
                         $sql="INSERT INTO campus (nombre, institucion_id, ciudad_id,principal) values ('Sede Principal',$institucion_id, $ciudad_id,1);";
                         $campus_destino_id=$inserts->InsertGeneral($sql);
-                        $log->info("\r\n".'Campus Insertado con exito; id; '. $campus_id."\r\n");
-                        
-                    } else {// si existe un campus
+                        $log->info("\r\n".'Campus destino Insertado con exito; id; '. $campus_destino_id."\r\n");
+                        $output.='<tr><td>';
+                        $output.="'Campus destino Insertado con exito; id; '. $campus_destino_id";
+                        $output.='</td></tr>';
+                    } else {// si existeel campus destino
                         $campus_destino_id=$checkCampusdestino[0]['id'];
                     }
-
-                   
-                  
-                    if (!isset($checkBusiness['error'])) {
-                        if (count($checkUser) > 0) {// se comprueba el usuario
-                            if (isset($checkUser['error'])) {// SI NO EXISTE EL USUARIO
-                                $pgsProID=$check->InsertUser($nameUser, $short_name);//se inserta el usuario
-                                $log->info("\r\n".'; Usuario Insertado con exito; id: '.  $pgsProID.';'.$nameUser.';'.$short_name."\r\n");
-                            } else {
-                                $pgsProID = $checkUser[0]['id'];
-                                /*$countError++;
-                                $times[0]['error'] = $checkUser['error'];
-                                $log->error("\r\n".$countError.'; No se pudo insertar el registro; '.$checkUser['desc'].'; UID; '.$times[0]['clave_res'].';'.$nameC.';'.$nameOT.";".$nameUser.';'.$short_name."\r\n");
-                                    */
-                            // }
-                                    if (count($checkArea) > 0) {//
-                                        if (isset($checkArea['error'])) {//si no existe el area
-                                            $practice_area_id=$check->InsertArea($nameArea);//se inserta el area
-                                            $log->info("\r\n".'; Area de practica creada con exito; id: '.  $practice_area_id.'; name: '.$nameArea."\r\n");
-                                        }else{//si existe el area
-                                            $practice_area_id=$checkArea[0]['id_practice_area'];
-                                        }
-                                        if($nameC=='VARIOS'){//si el cliente es varios el registro se almacena como no facturable
-                                            $pgsInvoiceble=2;
-                                        }else{
-                                            $pgsInvoiceble=1;
-                                        }
-                                        $pgsBuzId = $checkBusiness[0]['buzID'];
-                                        $pgsCurID = $checkBusiness[0]['buzCurID'];
-
-                                        $minuts = doubleval($times[0]['T_TRANS']) * 60;
-                                        $minutswork = doubleval($times[0]['tiempo_fac']) * 60;
-                                        if($total==0 && $tarifa>0){
-                                            $total=($minutswork/60)*$tarifa;
-                                        }
-                                        $pgsDateWork = new \DateTime($times[0]['FECHA']);
-                                        $pgsDateWork = $pgsDateWork->format('Y-m-d');
-                                        $sql = "INSERT INTO tmc_progress_tbl_pgs ( pgsBuzID, pgsProID, original_user_id, pgsMinutsWork, pgsMinuts, pgsDateWork, pgsDetails,
-                                            pgsHourRate, pgsTotal, pgsCurID, pgsStatus, practice_area_id,pgsInvoiceble, migration) 
-                                            VALUES ($pgsBuzId,$pgsProID,$pgsProID,$minutswork,$minuts,'" . $pgsDateWork . "','" . $times[0]['DETALLE'] . "',$tarifa,$total, $pgsCurID, 4,$practice_area_id, $pgsInvoiceble, 1);";
-                                        $countInsert++;
-                                        var_dump('id: '.$i.' - Count: '.$countInsert.' - '.$sql."\r\n");
-                                        $pgsID=$check->InsertTime($sql);
-
-                                        $log->info("\r\n".$countInsert.'; Registro Insertado; pgsID;'. $pgsID.'; UID; '.$times[0]['clave_res'].';'.$nameC.';'.$nameOT.";\r\n");
-                                    }
-
-                           }
                     
-                       }
-                    }else{
-                    // $log->error("\r\n".'; No se existe el id;'.$i."\r\n");
-                    } 
+                     //se valida la programacion de la modalidad 4
+                     $checkprogramacion=$check->checkModalidad($periodo_id,$institucion_id, $modalidad_id);
+                     if ($checkprogramacion==0) {// si no existe la programacion de la modalidad
+                         //se prepatra la data para la creacion de la programacion de la modalidad
+                         $sql="INSERT INTO modalidad (periodo_id, institucion_id, tipo_modalidad_id,migration) values ($periodo_id,$institucion_id, $modalidad_id, 1);";
+                         $programacion_modalidad_id=$inserts->InsertGeneral($sql);
+                         $log->info("\r\n".'Programación de la modalidad Insertada con exito; id; '. $programacion_modalidad_id."\r\n");
+                         $output.='<tr><td>';
+                         $output.="Programación de la modalidad Insertada con exito; id;  $programacion_modalidad_id";
+                         $output.='</td></tr>';
+                     } else {// si existe la programacion de la modalidad
+                        $programacion_modalidad_id= $checkprogramacion[0]['id'];
+                     }
+                    
+                      //se valida si existe el usuario 5 y 6
+                      $checkuser=$check->checkUsersDatos($num_docu);
+                      if ($checkuser==0) {// si no existe el usuario
+                          //se prepatra la data para la creacion de el usuario
+                          $sql="INSERT INTO datos_personales (nombres, apellidos,numero_documento) values ('$nombres','$apellidos', '$num_docu');";
+                          $datos_personales_id=$inserts->InsertGeneral($sql);
+                          $log->info("\r\n".'DATOS PERSONALES Insertados con exito; id; '. $datos_personales_id."\r\n");
+                          $output.='<tr><td>';
+                          $output.="DATOS PERSONALES Insertados con exito; id; ". $datos_personales_id;
+                          $output.='</td></tr>';
+                          $nombre=$nombres.' '.$apellidos;
+                          $sql="INSERT INTO users (name, email,password, datos_personales_id, activo, migration) values ('$nombre', '$num_docu@usantotomas.edu.com','cambiar123',  $datos_personales_id, 0,1);";
+                          $user_id=$inserts->InsertGeneral($sql);
+                          $log->info("\r\n".'usuario Insertado con exito; id; '. $user_id."\r\n");
+                          $output.='<tr><td>';
+                          $output.="usuario Insertado con exito; id;  $user_id";
+                          $output.='</td></tr>';
+                      } else {// si existe el usuario
+                         $datos_personales_id= $checkuser[0]['id'];
+                         $user_id=$check->checkUsers($datos_personales_id);
+                         $user_id=$user_id[0]['id'];
+                      }
+ 
+                        //se verifica que exista la facultad en relacion al usuario usuario 7
+                        $checkfacultad=$check->checkfacultad($facultad, $campus_origen_id);
+                        if ($checkfacultad==0) {// si no existe la facultad
+                            //se prepatra la data para la creacion la facultad
+                            $sql="INSERT INTO facultad (nombre, campus_id,tipo_facultad_id) values ('$facultad',$campus_origen_id, 1);";
+                            $facultad_id=$inserts->InsertGeneral($sql);
+                            $log->info("\r\n".'Facultad Insertada con exito; id; '. $facultad_id."\r\n");
+                            $output.='<tr><td>';
+                            $output.="'Facultad Insertada con exito; id; '. $facultad_id";
+                            $output.='</td></tr>';
+                        } else {// si existe la facultad
+                            $facultad_id=$checkfacultad[0]['id'];
+                        }
+
+                        //se verifica que exista el programa del  usuario 7.1
+                        $checkprograma=$check->checkprograma($programa);
+                        if ($checkprograma==0) {// si no existe el programa
+                            //se prepatra la data para la creacion el programa
+                            $sql="INSERT INTO programa (nombre, facultad_id) values ('$programa',$facultad_id);";
+                            $programa_id=$inserts->InsertGeneral($sql);
+                            $log->info("\r\n".'PROGRAMA Insertado con exito; id; '. $programa_id."\r\n");
+                            $output.='<tr><td>';
+                            $output.="'PROGRAMA Insertado con exito; id; '. $programa_id";
+                            $output.='</td></tr>';
+                        } else {// si existe el programa
+                            $programa_id=$checkprograma[0]['id'];
+                        }
+                     
+                        //se valida si existe el programa relacionado con el usuario 7.2 
+                        $checkuser_programa=$check->checkUserProgram($user_id,$programa_id );
+                        if ($checkuser_programa==0) {// si no existe programa relacionado con el usuario
+                            //se prepatra la data para la creacion programa relacionado con el usuario
+                            $sql="INSERT INTO user_programa (user_id, programa_id) values ($user_id,$programa_id);";
+                            $programa_user_id=$inserts->InsertGeneral($sql);
+                            $log->info("\r\n".'USER_PROGRAMA Insertados con exito; id; '. $programa_user_id."\r\n");
+                            $output.='<tr><td>';
+                            $output.="USER_PROGRAMA Insertados con exito; id; '. $programa_user_id";
+                            $output.='</td></tr>';
+                        } else {// si existe programa relacionado con el usuario
+                            $programa_user_id=$checkuser_programa[0]['id'];
+                        }
+                    
+                         //se valida si existe el CAMPUS relacionado con el usuario 7.3 
+                         $checkuser_campus=$check->checkUserCampus($user_id,$campus_origen_id );
+                         if ($checkuser_campus==0) {// si no existe CAMPUS relacionado con el usuario
+                             //se prepatra la data para la creacion CAMPUS relacionado con el usuario
+                             $sql="INSERT INTO user_campus (user_id, campus_id) values ($user_id,$campus_origen_id);";
+                             $campus_user_id=$inserts->InsertGeneral($sql);
+                             $log->info("\r\n".'USER_CAMPUS Insertados con exito; id; '. $campus_user_id."\r\n");
+                             $output.='<tr><td>';
+                             $output.="USER_CAMPUS Insertados con exito; id; '. $campus_user_id";
+                             $output.='</td></tr>';
+                         } else {// si existe CAMPUS relacionado con el usuario
+                             $campus_user_id=$checkuser_campus[0]['id'];
+                         }
+                       
+                         //se valida si existe la inscripcion 8
+                         $checkinscripcion=$check->checkinscripcion($user_id, $campus_origen_id, $periodo_id, $programacion_modalidad_id, $institucion_id);
+                         if ($checkinscripcion==0) {// si no existe la inscripcion
+                             //se prepatra la data para la creacion la inscripcion
+                             $sql="INSERT INTO inscripcion (user_id, campus_id,periodo_id,modalidad_id, institucion_destino_id, tipo, estado_id, migration ) 
+                             values ($user_id,$campus_origen_id, $periodo_id, $programacion_modalidad_id,$institucion_id, 0, 3, 1 );";
+                           $inscripcion_id=$inserts->InsertGeneral($sql);
+                             $log->info("\r\n".'La Inscripcion ha sido Insertada con exito; id; '. $inscripcion_id." ; # $countInsert; \r\n");
+                             $output.='<tr><td>';
+                             $output.="La Inscripcion ha sido Insertada con exito; id; '. $inscripcion_id # $countInsert";
+                             $output.='</td></tr>';
+                         } else {// si existe la inscripcion
+                             $inscripcion_id=$checkinscripcion[0]['id'];
+                         }
+                       
+                     
+                         if(!empty($fuentes_financiacion)){
+                            //se valida si existe la fuente de financiacion 9
+                            $checkfuentefinanciacion=$check->checkfuenteFinanciacion($fuentes_financiacion);
+                            if ($checkfuentefinanciacion==0) {// si no existe la fuente de financiacion
+                                //se prepatra la data para la creacion la fuente de financiacion
+                                $sql="INSERT INTO fuente_financiacion (nombre, tipo, migration ) 
+                                values ('$fuentes_financiacion',0, 1 );";
+                                $fuente_financiacion_id=$inserts->InsertGeneral($sql);
+                                $log->info("\r\n".'La Fuente de financiacion ha sido Insertada con exito; id; '. $fuente_financiacion_id."\r\n");
+                                $output.='<tr><td>';
+                                $output.="La Fuente de financiacion ha sido Insertada con exito; id; '. $fuente_financiacion_id";
+                                $output.='</td></tr>';
+                            } else {// si existe la la fuente de financiacion
+                                $fuente_financiacion_id=$checkinscripcion[0]['id'];
+                            }
+                            $checkfinanciacion=$check->checkFinanciacion($fuente_financiacion_id, $inscripcion_id);
+                            if ($checkfinanciacion==0) {// si no existe la financiacion
+                                //se prepatra la data para la creacion la financiacion
+                                $sql="INSERT INTO financiacion (fuente_financiacion_id, inscripcion_id) 
+                                values ($fuente_financiacion_id,$inscripcion_id );";
+                                $financiacion_id=$inserts->InsertGeneral($sql);
+                                $log->info("\r\n".'La financiacion ha sido Insertada con exito; id; '. $financiacion_id."\r\n");
+                                $output.='<tr><td>';
+                                $output.="La financiacion ha sido Insertada con exito; id; '.$financiacion_id";
+                                $output.='</td></tr>';
+                            }
+                          /*   echo '<pre>';
+                            var_dump( $checkfinanciacion, $periodo_id, $modalidad_id, $institucion_id, $campus_origen_id, $campus_destino_id, 
+                            $programacion_modalidad_id, $user_id, $facultad_id, $programa_id, $programa_user_id,  $campus_user_id, $inscripcion_id, $fuente_financiacion_id, $financiacion_id); die;
+              */           }   
+                    
+
+                        $countInsert++;
+                    
+                       
+                  
                  }  //fin si no esta vacia la fila 
             } //fin for 
             return   $output;
