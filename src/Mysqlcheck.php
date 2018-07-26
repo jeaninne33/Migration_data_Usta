@@ -98,6 +98,7 @@ class Mysqlcheck
         }
 
     }
+
     public function checkinscripcion($user_id,$campus_id, $periodo_id, $modalidad_id,$institucion_id){
         try {
             $sql="SELECT id FROM inscripcion WHERE user_id=$user_id and periodo_id=$periodo_id
@@ -274,56 +275,6 @@ class Mysqlcheck
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
         }
-    }
-
-
-    public function CheckNameCustomer($name){
-
-        switch ($name) {
-            case "SEABORD MARINE":  $name="SEABORD MARINE LTD";
-                break;
-            case "CONSTRUTORA OAS S.A. SUCURSAL DEL PERU":  $name="CONSTRUCTORA OAS S.A. SUCURSAL DEL PERU";
-                break;
-            case "GIUSEPPE NATALINI SFORZA":  $name="GIUSEPPE NATALINI";
-                break;
-            case "VERONICA D' ORNELLAS RADZIWILL":  $name="VENONICA D' ORNELLAS";
-                break;
-            case "OZINKA PERU":  $name="OZINCA PERU";
-                break;
-            case "RAFAEL SALAZAR":  $name="RAFAEL SALAZAR BUENO";
-                break;
-            case "JUAN GUERRA":  $name="JUAN GUERRA NAVARRO";
-                break;
-            case "MARTA D´URSO":  $name="MARTA DEL VALLE D'URSO PRIETO DE MADUEÑO";
-                break;
-            case "VILMA MEDANIC":  $name="VILMA MEDANIC LUPIS";
-                break;
-            case "IAM ADVISORS":  $name="IAM ADVISORS (CASO FAMILIA RICCI)";
-                break;
-            case "INVERSIONES MAJE S.A.C.":  $name="INVERSIONES MAJE S.A.";
-                break;
-            case "SEALED AIR":  $name="SEALED AIR CORPORATION";
-                break;
-            case "CARLO DE FERRARI":  $name="CARLO DE FERRARI BRIGNOLE";
-                break;
-            case "JOSE MACIA":  $name="JOSE MACIA PORTELL";
-                break;
-            case "FARO CAPITAL SAFI S.A.":  $name="FARO CAPITAL SAF S.A.";
-                break;
-            case "TRAVELERS CASUALTY AND SURETY COMPANY OF AMERICA":  $name="TRAVELERS";
-                break;
-            case "COLIMAN AVOCADO":  $name="COLIMAN AVOCADOS S.A.C.";
-                break;
-            case "01LABS S.A.C.":  $name="01 LABS S.A.C.";
-                break;
-            case "AGROPECUARIA PAMAJOSA S.A.C.":  $name="AGROPECUARIA PAMAJOSA S.A.";
-                break;
-            case "ANDERS ZIEDEK":  $name="ANDERS ZIEDEK WERNER HANS";
-                break;
-            case "PROCTER & GAMBLE INDUSTRIAL PERU S.R.L.":  $name="PROCTER & GAMBLE PERU S.R.L.";
-                break;
-        }
-        return $name;
     }
 
 

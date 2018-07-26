@@ -26,7 +26,7 @@ class Inserts
                 return $this->pdo->lastInsertId();
             }
         } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
+            print_r($exception->getMessage().' sql: '.$sql.' <br>');die;
         }
     }
 
@@ -41,17 +41,7 @@ class Inserts
             print_r($exception->getMessage());
         }
     }
-    public function InsertUser($name, $short_name){
-        try {
-            $sql="INSERT INTO users (username, passwd,email, user_type,nickname, fname,short_name, enabled, photo, admin_view)
-                values ('".strtolower($short_name)."@ehernandez.com.pe','','".strtolower($short_name)."@ehernandez.com.pe',3,'".$name."','".$name."','".$short_name."', 1,'',1);";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-            return $this->pdo->lastInsertId();
-        } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
-        }
-    }
+
 
    
 

@@ -4,43 +4,11 @@ require_once 'vendor/autoload.php';
 
 use TM\Inscripciones;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+set_time_limit(0);
 
-$inscripciones=new Inscripciones();
-$output = '';
+
 error_reporting (E_ALL & ~ E_DEPRECATED & ~ E_NOTICE);
 //  Read your Excel workbook
-try
-{
-	if(isset($_POST["import"])){
-			$extension = end(explode(".", $_FILES["excel"]["name"])); // For getting Extension of selected file
-			$allowed_extension = array("xls", "xlsx", "csv"); //allowed extension
-			
-			if(in_array($extension, $allowed_extension)) //check selected file extension is present in allowed extension array
-			{
-				$file = $_FILES["excel"]["tmp_name"]; // getting temporary source of excel file
-				//Aquí es donde seleccionamos nuestro csv
-				$fname = $_FILES['excel']['name'];
-				echo 'Cargando nombre del archivo: '.$fname.' ';
-				//include("PHPExcel/IOFactory.php"); // Add PHPExcel Library in this code
-				$objPHPExcel = PHPExcel_IOFactory::load($file); // create object of PHPExcel library by using load() method and in load method define path of selected file
-
-				$output .= "<label class='text-success'>Data Inserted</label><br /><table class='table table-bordered'>";
-				
-                $objPHPExcel->setActiveSheetIndex(0);
-                $worksheet=$objPHPExcel->getActiveSheet();
-                $output.= $inscripciones->fetchAllinscripcion($worksheet);
-					
-			  $output .= '</table>';
-			}
-			else
-			{
-				$output = '<label class="text-danger">Invalid EXTENSION File</label>'; //if non excel file then
-			}
-	}
-}catch(Exception $e)
-{
-    die('Error loading file "'.pathinfo($fname,PATHINFO_BASENAME).'": '.$e->getMessage());
-}
 //var_dump($asuntos->fetchAllBusiness());
 ?>
 
@@ -59,7 +27,7 @@ try
   }
   .box
   {
-   width:700px;
+   width:1100px;
    border:1px solid #ccc;
    background-color:#fff;
    border-radius:5px;
@@ -80,7 +48,41 @@ try
    <br />
    <br />
    <?php
-   echo $output;
+  
+   $inscripciones=new Inscripciones();
+   $output = '';
+   try{
+            if(isset($_POST["import"])){
+                    $extension = end(explode(".", $_FILES["excel"]["name"])); // For getting Extension of selected file
+                    $allowed_extension = array("xls", "xlsx", "csv"); //allowed extension
+                    
+                    if(in_array($extension, $allowed_extension)) //check selected file extension is present in allowed extension array
+                    {
+                        $file = $_FILES["excel"]["tmp_name"]; // getting temporary source of excel file
+                        //Aquí es donde seleccionamos nuestro csv
+                        $fname = $_FILES['excel']['name'];
+                      //  echo 'Cargando nombre del archivo: '.$fname.' ';
+                        //include("PHPExcel/IOFactory.php"); // Add PHPExcel Library in this code
+                        $objPHPExcel = PHPExcel_IOFactory::load($file); // create object of PHPExcel library by using load() method and in load method define path of selected file
+
+                        $output .= "<label class='text-success'>Data Inserted</label><br /><table class='table table-bordered'>";
+                        
+                        $objPHPExcel->setActiveSheetIndex(0);
+                        $worksheet=$objPHPExcel->getActiveSheet();
+                        $output.= $inscripciones->fetchAllinscripcion($worksheet);
+                            
+                    $output .= '</table>';
+                    }
+                    else
+                    {
+                        $output = '<label class="text-danger">Invalid EXTENSION File</label>'; //if non excel file then
+                    }
+            }
+        }catch(Exception $e)
+        {
+            die('Error loading file "'.pathinfo($fname,PATHINFO_BASENAME).'": '.$e->getMessage());
+        }
+        echo $output;
    ?>
   </div>
  </body>
