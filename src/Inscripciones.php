@@ -62,10 +62,10 @@ class Inscripciones
             $countInsert=0;
             $countError=0;
             $highestRow = $worksheet->getHighestRow();//total de registros filas de la hoja
-            $tabla="<label class='text-success'>Register DUplicated</label><br /><table class='table table-bordered'>";
+            $tabla="<label class='text-success'>DATA INSERT</label><br /><table class='table table-bordered'>";
             echo  $tabla; 
             $countexisteinsrip=0;
-            $existe= "<label class='text-success'>Register DUplicated</label><br />";
+            $existe= "<label class='text-success'></label><br />";
            // echo $worksheet->getHighestColumn()."<br>";
             for($row=2; $row<=$highestRow; $row++)//se recorre todo el archivo excel
             {
@@ -124,9 +124,10 @@ class Inscripciones
                         //se prepatra la data para la creacion de la modalidad
                         $sql="INSERT INTO tipo_modalidad (nombre, promedio, tipo,migration) values ('".$modalidad."',0, 0, 1);";
                         $modalidad_id=$inserts->InsertGeneral($sql);
-                        $log->info("  \r\n".'Modalidad Insertada con exito; id; '. $modalidad_id."  \r\n");
+                        //$output.=$inserts->InsertCorrecto( $modalidad_id, $log,"Modalidad Insertada con exito; id;", $output );
+                        $log->info("  \r\n".'Modalidad Insertada con exito'. $modalidad_id."  \r\n");
                         $output.='<tr><td>';
-                        $output.="Modalidad Insertada con exito; id; '. $modalidad_id";
+                        $output.='Modalidad Insertada con exito'.$modalidad_id;
                         $output.='</td></tr>';
                     } else {// si existe la modalidad
                         $modalidad_id=$checkModalidad[0]['id'];
