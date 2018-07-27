@@ -136,7 +136,7 @@ class Mysqlcheck
     }
     public function checkPeriod($name){
         try {
-            $sql="SELECT id FROM periodo WHERE nombre='".$name."';";
+            $sql="SELECT id, fecha_desde, fecha_hasta FROM periodo WHERE nombre='".$name."';";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $result=$stmt->fetchAll();

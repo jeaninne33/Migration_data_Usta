@@ -26,9 +26,9 @@ class Inserts
                 return $this->pdo->lastInsertId();
             }
         } catch (\PDOException $exception) {
-            print_r($exception->getMessage().' sql: '.$sql.' <br>');
-            $result=['error'=>1, 'msj'=>$exception->getMessage()."sql: .$sql.<br>"];
-            return $result;
+            print_r($exception->getMessage().' sql: '.$sql.' <br>'); //die;
+          //  $result=['error'=>1, 'msj'=>$exception->getMessage()."sql: .$sql.<br>"];
+           // return $result;
         }
     }
     public function InsertCorrecto($var, $log, $msj, $output){
