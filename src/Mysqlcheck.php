@@ -98,6 +98,22 @@ class Mysqlcheck
         }
 
     }
+    public function checkdivision($name, $campus_id)
+    {
+        try {
+            $sql = "SELECT id FROM division WHERE nombre= '$name' and campus_id=$campus_id;";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            if (count($result) > 0) {
+                return $result;
+            } else {
+                return 0; //array('error'=>'100','desc'=>"No existe EL usuario");
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
 
     public function checkinscripcion($user_id,$campus_id, $periodo_id, $modalidad_id,$institucion_id){
         try {
@@ -180,6 +196,25 @@ class Mysqlcheck
             print_r($exception->getMessage());
         }
     }
+    public function checkTipoDocumento($name)
+    {
+        try {
+            switch ($name) {
+                case ('TI' || 'CC') :
+                   return  10;
+                    break;
+                case 'PS':
+                    return  12;
+                    break;
+                case 'CE':
+                    return  11;
+                    break;
+            }
+           
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
 
 
     public function checkInstitution($name){
@@ -200,7 +235,7 @@ class Mysqlcheck
     
     public function checkModalidad($periodo_id, $institucion_id, $modalidad_id){
         try {
-            $sql="SELECT id FROM modalidad WHERE periodo_id=$periodo_id and institucion_id=$institucion_id and tipo_modalidad_id=$modalidad_id";
+            $sql="SELECT id FROM modalidad WHERE periodo_id=$periodo_id and institucion_origen_id=1 and institucion_destino_id=$institucion_id and tipo_modalidad_id=$modalidad_id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $user=$stmt->fetchAll();
@@ -273,7 +308,7 @@ class Mysqlcheck
                 return 0;
             }
         } catch (\PDOException $exception) {
-            print_r($exception->getMessage());
+            print_r($sql.'  '.$exception->getMessage());
         }
     }
 
