@@ -18,7 +18,7 @@ class ConnectionMySQL
     /**
      * @var string
      */
-    const DB_NAME = 'usta_produccion';
+    const DB_NAME = 'usta';
 
     /**
      * @var string

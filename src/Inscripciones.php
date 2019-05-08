@@ -8,7 +8,6 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Formatter\LineFormatter;
 
-
 class Inscripciones
 {
     /**
@@ -48,13 +47,13 @@ class Inscripciones
             //se instancian las clases
             $check=new Mysqlcheck();//para validar si existe se instancia la clase
             $inserts=new Inserts();//para validar si existe se instancia la clase
-            $countInsert=0;
+            $countInsert=1;
             $countError=0;
             $highestRow = $worksheet->getHighestRow();//total de registros filas de la hoja
-            $tabla="<label class='text-success'>DATA INSERT</label><br /><table class='table table-bordered'>";
+            $tabla="<label class='text-success'>DATA INSERT</label><table class='table table-bordered'>";
             echo  $tabla; 
             $countexisteinsrip=0;
-            $existe= "<label class='text-success'></label><br />";
+            $existe= "<label class='text-success'></label>";
            // echo $worksheet->getHighestColumn()."<br>";
             for($row=2; $row<=$highestRow; $row++)//se recorre todo el archivo excel
             {
@@ -65,22 +64,25 @@ class Inscripciones
                 $facultad =  trim($worksheet->getCellByColumnAndRow(3, $row)->getValue());
                 $programa =  trim($worksheet->getCellByColumnAndRow(4, $row)->getValue());
                 $tipo_doc =  trim($worksheet->getCellByColumnAndRow(5, $row)->getValue());
-                $num_docu = preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓ.Ú\s\W])", '', trim($worksheet->getCellByColumnAndRow(6, $row)->getValue(), " \t\n\r\0\x0B"));
+                $num_docu = trim($worksheet->getCellByColumnAndRow(6, $row)->getValue(), " \t\n\r\0\x0B");
+                $num_docu=str_replace(".", '', $num_docu);
                 $apellidos = trim($worksheet->getCellByColumnAndRow(7, $row)->getValue());
-
                 $nombres =   trim($worksheet->getCellByColumnAndRow(8, $row)->getValue());
                 $nacionalidad =  trim($worksheet->getCellByColumnAndRow(9, $row)->getValue());
+                $cargo =  trim($worksheet->getCellByColumnAndRow(10, $row)->getValue());
                 $modalidad =  trim($worksheet->getCellByColumnAndRow(12, $row)->getValue());
-                $institucion_origen = trim( $worksheet->getCellByColumnAndRow(13, $row)->getValue());
+                $institucion_origen = str_replace("'", '', preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓÚ\s\W])", '', trim( $worksheet->getCellByColumnAndRow(13, $row)->getValue(), " \t\n\r\0\x0B")));
                 $pais_origen = preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓÚ\s\W])", '', trim($worksheet->getCellByColumnAndRow(14, $row)->getValue(), " \t\n\r\0\x0B"));
-                $institucion_destino =  preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓÚ\s\W])", '', trim($worksheet->getCellByColumnAndRow(15, $row)->getValue(), " \t\n\r\0\x0B"));
+                $institucion_destino = str_replace("'", '', preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓÚ\s\W])", '', trim($worksheet->getCellByColumnAndRow(15, $row)->getValue(), " \t\n\r\0\x0B")));
                 $pais_destino = preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓÚ\s\W])", '', trim($worksheet->getCellByColumnAndRow(16, $row)->getValue(), " \t\n\r\0\x0B"));
                 $campus_destino = trim($worksheet->getCellByColumnAndRow(17, $row)->getValue());
                 $intensidad_horaria = trim($worksheet->getCellByColumnAndRow(20, $row)->getValue());
                 $fuentes_financiacion = trim( $worksheet->getCellByColumnAndRow(21, $row)->getValue());
-               // var_dump( $periodo, $campus,$division,$facultad,$programa,$tipo_doc,$num_docu,$apellidos,$nombres,$nacionalidad,$institucion_origen,$institucion_destino);
-                if(!empty($periodo) && !empty($campus) && !empty($division) && !empty($facultad) && !empty($programa) && !empty($tipo_doc) && !empty($num_docu) && !empty($apellidos) 
-                && !empty($nombres) && !empty($nacionalidad) && !empty($institucion_origen) && !empty($institucion_destino)){
+
+                // var_dump( $periodo, $campus,$division,$facultad,$programa,$tipo_doc,$num_docu,$apellidos,$nombres,$nacionalidad,$institucion_origen,$institucion_destino, $pais_destino);
+                // return die;
+                if(!empty($periodo) && !empty($campus) && !empty($division) && !empty($facultad) && !empty($programa) && !empty($tipo_doc) && !empty($num_docu) && $num_docu!='ND' && !empty($apellidos) 
+                && !empty($nombres) && !empty($nacionalidad) && !empty($institucion_origen) && !empty($institucion_destino) && !empty( $pais_destino)){
                     $output .= '<tr><td>';
                     $output .= "Fila de excel= " . $row;
                     $output .= '</td></tr>';
@@ -230,14 +232,18 @@ class Inscripciones
                     if ($checkuser==0) {// si no existe el usuario
                         //se prepatra la data para la creacion de el usuario
                         $tipo_documento_id= $check->checkTipoDocumento( $tipo_doc);
-                        $sql="INSERT INTO datos_personales (nombres, apellidos,numero_documento, tipo_documento_id) values ('$nombres','$apellidos', '$num_docu',  $tipo_documento_id);";
+                        $paisO = $check->checkCountry( $pais_origen);
+                        $pais_origen_id = $paisO[0]['id'];
+                        $sql="INSERT INTO datos_personales (nombres, apellidos,numero_documento, tipo_documento_id, nacionalidad_id, cargo)
+                                     values ('$nombres','$apellidos', '$num_docu',  $tipo_documento_id, $pais_origen_id, '$cargo');";
                         $datos_personales_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'DATOS PERSONALES Insertados con exito; id; '. $datos_personales_id."  \r\n");
                         $output.='<tr><td>';
                         $output.="DATOS PERSONALES Insertados con exito; id; ". $datos_personales_id;
                         $output.='</td></tr>';
                         $nombre=$nombres.' '.$apellidos;
-                        $sql="INSERT INTO users (name, email,password, datos_personales_id, activo, migration) values ('$nombre', '$num_docu@usantotomas.edu.com','cambiar123',  $datos_personales_id, 0,1);";
+                        $pass= crypt('cambiar123');
+                        $sql="INSERT INTO users (name, email,password, datos_personales_id, activo, migration) values ('$nombre', '$num_docu@usantotomas.edu.com','$pass',  $datos_personales_id, 0,1);";
                         $user_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'usuario Insertado con exito; id; '. $user_id."  \r\n");
                         $output.='<tr><td>';
@@ -336,11 +342,13 @@ class Inscripciones
                     }
                 
                     //se valida si existe la inscripcion 8
-                    $checkinscripcion=$check->checkinscripcion($user_id, $campus_origen_id, $periodo_id, $programacion_modalidad_id, $institucion_id);
+                    $checkinscripcion=$check->checkinscripcion($user_id, $campus_origen_id, $periodo_id, $programacion_modalidad_id, $institucion_id, $campus_destino_id);
                     if ($checkinscripcion==0) {// si no existe la inscripcion
                         //se prepatra la data para la creacion la inscripcion
-                        $sql="INSERT INTO inscripcion (user_id, campus_id,periodo_id,modalidad_id, institucion_destino_id, tipo, estado_id,programa_origen_id, fecha_inicio, fecha_fin, migration ) 
-                        values ($user_id,$campus_origen_id, $periodo_id, $programacion_modalidad_id,$institucion_id, 0, 3, $programa_id, '$starDate', '$endDate', 1 );";
+                        $sql="INSERT INTO inscripcion (user_id, campus_id,periodo_id,modalidad_id, institucion_destino_id, tipo, estado_id,
+                                        programa_origen_id, fecha_inicio, fecha_fin, migration, campus_destino_id ) 
+                                        values ($user_id,$campus_origen_id, $periodo_id, $programacion_modalidad_id,$institucion_id, 
+                                        0, 3, $programa_id, '$starDate', '$endDate', 1 ,  $campus_destino_id);";
                         $inscripcion_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'La Inscripcion ha sido Insertada con exito; id; '. $inscripcion_id." ; # $countInsert; \r\n");
                         $output.='<tr><td>';
@@ -389,10 +397,20 @@ class Inscripciones
 
                     }
                     end:
-                        $output.='<br>';
+                       // $output.='';
                     echo  $output;                
                   
+                } elseif (empty($periodo) || empty($campus) || empty($division) || empty($facultad) || empty($programa) || empty($tipo_doc) || empty($num_docu) || empty($apellidos)
+                    || empty($nombres) || empty($nacionalidad) || empty($institucion_origen) || empty($institucion_destino) || empty($pais_destino)) {
+                    $msj = "Fila excel No. $row ; error campos vacios ; periodo;  $periodo  campus;  $campus  division:  $division facultad:  
+                            $programa:programa  tipo_doc: $tipo_doc  numero docuemnto: $num_docu" ;
+                    $log->error("  \r\n" . $msj . " \r\n");
+                  } elseif ($num_docu=='ND') {
+                    $msj = "Fila excel No. $row ; error el estudiante no posee CEDULA ND ; periodo;  $periodo  campus;  $campus  division:  $division facultad:  
+                            $programa:programa  tipo_doc: $tipo_doc  numero docuemnto: $num_docu" ;
+                    $log->error("  \r\n" . $msj . " \r\n");
                 }  //fin si no esta vacia la fila 
+            //fin si no esta vacia la fila 
             } //fin for 
             echo '</table>';
             return   true;
