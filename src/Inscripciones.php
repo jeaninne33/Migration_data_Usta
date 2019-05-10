@@ -70,6 +70,7 @@ class Inscripciones
                 $nombres =   trim($worksheet->getCellByColumnAndRow(8, $row)->getValue());
                 $nacionalidad =  trim($worksheet->getCellByColumnAndRow(9, $row)->getValue());
                 $cargo =  trim($worksheet->getCellByColumnAndRow(10, $row)->getValue());
+                $tipo_interchage = trim($worksheet->getCellByColumnAndRow(11, $row)->getValue());
                 $modalidad =  trim($worksheet->getCellByColumnAndRow(12, $row)->getValue());
                 $institucion_origen = str_replace("'", '', preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓÚ\s\W])", '', trim( $worksheet->getCellByColumnAndRow(13, $row)->getValue(), " \t\n\r\0\x0B")));
                 $pais_origen = preg_replace("([^a-zA-ZñÑáéíóúÁÉÍÓÚ\s\W])", '', trim($worksheet->getCellByColumnAndRow(14, $row)->getValue(), " \t\n\r\0\x0B"));
@@ -120,7 +121,8 @@ class Inscripciones
                     }   
                     //se valida la modalidad 2
                     $checkModalidad = $check->checkTipoModalidad($modalidad);
-                    if ($checkModalidad==0) {// si no existe la modalidad
+                    if ($checkModalidad==0) { // si no existe la modalidad
+                        $modalidad = mb_strtoupper( $modalidad, 'utf-8');
                         //se prepatra la data para la creacion de la modalidad
                         $sql="INSERT INTO tipo_modalidad (nombre, promedio, tipo,migration) values ('".$modalidad."',0, 0, 1);";
                         $modalidad_id=$inserts->InsertGeneral($sql);
@@ -135,6 +137,26 @@ class Inscripciones
                     if(empty($modalidad_id)){
                         goto end;
                     }
+                    //se valida la institucion origen  PARA INTERIN
+                    $checkinstitucion_origen = $check->checkInstitution( $institucion_origen);
+
+                    if ( $checkinstitucion_origen == 0) { // si no existe la institucion_destino
+                        //se prepatra la data para la creacion de la institucion
+                        $pais = $check->checkCountry( $pais_origen);
+                        $pais_origen_id = $pais[0]['id'];
+                        $institucion_origen = mb_strtoupper( $institucion_origen, 'utf-8');
+                        $sql = "INSERT INTO institucion (nombre, tipo_institucion_id, migration,pais_id) values ('" . $institucion_origen . "',7, 1,   $pais_origen_id);";
+                        $institucion_origen_id = $inserts->InsertGeneral($sql);
+                        $log->info("  \r\n" . 'Institucion Origen Insertada con exito; id; ' . $institucion_origen_id . "  \r\n");
+                        $output .= '<tr><td>';
+                        $output .= "Institucion Origen Insertada con exito; id; '.  $institucion_origen_id";
+                        $output .= '</td></tr>';
+                    } else { // si existe la institucion
+                        $institucion_origen_id = $checkinstitucion_origen[0]['id'];
+                    }
+                    if (empty( $institucion_origen_id)) {
+                        goto end;
+                    }
                     //se valida la institucion destino 3
                     $checkinstitucion = $check->checkInstitution($institucion_destino);
                    
@@ -142,6 +164,7 @@ class Inscripciones
                         //se prepatra la data para la creacion de la institucion
                         $pais=$check->checkCountry($pais_destino);
                         $pais_destino_id= $pais[0]['id'];
+                        $institucion_destino = mb_strtoupper( $institucion_destino, 'utf-8');
                         $sql="INSERT INTO institucion (nombre, tipo_institucion_id, migration,pais_id) values ('".$institucion_destino."',7, 1, $pais_destino_id);";
                         $institucion_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'Institucion Insertada con exito; id; '. $institucion_id."  \r\n");
@@ -154,9 +177,26 @@ class Inscripciones
                     if(empty($institucion_id)){
                         goto end;
                     }
+                    //se valida el tipo de movilidad
+                    if( $check->checkTipoInterchange( $tipo_interchage)===0){//si es movilidad saliente
+                        $campus_origen= $campus;
+                        $tipoInterchange=0;
+                        $rol_id=17;
+                    }elseif(  $check->checkTipoInterchange($tipo_interchage) ===1 ) { //si es movilidad entrante
+                        $campus_origen = $campus_destino;
+                        $campus_destino = $campus;
+                        $tipoInterchange = 1;
+                        $rol_id = 18;
+                    }
+                    //se valida si existe el campus de origen
+                    if (!empty($campus_origen)) {
+                        $checkCampusOrigen = $check->checkCampus($campus_origen, $institucion_origen_id);
+                        $campus_nombre = $campus_origen;
+                    } else {
+                        $campus_nombre =  mb_strtoupper('Sede Principal', 'utf-8');
+                        $checkCampusOrigen = $check->firstCampus( $institucion_origen_id);
+                    }
                     //se valida el campus de oRIGEN 3.1
-                    $checkCampusOrigen=$check->checkCampus($campus);
-                   
                     if ($checkCampusOrigen==0) {// si no existe el campus origen
                         //se prepatra la data para la creacion del campus origen
                         $consulta= "select ciudad.id from ciudad 
@@ -166,7 +206,8 @@ class Inscripciones
                         limit 1";
                         $ciudad_id=$inserts->consulta($consulta);
                         $ciudad_id= $ciudad_id[0]['id'];
-                        $sql="INSERT INTO campus (nombre, institucion_id, ciudad_id,principal) values ('$campus',1, $ciudad_id,0);";
+                        $campus = mb_strtoupper($campus, 'utf-8');
+                        $sql="INSERT INTO campus (nombre, institucion_id, ciudad_id,principal) values ('$campus_origen',$institucion_origen_id, $ciudad_id,0);";
                         $campus_origen_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'Campus origen Insertado con exito; id; '. $campus_origen_id."  \r\n");
                         $output.='<tr><td>';
@@ -181,10 +222,10 @@ class Inscripciones
 
                     //se valida el campus de destino 3.2
                     if(!empty($campus_destino)){
-                        $checkCampusdestino = $check->checkCampus( $campus_destino);
+                        $checkCampusdestino = $check->checkCampus( $campus_destino, $institucion_id);
                         $campus_nombre= $campus_destino;
                     }else{
-                        $campus_nombre = 'Sede Principal';
+                        $campus_nombre =  mb_strtoupper( 'Sede Principal', 'utf-8'); 
                         $checkCampusdestino = $check->firstCampus($institucion_id);
                     }
                     if ($checkCampusdestino==0) {// si no existe el campus destino
@@ -211,11 +252,20 @@ class Inscripciones
                     }
 
                     //se valida la programacion de la modalidad 4
-                    $checkprogramacion=$check->checkModalidad($periodo_id,$institucion_id, $modalidad_id);
-                    if ($checkprogramacion==0) {// si no existe la programacion de la modalidad
+                    $checkprogramacion=$check->checkModalidad($periodo_id,$institucion_id, $modalidad_id,$institucion_origen_id);
+                    if ($checkprogramacion==0) { // si no existe la programacion de la modalidad
+                        if(!empty($intensidad_horaria) && is_numeric( $intensidad_horaria)){//si no es vacia la intensaidad horaria y es numerica
+                            if( $intensidad_horaria>7){
+                                $intensidad_horaria =7 * 12; //se convierten los dias por horas x semana  
+                            }else{
+                                $intensidad_horaria = $intensidad_horaria * 12;    //se convierten los dias por horas x semana  
+                            }
+                        }else{
+                            $intensidad_horaria='';
+                        }
                         //se prepatra la data para la creacion de la programacion de la modalidad
                         $sql="INSERT INTO modalidad (periodo_id, tipo_modalidad_id,migration, intensidad_horaria,institucion_destino_id,institucion_origen_id) 
-                                values ($periodo_id, $modalidad_id, 1,'$intensidad_horaria' ,$institucion_id,1);";
+                                values ($periodo_id, $modalidad_id, 1,'$intensidad_horaria' ,$institucion_id, $institucion_origen_id);";
                         $programacion_modalidad_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'Programación de la modalidad Insertada con exito; id; '. $programacion_modalidad_id."  \r\n");
                         $output.='<tr><td>';
@@ -234,6 +284,9 @@ class Inscripciones
                         $tipo_documento_id= $check->checkTipoDocumento( $tipo_doc);
                         $paisO = $check->checkCountry( $pais_origen);
                         $pais_origen_id = $paisO[0]['id'];
+                        $nombres =  mb_strtoupper( $nombres, 'utf-8');
+                        $apellidos =  mb_strtoupper( $apellidos, 'utf-8');
+                        $cargo =  mb_strtoupper( $cargo, 'utf-8'); 
                         $sql="INSERT INTO datos_personales (nombres, apellidos,numero_documento, tipo_documento_id, nacionalidad_id, cargo)
                                      values ('$nombres','$apellidos', '$num_docu',  $tipo_documento_id, $pais_origen_id, '$cargo');";
                         $datos_personales_id=$inserts->InsertGeneral($sql);
@@ -243,13 +296,13 @@ class Inscripciones
                         $output.='</td></tr>';
                         $nombre=$nombres.' '.$apellidos;
                         $pass= crypt('cambiar123');
-                        $sql="INSERT INTO users (name, email,password, datos_personales_id, activo, migration) values ('$nombre', '$num_docu@usantotomas.edu.com','$pass',  $datos_personales_id, 0,1);";
+                        $sql="INSERT INTO users (name, email,password, datos_personales_id, activo, migration) values ('$nombre', '$num_docu@usta.edu.co','$pass',  $datos_personales_id, 0,1);";
                         $user_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'usuario Insertado con exito; id; '. $user_id."  \r\n");
                         $output.='<tr><td>';
                         $output.="usuario Insertado con exito; id;  $user_id";
                         $output.='</td></tr>';
-                        $sql="INSERT INTO model_has_roles (model_id,role_id, model_type) values ($user_id, 17, '');";
+                        $sql="INSERT INTO model_has_roles (model_id,role_id, model_type) values ($user_id, $rol_id, '');";
                         $role_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'ROL estudiante Insertado con exito; id; '. $role_id."  \r\n");
                         $output.='<tr><td>';
@@ -264,11 +317,17 @@ class Inscripciones
                         goto end;
                     }
                     //se verifica que exista la división en relacion al usuario usuario 7.0
-
-                    $checkdivision = $check->checkdivision( $division, $campus_origen_id);
+                    //se valida el tipo de movilidad
+                    if ($check->checkTipoInterchange($tipo_interchage) === 0) { //si es movilidad saliente
+                        $checkdivision = $check->checkdivision($division, $campus_origen_id);
+                        $campuss_id = $campus_origen_id;
+                    } elseif ($check->checkTipoInterchange($tipo_interchage) === 1) { //si es movilidad entrante
+                        $checkdivision = $check->checkdivision($division, $campus_destino_id);
+                        $campuss_id = $campus_destino_id;
+                    }
                     if ($checkdivision == 0) { // si no existe la division
                         //se prepatra la data para la creacion la division
-                        $sql = "INSERT INTO division (nombre, campus_id) values ('$division',$campus_origen_id);";
+                        $sql = "INSERT INTO division (nombre, campus_id) values ('$division', $campuss_id);";
                         $division_id = $inserts->InsertGeneral($sql);
                         $log->info("  \r\n" . 'Division Insertada con exito; id; ' . $division_id . "  \r\n");
                         $output .= '<tr><td>';
@@ -280,11 +339,18 @@ class Inscripciones
                     if (empty($division_id)) {
                         goto end;
                     }
+                    //se valida el tipo de movilidad
+                    if ($check->checkTipoInterchange($tipo_interchage) === 0) { //si es movilidad saliente
+                        $checkfacultad = $check->checkfacultad($facultad, $campus_origen_id);
+                        $campuss_id = $campus_origen_id;
+                    } elseif ($check->checkTipoInterchange($tipo_interchage) === 1) { //si es movilidad entrante
+                        $checkfacultad = $check->checkfacultad($facultad, $campus_destino_id);
+                        $campuss_id = $campus_destino_id;
+                    }
                     //se verifica que exista la facultad en relacion al usuario usuario 7
-                    $checkfacultad=$check->checkfacultad($facultad, $campus_origen_id);
                     if ($checkfacultad==0) {// si no existe la facultad
                         //se prepatra la data para la creacion la facultad
-                        $sql="INSERT INTO facultad (nombre, campus_id,tipo_facultad_id) values ('$facultad',$campus_origen_id, 1);";
+                        $sql="INSERT INTO facultad (nombre, campus_id,tipo_facultad_id, division_id) values ('$facultad', $campuss_id, 1, $division_id );";
                         $facultad_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'Facultad Insertada con exito; id; '. $facultad_id."  \r\n");
                         $output.='<tr><td>';
@@ -326,12 +392,19 @@ class Inscripciones
                     } else {// si existe programa relacionado con el usuario
                         $programa_user_id=$checkuser_programa[0]['id'];
                     }
-                   
+                    if ($check->checkTipoInterchange($tipo_interchage) === 0) { //si es movilidad saliente
+                        $checkuser_campus = $check->checkUserCampus($user_id, $campus_origen_id);
+                        $campuss_id = $campus_origen_id;
+                        $programavalue= 'programa_origen_id';
+                    } elseif ($check->checkTipoInterchange($tipo_interchage) === 1) { //si es movilidad entrante
+                        $checkuser_campus = $check->checkUserCampus($user_id, $campus_destino_id);
+                        $campuss_id = $campus_destino_id;
+                        $programavalue = 'programa_destino_id';
+                    }
                     //se valida si existe el CAMPUS relacionado con el usuario 7.3 
-                    $checkuser_campus=$check->checkUserCampus($user_id,$campus_origen_id );
                     if ($checkuser_campus==0) {// si no existe CAMPUS relacionado con el usuario
                         //se prepatra la data para la creacion CAMPUS relacionado con el usuario
-                        $sql="INSERT INTO user_campus (user_id, campus_id) values ($user_id,$campus_origen_id);";
+                        $sql="INSERT INTO user_campus (user_id, campus_id) values ($user_id, $campuss_id);";
                         $campus_user_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'USER_CAMPUS Insertados con exito; id; '. $campus_user_id."  \r\n");
                         $output.='<tr><td>';
@@ -346,9 +419,9 @@ class Inscripciones
                     if ($checkinscripcion==0) {// si no existe la inscripcion
                         //se prepatra la data para la creacion la inscripcion
                         $sql="INSERT INTO inscripcion (user_id, campus_id,periodo_id,modalidad_id, institucion_destino_id, tipo, estado_id,
-                                        programa_origen_id, fecha_inicio, fecha_fin, migration, campus_destino_id ) 
+                                        $programavalue, fecha_inicio, fecha_fin, migration, campus_destino_id ) 
                                         values ($user_id,$campus_origen_id, $periodo_id, $programacion_modalidad_id,$institucion_id, 
-                                        0, 3, $programa_id, '$starDate', '$endDate', 1 ,  $campus_destino_id);";
+                                        $tipoInterchange, 16, $programa_id, '$starDate', '$endDate', 1 ,  $campus_destino_id);";
                         $inscripcion_id=$inserts->InsertGeneral($sql);
                         $log->info("  \r\n".'La Inscripcion ha sido Insertada con exito; id; '. $inscripcion_id." ; # $countInsert; \r\n");
                         $output.='<tr><td>';

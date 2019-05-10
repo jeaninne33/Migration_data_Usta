@@ -196,6 +196,22 @@ class Mysqlcheck
             print_r($exception->getMessage());
         }
     }
+    
+    public function checkTipoInterchange($name)
+    {
+        try {
+            switch ($name) {
+                case ( 'Entrante Nacional' || 'Entrante Internacional' ):
+                    return  1;//interin
+                    break;
+                case ( 'Saliente Nacional' ||  'Saliente Internacional'):
+                    return  0;//interout
+                    break;
+            }
+        } catch (\PDOException $exception) {
+            print_r($exception->getMessage());
+        }
+    }
     public function checkTipoDocumento($name)
     {
         try {
@@ -233,9 +249,10 @@ class Mysqlcheck
         }
     }
     
-    public function checkModalidad($periodo_id, $institucion_id, $modalidad_id){
+    public function checkModalidad($periodo_id, $institucion_id, $modalidad_id, $institucion_origen_id){
         try {
-            $sql="SELECT id FROM modalidad WHERE periodo_id=$periodo_id and institucion_origen_id=1 and institucion_destino_id=$institucion_id and tipo_modalidad_id=$modalidad_id";
+            $sql="SELECT id FROM modalidad WHERE periodo_id=$periodo_id and institucion_destino_id=$institucion_id 
+             and institucion_origen_id=$institucion_origen_id and tipo_modalidad_id=$modalidad_id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $user=$stmt->fetchAll();
@@ -281,9 +298,9 @@ class Mysqlcheck
             print_r($exception->getMessage());
         }
     }
-    public function checkCampus($name){
+    public function checkCampus($name, $institucion_id){
         try {
-            $sql="SELECT id FROM campus WHERE nombre LIKE '%".$name."%';";
+            $sql="SELECT id FROM campus WHERE nombre LIKE '%".$name."%' and institucion_id= $institucion_id;";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $result=$stmt->fetchAll();
