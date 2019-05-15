@@ -84,10 +84,14 @@ class Mysqlcheck
     }
     public function checkfacultad($name,$campus_id){
         try {
-            $sql="SELECT id FROM facultad WHERE nombre= '$name' and campus_id=$campus_id;";
+            $sql="SELECT id FROM facultad WHERE nombre like '$name%' and campus_id=$campus_id;";
+           
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $result=$stmt->fetchAll();
+            // if( $name=='Ingeniería de Telecomunicaciones' && $campus_id==7){
+            //     var_dump('<br>' . $sql , $result, count($result) > 0, '<br>');
+            // }
             if(count($result)>0){
                 return $result;
             }else{
@@ -101,7 +105,7 @@ class Mysqlcheck
     public function checkdivision($name, $campus_id)
     {
         try {
-            $sql = "SELECT id FROM division WHERE nombre= '$name' and campus_id=$campus_id;";
+            $sql = "SELECT id FROM division WHERE nombre like '$name%' and campus_id=$campus_id;";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -134,9 +138,9 @@ class Mysqlcheck
         }
 
     }
-    public function checkprograma($name){
+    public function checkprograma($name, $facultad_id){
         try {
-            $sql='SELECT id FROM programa WHERE nombre= "'.$name.'";';
+            $sql="SELECT id FROM programa WHERE nombre like '$name%' and facultad_id=$facultad_id;";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $result=$stmt->fetchAll();
@@ -200,13 +204,10 @@ class Mysqlcheck
     public function checkTipoInterchange($name)
     {
         try {
-            switch ($name) {
-                case ( 'Entrante Nacional' || 'Entrante Internacional' ):
-                    return  1;//interin
-                    break;
-                case ( 'Saliente Nacional' ||  'Saliente Internacional'):
+            if( $name=='Entrante Nacional' || $name=='Entrante Internacional' ){
+                return  1; //interin
+            }elseif( $name == 'Saliente Nacional' ||  $name =='Saliente Internacional'){
                     return  0;//interout
-                    break;
             }
         } catch (\PDOException $exception) {
             print_r($exception->getMessage());
@@ -216,7 +217,7 @@ class Mysqlcheck
     {
         try {
             switch ($name) {
-                case ('TI' || 'CC') :
+                case 'CC' :
                    return  10;
                     break;
                 case 'PS':
@@ -224,6 +225,9 @@ class Mysqlcheck
                     break;
                 case 'CE':
                     return  11;
+                    break;
+                case 'TI':
+                    return  29;
                     break;
             }
            
@@ -233,9 +237,9 @@ class Mysqlcheck
     }
 
 
-    public function checkInstitution($name){
+    public function checkInstitution($name,$pais_id){
         try {
-            $sql="SELECT id FROM institucion WHERE nombre LIKE '%".$name."%';";
+            $sql="SELECT id FROM institucion WHERE nombre LIKE '%".$name."%' and pais_id=$pais_id;";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $user=$stmt->fetchAll();
